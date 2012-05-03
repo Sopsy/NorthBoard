@@ -49,7 +49,7 @@
 		echo boardnav(true);
 		
 		echo '
-		<p id="software"><a href="http://northboard.fi/changelog.php">NorthBoard v'. $cfg['version'] .'</a></p>
+		<p id="software"><a href="http://northpole.fi/northboard/">NorthBoard v'. $cfg['version'] .'</a></p>
 	</div>
 	<div id="hide_sidebar">
 		';
