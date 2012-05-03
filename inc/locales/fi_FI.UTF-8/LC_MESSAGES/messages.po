@@ -1,0 +1,2533 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NorthBoard 0.9.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-16 12:14+0200\n"
+"PO-Revision-Date: 2011-08-18 16:35+0200\n"
+"Last-Translator: Aleksi Kinnunen <info@npn.fi>\n"
+"Language-Team: www.northpole.fi <admin@northpole.fi>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;T_\n"
+"X-Poedit-Basepath: ../../../../\n"
+"X-Poedit-Language: Finnish\n"
+"X-Poedit-Country: FINLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: scripts\n"
+"X-Poedit-SearchPath-1: mod\n"
+"X-Poedit-SearchPath-2: inc\n"
+"X-Poedit-SearchPath-3: js\n"
+"X-Poedit-SearchPath-4: css\n"
+"X-Poedit-SearchPath-5: .\n"
+"X-Poedit-SearchPath-6: scripts/ajax\n"
+
+#: scripts/fp_content.php:12
+msgid "No categories exist!"
+msgstr "Kategorioita ei ole olemassa!"
+
+#: scripts/fp_content.php:41
+#, php-format
+msgid "<span>%s</span>, written by %s - %s"
+msgstr "<span>%s</span>, kirjoittanut %s - %s"
+
+#: scripts/fp_content.php:41
+msgid "Y/m/d g:i A"
+msgstr "d.m.Y H:i"
+
+#: scripts/fp_content.php:48
+msgid "This category does not contain anything."
+msgstr "Tämä alue ei sisällä mitään."
+
+#: scripts/fp_content.php:51
+msgid "Category not found"
+msgstr "Kategoriaa ei löytynyt"
+
+#: scripts/sfw_redirect.php:15
+#: scripts/ajax/follow_thread.php:24
+#: scripts/ajax/follow_thread.php:32
+#: scripts/ajax/save_settings.php:39
+#: scripts/ajax/hide_thread.php:25
+#: scripts/ajax/hide_thread.php:39
+msgid "Error in SQL query!"
+msgstr "Virhe tietokantakyselyssä!"
+
+#: scripts/delete.php:36
+msgid "Password is missing!"
+msgstr "Salasana puuttuu!"
+
+#: scripts/delete.php:48
+msgid "You cannot report without a reason!"
+msgstr "Et voi ilmiantaa ilman syytä!"
+
+#: scripts/delete.php:58
+msgid "Message reported."
+msgstr "Viesti ilmiannettu."
+
+#: scripts/delete.php:61
+msgid "The message you tried to report does not exist."
+msgstr "Viestiä, jota yritit ilmiantaa, ei ole olemassa."
+
+#: scripts/delete.php:65
+msgid "This message has been reported already"
+msgstr "Viesti on jo ilmiannettu."
+
+#: scripts/delete.php:109
+#: scripts/delete.php:119
+msgid "Generating the archive failed!"
+msgstr "Arkiston luominen epäonnistui!"
+
+#: scripts/delete.php:122
+msgid "Opening the generated archive failed!"
+msgstr "Luodun arkiston avaaminen epäonnistui!"
+
+#: scripts/delete.php:146
+#, php-format
+msgid "The files you have selected exceeds the maxium size of a downloadable archive (%s)!"
+msgstr "Tiedostot jotka olet valinnut ylittää ladattavan arkiston maksimikoon (%s)!"
+
+#: scripts/delete.php:148
+msgid "You did not select any posts with files to download."
+msgstr "Et valinnut yhtään viestiä jossa olisi tiedostoja ladattavaksi."
+
+#: scripts/delete.php:155
+msgid "ID"
+msgstr "ID"
+
+#: scripts/delete.php:158
+msgid "Returning to the board in 2 seconds..."
+msgstr "Palataan laudalle 2 sekunnissa..."
+
+#: scripts/redirect.php:11
+msgid "Malformed message ID!"
+msgstr "Virheellinen viestin ID!"
+
+#: scripts/redirect.php:31
+msgid "The board where the requested message is does not exist!"
+msgstr "Lautaa, jolla pyydetty viesti on, ei ole olemassa!"
+
+#: scripts/redirect.php:33
+#, php-format
+msgid "The requested message (%s) does not exist!"
+msgstr "Viestiä (%s) ei ole olemassa!"
+
+#: scripts/post.php:36
+msgid "Board ID is missing"
+msgstr "Laudan ID puuttuu"
+
+#: scripts/post.php:45
+msgid "The board does not exist!"
+msgstr "Lautaa ei ole olemassa!"
+
+#: scripts/post.php:47
+msgid "The board is locked and cannot be posted to"
+msgstr "Lauta on lukittu, eikä sille voi lähettää viestejä"
+
+#: scripts/post.php:81
+msgid "Thread ID is missing"
+msgstr "Langan ID puuttuu"
+
+#: scripts/post.php:91
+#: scripts/post.php:94
+msgid "You are posting too fast. Please wait a while beetween your posts."
+msgstr "Lähetät viestejä liian nopeasti. Ole hyvä ja odota hetki viestien lähettämisten välillä."
+
+#: scripts/post.php:96
+msgid "Spambot detected. Your message will not be saved."
+msgstr "Spämmibotti havaittu. Viestiäsi ei tallenneta."
+
+#: scripts/post.php:102
+msgid "Your browser did not send a HTTP-Referer -value or it was incorrect. Please check your browser settings."
+msgstr "Selaimesi ei lähettänyt HTTP-Referer -arvoa tai se oli virheellinen. Tarkista selaimesi asetukset."
+
+#: scripts/post.php:145
+#, php-format
+msgid "Post subject is too long! The maximum is %s characters."
+msgstr "Viestin aihe on liian pitkä! Maksimipituus on %s merkkiä."
+
+#: scripts/post.php:153
+#: scripts/post.php:157
+msgid "Message, file or embed is missing!"
+msgstr "Viesti, tiedosto tai upote puuttuu!"
+
+#: scripts/post.php:159
+#, php-format
+msgid "Your message is too long! The maximum is %s characters."
+msgstr "Viestisi on liian pitkä! Maksimipituus on %s merkkiä."
+
+#: scripts/post.php:202
+msgid "Sorry, posting from the country you are posting from at the moment is disallowed to this board."
+msgstr "Viestien lähettäminen tälle laudalle on estetty maasta, josta yrität viestiä lähettää."
+
+#: scripts/post.php:370
+msgid "Sorry, posting through a proxy is not allowed."
+msgstr "Viestien lähettäminen välityspalvelimen kautta ei ole sallittua."
+
+#: scripts/post.php:381
+msgid "The thread you tried to post to is locked."
+msgstr "Lanka, johon yritit lähettää viestiä on lukittu."
+
+#: scripts/post.php:383
+msgid "Thread does not exist!"
+msgstr "Lankaa ei ole olemassa!"
+
+#: scripts/post.php:401
+#, php-format
+msgid "The sum of file sizes of the files you uploaded exceeded the maxium allowed file size of %s."
+msgstr "Lähettämiesi tiedostojen koon summa ylittää tiedostokoon maksimirajan %s."
+
+#: scripts/post.php:407
+msgid "The server is running out of free hard drive space. New files will not be accepted before some space is freed."
+msgstr "Palvelimelta on loppumassa vapaa kiintolevytila. Uusia tiedostoja ei hyväksytä, ennenkuin tilaa vapautuu."
+
+#: scripts/post.php:411
+msgid "File directory is missing and it cannot be created automatically! Please create a directory called \"files\" to the board root and give the script full read/write access into it."
+msgstr "Tiedostohakemisto puuttuu ja ei saatu luotua automaattisesti! Luo laudan juureen hakemisto nimeltä \"files\" ja anna tälle skriptille täydet luku/kirjoitusoikeidet siihen."
+
+#: scripts/post.php:414
+#: scripts/post.php:417
+#: scripts/post.php:420
+msgid "Cannot create file directories! Please make sure that the script has full read/write access to the \"files\" -directory."
+msgstr "Tiedostohakemistoja ei voitu luoda! Tarkista, että skriptillä on täydet luku-/kirjoitusoikeudet \"files\" -hakemistoon."
+
+#: scripts/post.php:428
+#, php-format
+msgid "File %s: The maximum amount of files has been reached, excess files will be discarded."
+msgstr "Tiedosto %s: Tiedostojen maksimimäärä on saavutetty, ylimääräiset tiedostot hylätään."
+
+#: scripts/post.php:466
+#: scripts/post.php:468
+msgid "Uploading a file has failed. Please try again."
+msgstr "Tiedoston lataaminen epäonnistui. Ole hyvä ja yritä uudelleen."
+
+#: scripts/post.php:501
+#: scripts/post.php:504
+#: scripts/post.php:548
+#: scripts/post.php:550
+msgid "Destination file already exists! Please try uploading again."
+msgstr "Kohdetiedosto on jo olemassa! Yritä tiedoston lähettämistä uudelleen."
+
+#: scripts/post.php:525
+#: scripts/post.php:527
+#, php-format
+msgid "Thumbnail generation failed: %s.%s"
+msgstr "Esikatselukuvan luominen epäonnistui: %s.%s"
+
+#: scripts/post.php:537
+#: scripts/post.php:539
+msgid "Your image file is larger than the maxium allowed. File discarded."
+msgstr "Kuvatiedostosi on suurempi kuin suurin sallittu koko. Tiedosto hylättiin."
+
+#: scripts/post.php:580
+#: scripts/post.php:582
+#, php-format
+msgid "Saving the uploaded file has failed: %s.%s"
+msgstr "Lähetetyn tiedoston tallentaminen epäonnistui: %s.%s"
+
+#: scripts/post.php:665
+#: scripts/post.php:667
+msgid "Thumbnail generation failed!"
+msgstr "Esikatselukuvan luominen epäonnistui!"
+
+#: scripts/post.php:693
+#: scripts/post.php:695
+msgid "Temporary file directory is missing! Please create a folder called \"tmp\" to the board root."
+msgstr "Väliaikaisten tiedostojen hakemisto puuttuu! Luo laudan juureen hakemisto nimeltä \"tmp\"."
+
+#: scripts/post.php:715
+#: scripts/post.php:717
+#: scripts/post.php:736
+#: scripts/post.php:738
+msgid "Saving the uploaded file failed. Is there write access to the \"files\" -folder?"
+msgstr "Lähetetyn tiedoston tallentaminen epäonnistui. Onko hakemistoon \"files\" kirjoitusoikeutta?"
+
+#: scripts/post.php:751
+#: scripts/post.php:753
+msgid "Saving the file has failed!"
+msgstr "Tiedoston tallentaminen epäonnistui!"
+
+#: scripts/post.php:765
+#: scripts/post.php:767
+#, php-format
+msgid "File %s: Wrong extension (%s) for the file mime-type (%s)! This usually means that your file is faulty."
+msgstr "Tiedosto %s: Väärä tiedostopääte (%s) tiedoston mime-tyypille (%s)! Tämä yleensä tarkoittaa sitä, että tiedostosi on viallinen."
+
+#: scripts/post.php:774
+#: scripts/post.php:776
+#, php-format
+msgid "The type of the file you tried to upload is not allowed (%s, %s)."
+msgstr "Tiedostotyyppi, jota yritit lähettää ei ole sallittu (%s, %s)."
+
+#: scripts/post.php:783
+#: scripts/post.php:785
+#, php-format
+msgid "Your file is too big (%s)! The maximum allowed file size is (%s)."
+msgstr "Tiedosto on liian suuri (%s)! Suurin sallittu tiedostokoko on (%s)."
+
+#: scripts/post.php:801
+msgid "All of your files had errors while uploading. This post will not be saved."
+msgstr "Jokaisessa lähettämässäsi tiedostossa tapahtui virheitä tallentamisen aikana. Tätä viestiä ei tallenneta."
+
+#: scripts/post.php:819
+msgid "Posting a NSFW-embed is disallowed to SFW boards!"
+msgstr "Epätyöturvallisen upotteen lähettäminen työturvallisille laudoille ei ole sallittua!"
+
+#: scripts/post.php:826
+#, php-format
+msgid "Embedding failed. Checking %s%s resulted in an HTTP-404 error."
+msgstr "Upotteen lisääminen epäonnistui. Kohteen %s%s tarkistaminen johti HTTP-404 virheeseen."
+
+#: scripts/post.php:831
+msgid "Malformed embed-ID"
+msgstr "Upotteen ID on virheellinen"
+
+#: scripts/post.php:836
+#, php-format
+msgid "Embedding failed. Embed source could not be confirmed because an error occurred at the source. (%s)"
+msgstr "Upotteen lisääminen epäonnistui. Upotteen lähdettä ei voitu vahvistaa, koska lähteessä ilmeni virhe. (%s)"
+
+#: scripts/post.php:844
+msgid "Malformed embed type!"
+msgstr "Virheellinen upotteen tyyppi!"
+
+#: scripts/post.php:856
+msgid "A file or an embed is required to make a new thread!"
+msgstr "Tiedosto tai upote tarvitaan uuden langan aloittamiseen!"
+
+#: scripts/post.php:1043
+msgid "There were errors when uploading some of your files. These files were discarded, but your post was saved."
+msgstr "Joidenkin lähettämäsi tiedostojen tallennuksessa tapahtui virheitä. Nämä tiedostot hylätään, mutta viestisi tallennetaan."
+
+#: scripts/post.php:1045
+msgid "Click here to continue"
+msgstr "Klikkaa tästä jatkaakseki"
+
+#: scripts/post.php:1053
+msgid "An error occurred while saving your message!"
+msgstr "Viestiä tallentaessa tapahtui virhe!"
+
+#: scripts/ajax/message.php:17
+#: scripts/ajax/untruncate.php:16
+#, php-format
+msgid "Message %s does not exist"
+msgstr "Viestiä %s ei ole olemassa"
+
+#: scripts/ajax/message.php:22
+msgid "Copy this part of the address to the embed -field."
+msgstr "Kopioi upote -kenttään tämä osa osoitteesta."
+
+#: scripts/ajax/message.php:37
+#: scripts/ajax/untruncate.php:24
+msgid "Malformed message ID"
+msgstr "Viestin ID on virheellinen"
+
+#: scripts/ajax/follow_thread.php:8
+#: scripts/ajax/hide_thread.php:8
+msgid "Thread ID is missing or is malformed!"
+msgstr "Langan ID puuttuu tai on viallinen!"
+
+#: scripts/ajax/follow_thread.php:15
+msgid "This thread is already being followed!"
+msgstr "Tämä lanka on jo seuratuissa!"
+
+#: scripts/ajax/follow_thread.php:18
+msgid "The thread you tried to follow does not exist!"
+msgstr "Lankaa, jota yritit seurata, ei ole olemassa."
+
+#: scripts/ajax/save_settings.php:14
+#: scripts/ajax/save_settings.php:32
+msgid "No data to save!"
+msgstr "Ei tallennettavaa dataa!"
+
+#: scripts/ajax/save_settings.php:18
+#: scripts/ajax/save_settings.php:23
+#: scripts/ajax/save_settings.php:28
+msgid "The selected value does not exist!"
+msgstr "Valitsemaasi arvoa ei ole olemassa!"
+
+#: scripts/ajax/hide_thread.php:15
+msgid "This thread is already hidden!"
+msgstr "Tämä lanka on jo piilotettu!"
+
+#: scripts/ajax/hide_thread.php:18
+msgid "The thread you tried to hide does not exist!"
+msgstr "Lankaa, jota yritit piilottaa, ei ole olemassa."
+
+#: scripts/ajax/expand_thread.php:44
+msgid "Expand all images"
+msgstr "Laajenna kaikki kuvat"
+
+#: scripts/ajax/expand_thread.php:48
+#, php-format
+msgid "Only latest %s messages are shown."
+msgstr "Vain %s viimeisintä viestiä näytetään."
+
+#: scripts/ajax/expand_thread.php:48
+#, php-format
+msgid "%s messages omitted"
+msgstr "%s viestiä ohitettu"
+
+#: scripts/ajax/expand_thread.php:59
+#: scripts/ajax/expand_thread.php:64
+msgid "No omitted posts to display"
+msgstr "Ei ohitettuja viestejä näytettäväksi"
+
+#: mod/statistics.php:10
+msgid "Statistics"
+msgstr "Tilastot"
+
+#: mod/statistics.php:10
+#: mod/users.php:12
+msgid "Board administration"
+msgstr "Laudan hallinta"
+
+#: mod/statistics.php:20
+msgid "Post count by board"
+msgstr "Viestimäärä laudoittain"
+
+#: mod/statistics.php:33
+msgid "Board"
+msgstr "Lauta"
+
+#: mod/statistics.php:34
+msgid "Posts last hour"
+msgstr "Viestiä viimeisen tunnin aikana"
+
+#: mod/statistics.php:35
+msgid "Posts last day"
+msgstr "Viestiä viimeisen päivän aikana"
+
+#: mod/statistics.php:36
+msgid "Total posts"
+msgstr "Viestejä yhteensä"
+
+#: mod/statistics.php:55
+msgid "Total"
+msgstr "Yhteensä"
+
+#: mod/users.php:24
+msgid "Board administrators"
+msgstr "Laudan ylläpitäjät"
+
+#: mod/users.php:27
+msgid "User ID"
+msgstr "Käyttäjä ID"
+
+#: mod/users.php:28
+#: mod/users.php:71
+#: mod/users.php:143
+msgid "Username"
+msgstr "Käyttäjätunnus"
+
+#: mod/users.php:29
+#: mod/users.php:77
+#: mod/users.php:149
+msgid "E-mail"
+msgstr "Sähköpostiosoite"
+
+#: mod/users.php:30
+#: mod/users.php:80
+#: mod/users.php:152
+msgid "User class"
+msgstr "Käyttäjän luokka"
+
+#: mod/users.php:31
+msgid "Last login"
+msgstr "Viimeisin kirjautuminen"
+
+#: mod/users.php:32
+msgid "Last active"
+msgstr "Viimeksi aktiivisena"
+
+#: mod/users.php:33
+msgid "Created by"
+msgstr "Tekijä"
+
+#: mod/users.php:34
+msgid "Added"
+msgstr "Lisätty"
+
+#: mod/users.php:35
+#: mod/users.php:55
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: mod/users.php:41
+#: mod/users.php:82
+#: mod/users.php:154
+msgid "Admin"
+msgstr "Ylläpitäjä"
+
+#: mod/users.php:42
+#: mod/users.php:83
+#: mod/users.php:155
+msgid "SMod"
+msgstr "SMod"
+
+#: mod/users.php:43
+#: mod/users.php:84
+#: mod/users.php:156
+msgid "Mod"
+msgstr "Mod"
+
+#: mod/users.php:51
+#: mod/users.php:52
+#: mod/users.php:54
+msgid "Y/m/d g:i:s A"
+msgstr "d.m.Y H:i:s"
+
+#: mod/users.php:66
+msgid "Create an account"
+msgstr "Luo tunnus"
+
+#: mod/users.php:70
+#: mod/users.php:142
+msgid "User details"
+msgstr "Käyttäjän tiedot"
+
+#: mod/users.php:74
+#: mod/users.php:146
+msgid "Password"
+msgstr "Salasana"
+
+#: mod/users.php:87
+#: mod/users.php:159
+msgid "You need to type in your password to prevent automated account creations"
+msgstr "Sinun täytyy kirjoittaa salasanasi ehkäistäksesi automaattisia tunnusten luonteja"
+
+#: mod/users.php:89
+#: mod/users.php:161
+msgid "Your password"
+msgstr "Salasanasi"
+
+#: mod/users.php:92
+#: mod/users.php:164
+msgid "Create"
+msgstr "Luo"
+
+#: mod/users.php:101
+#: mod/users.php:173
+msgid "Username is missing."
+msgstr "Käyttäjätunnus puuttuu."
+
+#: mod/users.php:107
+#, php-format
+msgid "Password is missing or is too short (min. %s characters)."
+msgstr "Salasana puuttuu tai on liian lyhyt (min. %s merkkiä)."
+
+#: mod/users.php:112
+#: mod/users.php:185
+msgid "User class is missing or is malformed."
+msgstr "Käyttäjän luokka puuttuu tai on viallinen."
+
+#: mod/users.php:119
+#: mod/users.php:192
+msgid "Your password was wrong."
+msgstr "Salasanasi oli väärin."
+
+#: mod/users.php:123
+#: mod/users.php:196
+msgid "The given username is already in use!"
+msgstr "Annettu käyttäjänimi on jo käytössä!"
+
+#: mod/users.php:127
+#: mod/users.php:202
+msgid "User added successfully!"
+msgstr "Käyttäjä lisätty!"
+
+#: mod/users.php:129
+#: mod/users.php:204
+msgid "Adding the user failed!"
+msgstr "Käyttäjän lisääminen epäonnistui!"
+
+#: mod/users.php:138
+#, php-format
+msgid "Edit account for %s"
+msgstr "Muokkaa henkilön %s tunnusta"
+
+#: mod/users.php:207
+msgid "User ID is missing or is not numeric!"
+msgstr "Käyttäjän ID puuttuu tai ei ole numeerinen!"
+
+#: mod/login.php:11
+#: mod/login.php:15
+#: mod/login.php:32
+msgid "Login"
+msgstr "Kirjaudu sisään"
+
+#: mod/login.php:28
+msgid "Remember me"
+msgstr "Muista minut"
+
+#: mod/login.php:58
+msgid "Wrong username or password!"
+msgstr "Väärä käyttäjätunnus tai salasana!"
+
+#: mod/mod_sidebar.php:5
+msgid "Administration"
+msgstr "Hallinta"
+
+#: mod/mod_sidebar.php:12
+msgid "Return to the board"
+msgstr "Palaa laudalle"
+
+#: mod/mod_sidebar.php:13
+#: mod/mod_sidebar.php:20
+#: mod/index.php:18
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: mod/mod_sidebar.php:14
+msgid "You are logged in"
+msgstr "Olet kirjautunut sisään"
+
+#: mod/mod_sidebar.php:15
+msgid "Class:"
+msgstr "Luokka:"
+
+#: mod/mod_sidebar.php:15
+msgid "Super Moderator"
+msgstr "Supermoderaattori"
+
+#: mod/mod_sidebar.php:15
+msgid "Moderator"
+msgstr "Moderaattori"
+
+#: mod/mod_sidebar.php:16
+msgid "My account"
+msgstr "Oma tunnus"
+
+#: mod/mod_sidebar.php:17
+msgid "Logout"
+msgstr "Kirjaudu ulos"
+
+#: mod/mod_sidebar.php:21
+msgid "Manage notifications"
+msgstr "Hallitse ilmoituksia"
+
+#: mod/mod_sidebar.php:22
+msgid "Add a notification"
+msgstr "Lisää ilmoitus"
+
+#: mod/mod_sidebar.php:25
+msgid "Administrators"
+msgstr "Ylläpitäjät"
+
+#: mod/mod_sidebar.php:26
+msgid "Manage administrators"
+msgstr "Hallitse ylläpitäjiä"
+
+#: mod/mod_sidebar.php:28
+msgid "Moderation log"
+msgstr "Valvontaloki"
+
+#: mod/mod_sidebar.php:29
+#: mod/errorlog.php:8
+msgid "Errorlog"
+msgstr "Virheloki"
+
+#: mod/mod_sidebar.php:32
+msgid "Front page"
+msgstr "Etusivu"
+
+#: mod/mod_sidebar.php:33
+#: mod/mod_sidebar.php:53
+msgid "Manage categories"
+msgstr "Hallitse alueita"
+
+#: mod/mod_sidebar.php:34
+#: mod/mod_sidebar.php:54
+msgid "Create a category"
+msgstr "Luo alue"
+
+#: mod/mod_sidebar.php:35
+msgid "Manage content"
+msgstr "Hallitse sisältöä"
+
+#: mod/mod_sidebar.php:36
+msgid "Add content"
+msgstr "Lisää sisältöä"
+
+#: mod/mod_sidebar.php:39
+msgid "Wordfilters"
+msgstr "Sanasuodattimet"
+
+#: mod/mod_sidebar.php:40
+msgid "Manage wordfilters"
+msgstr "Hallitse sanasuodattimia"
+
+#: mod/mod_sidebar.php:41
+msgid "Add a wordfilter"
+msgstr "Lisää sanasuodatin"
+
+#: mod/mod_sidebar.php:44
+#: mod/bans.php:10
+msgid "Bans"
+msgstr "Bannit"
+
+#: mod/mod_sidebar.php:45
+msgid "Manage bans"
+msgstr "Hallitse banneja"
+
+#: mod/mod_sidebar.php:46
+msgid "Expired bans"
+msgstr "Vanhentuneet bannit"
+
+#: mod/mod_sidebar.php:47
+#: mod/bans.php:33
+msgid "Add a ban"
+msgstr "Lisää banni"
+
+#: mod/mod_sidebar.php:50
+msgid "Boards and categories"
+msgstr "Laudat ja alueet"
+
+#: mod/mod_sidebar.php:51
+msgid "Manage boards"
+msgstr "Hallitse lautoja"
+
+#: mod/mod_sidebar.php:52
+msgid "Create a board"
+msgstr "Luo lauta"
+
+#: mod/mod_sidebar.php:57
+#: inc/functions_html.php:906
+msgid "Files"
+msgstr "Tiedostot"
+
+#: mod/mod_sidebar.php:58
+msgid "Latest uploaded files"
+msgstr "Viimeisimmät tiedostot"
+
+#: mod/mod_sidebar.php:60
+#: mod/messages.php:10
+#: mod/files.php:10
+msgid "Messages"
+msgstr "Viestit"
+
+#: mod/mod_sidebar.php:61
+msgid "Latest messages"
+msgstr "Uusimmat viestit"
+
+#: mod/mod_sidebar.php:62
+#, php-format
+msgid "Reports (%s)"
+msgstr "Ilmiannot (%s)"
+
+#: mod/mod_sidebar.php:63
+#: mod/messages.php:93
+msgid "Locked threads"
+msgstr "Lukitut langat"
+
+#: mod/mod_sidebar.php:64
+#: mod/messages.php:123
+msgid "Stickied threads"
+msgstr "Tahmatut langat"
+
+#: mod/mod_sidebar.php:65
+#: mod/messages.php:197
+msgid "Move thread"
+msgstr "Siirrä lanka"
+
+#: mod/mod_sidebar.php:66
+#: mod/messages.php:154
+msgid "Merge threads"
+msgstr "Yhdistä langat"
+
+#: mod/mod_sidebar.php:69
+msgid "Post count"
+msgstr "Viestimäärät"
+
+#: mod/mod_sidebar.php:70
+msgid "Posting countries"
+msgstr "Postausmaat"
+
+#: mod/mod_sidebar.php:71
+msgid "Files and disk space"
+msgstr "Tiedostot ja kiintolevytila"
+
+#: mod/messages.php:19
+msgid "100 newest posts"
+msgstr "100 uusinta viestiä"
+
+#: mod/messages.php:25
+#: mod/messages.php:99
+#: mod/messages.php:129
+msgid "Board-ID"
+msgstr "Lauta-ID"
+
+#: mod/messages.php:26
+msgid "Thread"
+msgstr "Lanka"
+
+#: mod/messages.php:27
+msgid "File-ID"
+msgstr "Tiedosto-ID"
+
+#: mod/messages.php:28
+#: mod/files.php:26
+#: inc/functions_html.php:846
+#: inc/functions_html.php:847
+msgid "Name"
+msgstr "Nimi"
+
+#: mod/messages.php:29
+#: mod/messages.php:100
+#: mod/messages.php:130
+#: inc/functions_html.php:899
+msgid "Message"
+msgstr "Viesti"
+
+#: mod/messages.php:30
+msgid "Sent"
+msgstr "Lähetetty"
+
+#: mod/messages.php:31
+#: mod/files.php:29
+#: mod/bans.php:185
+#: mod/bans.php:199
+msgid "Remove"
+msgstr "Poista"
+
+#: mod/messages.php:32
+msgid "Remove all"
+msgstr "Poista kaikki"
+
+#: mod/messages.php:52
+#: mod/messages.php:86
+#: mod/messages.php:116
+#: mod/messages.php:146
+msgid "No messages were found"
+msgstr "Viestejä ei löytynyt"
+
+#: mod/messages.php:63
+msgid "Reported messages"
+msgstr "Ilmiannetut viestit"
+
+#: mod/messages.php:69
+#: mod/bans.php:70
+#: mod/bans.php:94
+#: mod/bans.php:178
+#: inc/functions_html.php:709
+msgid "Reason"
+msgstr "Syy"
+
+#: mod/messages.php:70
+#: mod/errorlog.php:25
+msgid "Time"
+msgstr "Aika"
+
+#: mod/messages.php:71
+#: mod/messages.php:81
+msgid "Checked"
+msgstr "Tarkistettu"
+
+#: mod/messages.php:101
+#: mod/messages.php:111
+#: inc/functions_html.php:444
+msgid "Unlock"
+msgstr "Avaa"
+
+#: mod/messages.php:131
+#: mod/messages.php:141
+#: inc/functions_html.php:450
+msgid "Unstick"
+msgstr "Epätahmaa"
+
+#: mod/messages.php:158
+msgid "Merge this thread-ID"
+msgstr "Yhdistä tämä lanka"
+
+#: mod/messages.php:160
+msgid "with this thread-ID"
+msgstr "tähän lankaan"
+
+#: mod/messages.php:162
+#: inc/functions_html.php:440
+msgid "Merge"
+msgstr "Yhdistä"
+
+#: mod/messages.php:166
+#: mod/messages.php:170
+#: mod/messages.php:218
+msgid "Thread-ID is missing"
+msgstr "Langan ID puuttuu"
+
+#: mod/messages.php:168
+#: mod/messages.php:172
+#: mod/messages.php:220
+msgid "Malformed thread-ID"
+msgstr "Virheellinen langan ID"
+
+#: mod/messages.php:177
+msgid "One of the threads to be merged does not exist or it is not a thread."
+msgstr "Yhtä yhdistettävistä langoista ei ole olemassa tai se ei ole lanka."
+
+#: mod/messages.php:189
+msgid "Threads successfully merged"
+msgstr "Lankojen yhdistäminen onnistui"
+
+#: mod/messages.php:191
+msgid "Merging the threads failed!"
+msgstr "Lankojen yhdistäminen epäonnistui!"
+
+#: mod/messages.php:201
+msgid "Thread-ID"
+msgstr "Lanka-ID"
+
+#: mod/messages.php:203
+msgid "Move to board"
+msgstr "Siirrä laudalle"
+
+#: mod/messages.php:214
+#: inc/functions_html.php:441
+msgid "Move"
+msgstr "Siirrä"
+
+#: mod/messages.php:222
+msgid "Board-ID is missing"
+msgstr "Laudan ID puuttuu"
+
+#: mod/messages.php:224
+msgid "Malformed board-ID"
+msgstr "Virheellinen laudan ID"
+
+#: mod/messages.php:228
+msgid "Thread is moved"
+msgstr "Lanka siirrettiin"
+
+#: mod/messages.php:230
+msgid "Moving the thread failed!"
+msgstr "Langan siirtäminen epäonnistui!"
+
+#: mod/messages.php:235
+msgid "Message deleted!"
+msgstr "Viesti poistettu!"
+
+#: mod/messages.php:239
+#, php-format
+msgid "%s messages deleted!"
+msgstr "%s viestiä poistettu!"
+
+#: mod/messages.php:243
+msgid "Thread locked!"
+msgstr "Lanka lukittu!"
+
+#: mod/messages.php:244
+msgid "Locking the thread failed!"
+msgstr "Lankan lukitseminen epäonnistui!"
+
+#: mod/messages.php:248
+msgid "Thread stickied!"
+msgstr "Lanka tahmattu!"
+
+#: mod/messages.php:249
+msgid "Sticking the thread failed!"
+msgstr "Langan tahmaus epäonnistui!"
+
+#: mod/messages.php:253
+msgid "Thread is now unlocked!"
+msgstr "Lanka on nyt avattu!"
+
+#: mod/messages.php:254
+msgid "Unlocking the thread failed!"
+msgstr "Langan avaus epäonnistui!"
+
+#: mod/messages.php:258
+msgid "Thread is no longer stickied!"
+msgstr "Lanka ei ole enää tahmattu!"
+
+#: mod/messages.php:259
+msgid "Unsticking the thread failed!"
+msgstr "Langan tahmauksen poisto epäonnistui!"
+
+#: mod/messages.php:261
+msgid "Function does not exist (or insufficient permissions)"
+msgstr "Toimintoa ei ole olemassa (tai oikeutesi eivät riitä)"
+
+#: mod/files.php:20
+msgid "100 newest files"
+msgstr "100 uusinta tiedostoa"
+
+#: mod/files.php:27
+msgid "Size"
+msgstr "Koko"
+
+#: mod/files.php:28
+msgid "Folder"
+msgstr "Kansio"
+
+#: mod/files.php:45
+msgid "No files were found"
+msgstr "Tiedostoja ei löytynyt"
+
+#: mod/files.php:53
+msgid "File deleted"
+msgstr "Tiedosto poistettu"
+
+#: mod/files.php:54
+msgid "File deletion failed!"
+msgstr "Tiedoston poistaminen epäonnistui!"
+
+#: mod/files.php:56
+msgid "Malformed file id!"
+msgstr "Virheellinen tiedoston id!"
+
+#: mod/bans.php:30
+msgid "Message sent by the user:"
+msgstr "Käyttäjän lähettämä viesti:"
+
+#: mod/bans.php:38
+msgid "IP-Address and ban type"
+msgstr "IP-Osoite ja bannin tyyppi"
+
+#: mod/bans.php:39
+msgid "IP-Address (SHA512-encrypted)"
+msgstr "IP-Osoite (SHA512-salattuna)"
+
+#: mod/bans.php:42
+msgid "IP-Address (Unencrypted - replaces the former field, leave empty if using it)"
+msgstr "IP-Osoite (Ei salattu - korvaa edellisen kentän, jätä tyhjäksi jos käytät sitä)"
+
+#: mod/bans.php:45
+msgid "Allow reading of the boards"
+msgstr "Salli lautojen lukeminen"
+
+#: mod/bans.php:47
+#: mod/bans.php:109
+#: mod/bans.php:112
+#: mod/bans.php:194
+msgid "Yes"
+msgstr "Kyllä"
+
+#: mod/bans.php:48
+#: mod/bans.php:109
+#: mod/bans.php:112
+#: mod/bans.php:194
+msgid "No"
+msgstr "Ei"
+
+#: mod/bans.php:52
+msgid "Note to add after the message"
+msgstr "Viestin perään lisättävä huomautus"
+
+#: mod/bans.php:53
+msgid "User was banned for this post"
+msgstr "Käyttäjä bannattiin tästä viestistä"
+
+#: mod/bans.php:56
+msgid "Ban length and reason"
+msgstr "Bannin pituus ja syy"
+
+#: mod/bans.php:57
+msgid "Length in seconds"
+msgstr "Pituus sekunneissa"
+
+#: mod/bans.php:59
+msgid "Choose"
+msgstr "Valitse"
+
+#: mod/bans.php:60
+msgid "h"
+msgstr "t"
+
+#: mod/bans.php:61
+#: mod/bans.php:62
+msgid "d"
+msgstr "pv"
+
+#: mod/bans.php:63
+#: mod/bans.php:64
+msgid "w"
+msgstr "vk"
+
+#: mod/bans.php:65
+msgid "m"
+msgstr "kk"
+
+#: mod/bans.php:66
+msgid "y"
+msgstr "v"
+
+#: mod/bans.php:67
+msgid "Permanent"
+msgstr "Pysyvä"
+
+#: mod/bans.php:73
+msgid "Note to another moderators"
+msgstr "Huomautus muille moderaattoreille"
+
+#: mod/bans.php:76
+msgid "Add ban"
+msgstr "Lisää banni"
+
+#: mod/bans.php:85
+msgid "Previous 20 bans"
+msgstr "Edelliset 20 bannia"
+
+#: mod/bans.php:89
+msgid "Previous bans for this user"
+msgstr "Käyttäjän edelliset bannit"
+
+#: mod/bans.php:95
+#: mod/bans.php:179
+msgid "Note"
+msgstr "Huomautus"
+
+#: mod/bans.php:96
+#: mod/bans.php:180
+msgid "Can read"
+msgstr "Voi lukea"
+
+#: mod/bans.php:98
+#: mod/bans.php:182
+msgid "Length"
+msgstr "Pituus"
+
+#: mod/bans.php:98
+#: mod/bans.php:182
+msgid "Expires"
+msgstr "Vanhentuu"
+
+#: mod/bans.php:99
+msgid "Expired/Deleted"
+msgstr "Vanhentunut/Poistettu"
+
+#: mod/bans.php:100
+#: mod/bans.php:183
+msgid "Banned by"
+msgstr "Bannasi"
+
+#: mod/bans.php:111
+#: mod/bans.php:196
+msgid "sec"
+msgstr "sek"
+
+#: mod/bans.php:111
+#: mod/bans.php:196
+msgid "Never"
+msgstr "Ei koskaan"
+
+#: mod/bans.php:118
+#: mod/bans.php:204
+msgid "No bans were found."
+msgstr "Banneja ei löytynyt."
+
+#: mod/bans.php:136
+msgid "IP-Address is missing!"
+msgstr "IP-Osoite puuttuu!"
+
+#: mod/bans.php:139
+msgid "Malformed form field"
+msgstr "Virheellinen lomakkeen kenttä"
+
+#: mod/bans.php:145
+msgid "Ban reason is missing!"
+msgstr "Bannin syy puuttuu!"
+
+#: mod/bans.php:153
+msgid "Ban added!"
+msgstr "Banni lisätty!"
+
+#: mod/bans.php:155
+msgid "Adding the ban failed!"
+msgstr "Bannin lisääminen epäonnistui!"
+
+#: mod/bans.php:161
+msgid "Ban removed!"
+msgstr "Banni poistettu!"
+
+#: mod/bans.php:162
+msgid "Removing the ban failed!"
+msgstr "Bannin poistaminen epäonnistui!"
+
+#: mod/bans.php:168
+msgid "All valid bans"
+msgstr "Kaikki voimassaolevat bannit"
+
+#: mod/bans.php:172
+msgid "Last 100 expired bans"
+msgstr "Viimeiset 100 vanhentunutta bannia"
+
+#: mod/errorlog.php:18
+msgid "100 latest errors logged"
+msgstr "100 viimeisintä lokitettua virhettä"
+
+#: mod/errorlog.php:23
+msgid "Info"
+msgstr "Tietoa"
+
+#: mod/errorlog.php:24
+msgid "Error data"
+msgstr "Virhedata"
+
+#: mod/errorlog.php:26
+msgid "User IP"
+msgstr "Käyttäjän IP"
+
+#: mod/errorlog.php:34
+msgid "Click here to toggle saved data"
+msgstr "Klikkaa tästä nähdäksesi tallennetun datan"
+
+#: mod/errorlog.php:41
+msgid "No errors logged"
+msgstr "Ei kirjattuja virheitä"
+
+#: mod/index.php:22
+#: mod/index.php:28
+#, php-format
+msgid "Posted by %s at %s"
+msgstr "Lähettänyt %s - %s"
+
+#: inc/functions_text.php:164
+msgid "here"
+msgstr "tästä"
+
+#: inc/functions_text.php:169
+msgid "\"Reply\""
+msgstr "\"Vastaa\""
+
+#: inc/functions_text.php:217
+#, php-format
+msgid "This message was truncated, click %s to see the rest of it."
+msgstr "Tätä viestiä on lyhennetty, klikkaa %s nähdäksesi loput siitä."
+
+#: inc/functions_db.php:18
+#: inc/functions_db.php:27
+msgid "Database error!"
+msgstr "Tietokantavirhe!"
+
+#: inc/functions_db.php:18
+#: inc/functions_db.php:27
+#, php-format
+msgid "Database is down (%s)! Dispatching repair droids..."
+msgstr "Tietokanta on nurin (%s)! Päästetään korjausdroidit vapaaksi..."
+
+#: inc/functions_db.php:18
+#: inc/functions_db.php:27
+#, php-format
+msgid "An email has been automatically sent to the site administration at %s"
+msgstr "Sähköpostiviesti lähetettiin automaattisesti laudan ylläpitoon osoitteessa %s"
+
+#: inc/functions_general.php:12
+#: inc/functions_general.php:14
+#: inc/functions_general.php:18
+#, php-format
+msgid "%s could not be found! Please install the module or set %s in config.php to false."
+msgstr "%s ei löytynyt! Asenna kyseinen moduuli tai vaihda asetus %s falseksi config.php:stä."
+
+#: inc/functions_general.php:12
+#: inc/functions_general.php:14
+#: inc/functions_general.php:16
+#: inc/functions_general.php:18
+#: inc/functions_general.php:20
+#: inc/functions_general.php:22
+#: inc/functions_general.php:26
+#: inc/functions_general.php:28
+#: inc/functions_general.php:30
+#, php-format
+msgid "Debian package name: %s"
+msgstr "Debian pakettinimi: %s"
+
+#: inc/functions_general.php:16
+#, php-format
+msgid "%s could not be found! Please install the module."
+msgstr "%s ei löytynyt! Asenna kyseinen moduuli."
+
+#: inc/functions_general.php:20
+#: inc/functions_general.php:22
+#: inc/functions_general.php:24
+#: inc/functions_general.php:26
+#: inc/functions_general.php:28
+#: inc/functions_general.php:30
+#, php-format
+msgid "%s was not found from %s!"
+msgstr "%s ei löytynyt annetusta kohteesta (%s)!"
+
+#: inc/functions_general.php:20
+msgid "ImageMagick is required to run the board."
+msgstr "ImageMagick vaaditaan laudan käyttämiseen."
+
+#: inc/functions_general.php:20
+#, php-format
+msgid "Please check the value of %s in config.php."
+msgstr "Tarkista asetuksen %s arvo config.php -tiedostosta."
+
+#: inc/functions_general.php:22
+#: inc/functions_general.php:24
+#: inc/functions_general.php:26
+#: inc/functions_general.php:28
+#: inc/functions_general.php:30
+#, php-format
+msgid "Please check the value of %s or change %s to false in config.php."
+msgstr "Tarkista asetuksen %s arvo tai vaihda %s falseksi config.php:ssä."
+
+#: inc/functions_general.php:32
+msgid "You have not deleted the file install.php. This is a serious security issue!"
+msgstr "Et ole poistanut install.php -tiedostoa. Tämä on vakava turvallisuusaukko!"
+
+#: inc/functions_general.php:36
+msgid "Fatal error! Script execution halted."
+msgstr "Vakava virhe! Skriptin suoritus pysäytetään."
+
+#: inc/functions_general.php:55
+#, php-format
+msgid "You are banned! %sDetails%s"
+msgstr "Olet bannattu! %sLisätietoja%s"
+
+#: inc/functions_general.php:82
+msgid "B"
+msgstr "t"
+
+#: inc/functions_general.php:82
+msgid "KB"
+msgstr "Kt"
+
+#: inc/functions_general.php:82
+msgid "MB"
+msgstr "Mt"
+
+#: inc/functions_general.php:82
+msgid "GB"
+msgstr "Gt"
+
+#: inc/functions_general.php:82
+msgid "TB"
+msgstr "Tt"
+
+#: inc/functions_general.php:113
+msgid "Unknown error."
+msgstr "Tuntematon virhe."
+
+#: inc/functions_general.php:116
+#: inc/functions_general.php:120
+#: inc/functions_general.php:128
+msgid "An error occurred!"
+msgstr "Tapahtui virhe!"
+
+#: inc/functions_general.php:163
+msgid "What the hell just happened?"
+msgstr "Mitä helvettiä äsken tapahtui?"
+
+#: inc/functions_general.php:164
+msgid "Operation completed!"
+msgstr "Toiminto suoritettu!"
+
+#: inc/functions_html.php:51
+msgid "Open media player"
+msgstr "Avaa mediasoitin"
+
+#: inc/functions_html.php:51
+msgid "Java"
+msgstr "Java"
+
+#: inc/functions_html.php:51
+msgid "Flash"
+msgstr "Flash"
+
+#: inc/functions_html.php:81
+msgid "Proxy server"
+msgstr "Välityspalvelin"
+
+#: inc/functions_html.php:86
+msgid "TOR Exit node"
+msgstr "TOR Exit node"
+
+#: inc/functions_html.php:208
+#: inc/functions_html.php:225
+#: inc/functions_html.php:228
+msgid "message"
+msgstr "viesti"
+
+#: inc/functions_html.php:208
+#: inc/functions_html.php:225
+#: inc/functions_html.php:228
+msgid "messages"
+msgstr "viestiä"
+
+#: inc/functions_html.php:209
+#: inc/functions_html.php:226
+#: inc/functions_html.php:229
+msgid "and"
+msgstr "ja"
+
+#: inc/functions_html.php:209
+#: inc/functions_html.php:226
+#: inc/functions_html.php:229
+msgid "file"
+msgstr "tiedosto"
+
+#: inc/functions_html.php:209
+#: inc/functions_html.php:226
+#: inc/functions_html.php:229
+msgid "files"
+msgstr "tiedostoa"
+
+#: inc/functions_html.php:210
+#: inc/functions_html.php:230
+msgid "omitted."
+msgstr "ohitettu."
+
+#: inc/functions_html.php:220
+msgid "No omitted posts."
+msgstr "Ei ohitettuja viestejä."
+
+#: inc/functions_html.php:223
+#, php-format
+msgid "Page %s:"
+msgstr "Sivu %s:"
+
+#: inc/functions_html.php:227
+msgid "from older posts and also"
+msgstr "vanhemmista viesteistä, sekä"
+
+#: inc/functions_html.php:230
+msgid "from newer posts"
+msgstr "uudemmista viesteistä"
+
+#: inc/functions_html.php:309
+msgid "This thread is being followed"
+msgstr "Tätä lankaa seurataan"
+
+#: inc/functions_html.php:312
+msgid "Thread location:"
+msgstr "Langan sijainti:"
+
+#: inc/functions_html.php:327
+#: inc/functions_html.php:861
+msgid "Sage"
+msgstr "Sage"
+
+#: inc/functions_html.php:331
+#: inc/functions_html.php:865
+msgid "RAGE!"
+msgstr "RAGE!"
+
+#: inc/functions_html.php:335
+#: inc/functions_html.php:869
+msgid "Love"
+msgstr "Love"
+
+#: inc/functions_html.php:339
+msgid "Tsundere!"
+msgstr "Tsundere!"
+
+#: inc/functions_html.php:347
+#: inc/functions_html.php:357
+#: inc/functions_html.php:847
+msgid "OP"
+msgstr "AP"
+
+#: inc/functions_html.php:372
+msgid "## Admin ##"
+msgstr "## Ylläpitäjä ##"
+
+#: inc/functions_html.php:373
+msgid "## SMod ##"
+msgstr "## SMod ##"
+
+#: inc/functions_html.php:374
+msgid "## Mod ##"
+msgstr "## Mod ##"
+
+#: inc/functions_html.php:380
+msgid "No."
+msgstr "No."
+
+#: inc/functions_html.php:383
+msgid "Locked"
+msgstr "Lukittu"
+
+#: inc/functions_html.php:385
+msgid "Stickied"
+msgstr "Tahmattu"
+
+#: inc/functions_html.php:396
+msgid "Hide thread"
+msgstr "Piilota lanka"
+
+#: inc/functions_html.php:399
+msgid "Follow thread"
+msgstr "Seuraa lankaa"
+
+#: inc/functions_html.php:399
+msgid "Remove from followed threads."
+msgstr "Poista seuratuista langoista."
+
+#: inc/functions_html.php:407
+msgid "Expand thread"
+msgstr "Laajenna lanka"
+
+#: inc/functions_html.php:411
+msgid "Quick reply"
+msgstr "Pikavastaus"
+
+#: inc/functions_html.php:429
+msgid "Reply"
+msgstr "Vastaa"
+
+#: inc/functions_html.php:435
+msgid "Ban"
+msgstr "Bannaa"
+
+#: inc/functions_html.php:436
+#: inc/functions_html.php:718
+msgid "Delete"
+msgstr "Poista"
+
+#: inc/functions_html.php:437
+msgid "Delete all"
+msgstr "Poista kaikki"
+
+#: inc/functions_html.php:446
+msgid "Lock"
+msgstr "Lukitse"
+
+#: inc/functions_html.php:452
+msgid "Stick"
+msgstr "Tahmaa"
+
+#: inc/functions_html.php:485
+msgid "Open embedded media"
+msgstr "Avaa upotettu media"
+
+#: inc/functions_html.php:597
+msgid "Details"
+msgstr "Lisätiedot"
+
+#: inc/functions_html.php:631
+msgid "Loading..."
+msgstr "Ladataan..."
+
+#: inc/functions_html.php:632
+#: inc/functions_html.php:637
+msgid "Image"
+msgstr "Kuva"
+
+#: inc/functions_html.php:642
+msgid "Hide flash"
+msgstr "Piilota flash"
+
+#: inc/functions_html.php:668
+msgid "Site personalization"
+msgstr "Sivuston personointi"
+
+#: inc/functions_html.php:682
+msgid "Hide postform"
+msgstr "Piilota postauslomake"
+
+#: inc/functions_html.php:685
+msgid "Show postform"
+msgstr "Näytä postauslomake"
+
+#: inc/functions_html.php:704
+msgid "Toggle all posts"
+msgstr "Valitse kaikki viestit"
+
+#: inc/functions_html.php:705
+msgid "Download files"
+msgstr "Lataa tiedostot"
+
+#: inc/functions_html.php:705
+#, php-format
+msgid "(Max size %s)"
+msgstr "(Max koko %s)"
+
+#: inc/functions_html.php:706
+msgid "Archive name"
+msgstr "Arkiston nimi"
+
+#: inc/functions_html.php:706
+msgid "Download"
+msgstr "Lataa"
+
+#: inc/functions_html.php:708
+msgid "Report message"
+msgstr "Ilmianna viesti"
+
+#: inc/functions_html.php:709
+msgid "Report"
+msgstr "Ilmianna"
+
+#: inc/functions_html.php:711
+msgid "Delete message"
+msgstr "Poista viesti"
+
+#: inc/functions_html.php:711
+msgid "File only"
+msgstr "Vain tiedosto"
+
+#: inc/functions_html.php:730
+msgid "Followed"
+msgstr "Seuratut"
+
+#: inc/functions_html.php:730
+#: inc/functions_html.php:735
+msgid "My threads"
+msgstr "Omat langat"
+
+#: inc/functions_html.php:730
+msgid "Replied"
+msgstr "Vastatut"
+
+#: inc/functions_html.php:733
+msgid "Boards"
+msgstr "Laudat"
+
+#: inc/functions_html.php:734
+msgid "Followed threads"
+msgstr "Seuratut langat"
+
+#: inc/functions_html.php:736
+msgid "Replied threads"
+msgstr "Vastatut langat"
+
+#: inc/functions_html.php:847
+msgid "Sets your name to OP if you are the OP of this thread"
+msgstr "Asettaa nimeksesi AP jos olet langan oikea AP"
+
+#: inc/functions_html.php:857
+msgid "Options"
+msgstr "Valinnat"
+
+#: inc/functions_html.php:861
+msgid "Don't bump the thread"
+msgstr "Älä nosta lankaa"
+
+#: inc/functions_html.php:865
+#: inc/functions_html.php:869
+msgid "Show your feelings!"
+msgstr "Näytä tunteesi!"
+
+#: inc/functions_html.php:873
+msgid "After posting, return to the thread instead of the board"
+msgstr "Palaa lankaan viestin lähettämisen jälkeen"
+
+#: inc/functions_html.php:873
+msgid "Noko"
+msgstr "Noko"
+
+#: inc/functions_html.php:892
+msgid "Subject"
+msgstr "Aihe"
+
+#: inc/functions_html.php:895
+msgid "Submit"
+msgstr "Lähetä"
+
+#: inc/functions_html.php:901
+msgid "Widen text field"
+msgstr "Levennä tekstikenttää"
+
+#: inc/functions_html.php:902
+msgid "characters remaining"
+msgstr "merkkiä jäljellä"
+
+#: inc/functions_html.php:909
+msgid "CTRL/Shift + click in file browser to select multiple files"
+msgstr "CTRL/Shift + klikkaa tiedostoselaimessa valitaksesi useita tiedostoja"
+
+#: inc/functions_html.php:909
+#, php-format
+msgid "Max. %s files"
+msgstr "Max. %s tiedostoa"
+
+#: inc/functions_html.php:913
+msgid "Clear the EXIF-data from JPG-images."
+msgstr "Poista EXIF-data JPG-kuvista."
+
+#: inc/functions_html.php:913
+msgid "Clear JPG EXIF"
+msgstr "Poista JPG EXIF"
+
+#: inc/functions_html.php:920
+msgid "Embed"
+msgstr "Upote"
+
+#: inc/functions_html.php:933
+msgid "NSFW"
+msgstr "NSFW"
+
+#: inc/functions_html.php:936
+msgid "(Embed help)"
+msgstr "(Upoteohje)"
+
+#: inc/functions_html.php:942
+msgid "Used to delete files and posts"
+msgstr "Käytetään tiedostojen ja viestien poistoon"
+
+#: inc/functions_html.php:950
+msgid "Show the admin tag after poster name"
+msgstr "Näytä ylläpitotagi nimen perässä"
+
+#: inc/functions_html.php:950
+msgid "Modpost"
+msgstr "Modpost"
+
+#: inc/functions_html.php:977
+#, php-format
+msgid "Allowed file types are: %s"
+msgstr "Sallitut tiedostotyypit ovat: %s"
+
+#: inc/functions_html.php:982
+#, php-format
+msgid "There is %s user online."
+msgstr "Laudalla on %s käyttäjä paikalla."
+
+#: inc/functions_html.php:984
+#, php-format
+msgid "There are %s users online."
+msgstr "Laudalla on %s käyttäjää paikalla."
+
+#: inc/functions_html.php:1005
+#, php-format
+msgid "Max allowed file size is %s."
+msgstr "Suurin sallittu tiedostokoko on %s."
+
+#: inc/functions_html.php:1008
+msgid "Show thread list"
+msgstr "Näytä lankaluettelo"
+
+#: inc/header.php:42
+msgid "This page requires JavaScript to run properly. Please configure your browser to allow JavaScript for this site."
+msgstr "Tämä sivu tarvitsee JavaScriptiä toimiakseen kunnolla. Salli JavaScript selaimesi asetuksista tälle sivustolle."
+
+#: inc/header.php:45
+msgid "Cookies are required to have your personalized settings saved and for some functions to work. Please configure your browser to allow cookies for this site."
+msgstr "Keksit ovat vaadittu, jotta henkilökohtaiset asetuksesi voidaan tallentaa ja että tietyt toiminnot toimivat. Säädä selaimesi sallimaan keksit tälle sivustolle."
+
+#: inc/functions_posts.php:68
+msgid "Post deleted"
+msgstr "Viesti poistettu"
+
+#: inc/functions_posts.php:113
+msgid "This message cannot be deleted yet because it was posted only a while ago."
+msgstr "Tätä viestiä ei voi poistaa vielä, koska se lähetettiin juuri äsken."
+
+#: inc/functions_posts.php:123
+msgid "Wrong password!"
+msgstr "Väärä salasana!"
+
+#: inc/functions_posts.php:125
+msgid "The message requested for deletion cannot be found!"
+msgstr "Poistettavaa viestiä ei löytynyt!"
+
+#: inc/functions_mod.php:50
+msgid "Trying to write to modlog as a non-privileged user"
+msgstr "Kirjoitusyritys moderointilokiin oikeudettomana käyttäjänä"
+
+#: inc/functions_mod.php:57
+msgid "Deleted a file"
+msgstr "Poisti tiedoston"
+
+#: inc/functions_mod.php:59
+msgid "Deleted a post"
+msgstr "Poisti viestin"
+
+#: inc/functions_mod.php:61
+msgid "Modposted"
+msgstr "Modpostasi"
+
+#: inc/sidebar.php:9
+msgid "Message search"
+msgstr "Viestihaku"
+
+#: inc/sidebar.php:37
+#, php-format
+msgid "%s unchecked reports!"
+msgstr "%s tarkastamatonta ilmiantoa!"
+
+#: inc/sidebar.php:50
+msgid "Hide sidebar"
+msgstr "Piilota sivupalkki"
+
+#: inc/sidebar.php:52
+msgid "Show sidebar"
+msgstr "Näytä sivupalkki"
+
+#: inc/include.php:23
+#, php-format
+msgid "The server is too busy at the moment. Please try again later.<br />Current load is %s, the limit is %s."
+msgstr "Palvelin on ylikuormitettu tällä hetkellä. Ole hyvä ja yritä myöhemmin uudelleen.<br />Nykyinen kuormitus on %s, raja on %s."
+
+#: inc/functions_statistics.php:126
+msgid "Not responding!"
+msgstr "Ei vastaa!"
+
+#: inc/functions_upload.php:77
+#: inc/functions_upload.php:84
+#: inc/functions_upload.php:90
+#: inc/functions_upload.php:96
+#: inc/functions_upload.php:102
+#: inc/functions_upload.php:108
+#, php-format
+msgid "%s binary was not found from %s!"
+msgstr "%s -binääriä ei löytynyt kohteesta %s!"
+
+#: js/js.php:14
+msgid "Sending..."
+msgstr "Lähetetään..."
+
+#: js/js.php:15
+msgid "Saving post..."
+msgstr "Tallennetaan viestiä..."
+
+#: js/js.php:21
+msgid "Your message has reached it's maximum length.<br />Any characters beyond this limit will be removed."
+msgstr "Viestisi on saavuttanut maksimipituutensa.<br />Kaikki merkit tämän rajan jälkeen poistetaan."
+
+#: js/js.php:24
+msgid "The requested message cannot be found on this page!"
+msgstr "Haettua viestiä ei löydy tältä sivulta!"
+
+#: js/js.php:25
+msgid "Thread hidden. If you wish to, you can restore this thread from the 'Site Personalization' -page."
+msgstr "Lanka piilotettu. Jos haluat, voit palauttaa langan 'Sivuston personointi' -sivulta."
+
+#: js/js.php:26
+msgid "Thread added to followed threads."
+msgstr "Lanka lisätty seurattuihin lankoihin."
+
+#: js/js.php:27
+msgid "Thread removed from followed threads."
+msgstr "Lanka poistettu seuratuista langoista."
+
+#: js/js.php:28
+msgid "Replying to thread"
+msgstr "Vastataan lankaan"
+
+#: js/js.php:29
+msgid "Undo"
+msgstr "Peruuta"
+
+#: js/js.php:30
+msgid "Undo successful. Thread will be restored after a page reload."
+msgstr "Kumoaminen onnistu. Lanka palautetaan sivun uudelleenlataamisen jälkeen."
+
+#: js/js.php:31
+msgid "Your browser seems to be outdated or is unsupported. Please update your browser or change it into a supported one! Supported browsers are: "
+msgstr "Selaimesi on vanhentunut tai se ei ole tuettu. Päivitä selaimesi tai vaihda se tuettuun! Tuetut selaimet ovat:"
+
+#: js/js.php:79
+msgid "Opening the JavaScript cache file has failed!"
+msgstr "JavaScript-välimuistitiedoston avaaminen epäonnistui!"
+
+#: css/css.php:40
+msgid "Opening the CSS cache file has failed!"
+msgstr "CSS-välimuistitiedoston avaaminen epäonnistui!"
+
+#: settings.php:6
+msgid "You need to have cookies allowed to personalize the site. If you just deleted your cookies and therefore receive this error, please reload this page."
+msgstr "Sinulla täytyy olla keksit sallittuna jotta voit personoida sivustoa. Jos poistit keksit juuri ja sen takia saat tämän virheen, lataa tämä sivu uudelleen."
+
+#: settings.php:20
+msgid "General site settings"
+msgstr "Yleiset sivustoasetukset"
+
+#: settings.php:28
+msgid "Stylesheet"
+msgstr "Tyylitiedosto"
+
+#: settings.php:43
+msgid "Locale"
+msgstr "Kieli"
+
+#: settings.php:68
+msgid "Timezone"
+msgstr "Aikavyöhyke"
+
+#: settings.php:80
+msgid "Hide NSFW-boards"
+msgstr "Piilota ei-työturvalliset laudat"
+
+#: settings.php:81
+msgid "Unckecking this box will unlock parts of the site which may contain nudity, gore etc. and thus are not recommended for persons under the age of 18."
+msgstr "Tämän valinnan poistaminen avaa sivustosta osia, jotka saattavat sisältää alastomuutta,väkivaltaa jne. eikä se näinollen ole suositeltavaa alle 18-vuotiaille."
+
+#: settings.php:86
+msgid "Autoload media players and embeds"
+msgstr "Lataa automaattisesti mediasoittimet ja upotteet"
+
+#: settings.php:87
+msgid "Uncheck this to make page loading faster if you are on a slow computer or behind a slow connection."
+msgstr "Poistamalla tämän valinnan voit nopeuttaa sivujen latautumista jos olet hitaalla tietokoneella tai hitaan yhteyden takana."
+
+#: settings.php:92
+msgid "Hide all poster names"
+msgstr "Piilota kaikki "
+
+#: settings.php:93
+msgid "Check this to hide names and tripcodes of posters in all posts. This does not include the name 'OP' when the 'Name: OP' -checkbox was checked when posting, but includes the board default poster name (eg. Anonymous)."
+msgstr "Valitse tämä piilottaaksesi kaikki nimet ja trippikoodit kaikista viesteistä. Tämä valinta ei piilota nimeä 'AP', jos se on valittu raksittamalla 'Nimi: AP' -kohta lähetettäessä viestiä, mutta piilottaa laudan oletusnimet (Esim. Anonyymi)."
+
+#: settings.php:98
+msgid "Hide my region"
+msgstr "Piilota alueeni"
+
+#: settings.php:99
+msgid "Check this to hide your region and city from the flag in your posts."
+msgstr "Valitse tämä piilottaaksesi alueesi ja kaupunkisi lipusta postauksissasi."
+
+#: settings.php:103
+msgid "Save settings"
+msgstr "Tallenna asetukset"
+
+#: settings.php:109
+msgid "Hidden threads"
+msgstr "Piilotetut langat"
+
+#: settings.php:117
+msgid "No subject"
+msgstr "Ei aihetta"
+
+#: settings.php:117
+msgid "Restore"
+msgstr "Palauta"
+
+#: settings.php:121
+msgid "Restore all"
+msgstr "Palauta kaikki"
+
+#: settings.php:123
+msgid "You have no hidden threads"
+msgstr "Sinulla ei ole piilotettuja lankoja"
+
+#: settings.php:128
+msgid "Overboard settings"
+msgstr "Ylilaudan asetukset"
+
+#: settings.php:129
+msgid "Boards to hide from the overboard"
+msgstr "Ylilaudalta piilotettavat laudat"
+
+#: settings.php:150
+msgid "Save"
+msgstr "Tallenna"
+
+#: settings.php:156
+msgid "Saved settings"
+msgstr "Tallennetut asetukset"
+
+#: settings.php:157
+#, php-format
+msgid "Your personalization settings are automatically saved and are deleted if you are inactive for more than %s days."
+msgstr "Henkilökohtaiset asetuksesi tallennetaan automaattisesti ja poistetaan, mikäli olet inaktiivisena enemmän kuin %s päivää."
+
+#: settings.php:158
+msgid "These settings include your selected stylesheet, sidebar hidden or not, NSFW-boards hidden or not, locale, timezone, hidden- and followed threads, overboard customization and the message deletion password."
+msgstr "Nämä asetukset sisältävät valitsemasi tyylitiedoston, sivupalkin tilan, työturvallisuuden tilan, kielen, aikavyöhykkeen, piilotetut- ja seuratut langat, ylilaudan kustomoinnit ja viestien poiston salasanan."
+
+#: settings.php:159
+msgid "If you would like to clear your cookies or load the settings into another computer or browser, you can use these automatically generated username and password (Note that as for now, you cannot change these)"
+msgstr "Jos haluat poistaa keksit tai ladata asetukset toiseen tietokoneeseen tai selaimeen, voit käyttää näitä automaattisesti luotuja käyttäjätunnusta ja salasanaa (Huomioi, että ainakaan vielä, et voi vaihtaa näitä)"
+
+#: settings.php:163
+msgid "Load saved settings"
+msgstr "Lataa tallennetut asetukset"
+
+#: settings.php:170
+msgid "Load settings"
+msgstr "Lataa asetukset"
+
+#: settings.php:173
+msgid "Delete saved settings"
+msgstr "Poista tallennetut asetukset"
+
+#: settings.php:174
+msgid "If you, for some reason, would like to completely delete all of your personalization settings and saved information about you from the service, you can do it by clicking the following button."
+msgstr "Jos haluat, jostain syystä, kokonaan poistaa kaikki personointiasetuksesi ja kaiken tallennetun tiedon sinusta tästä palvelusta, voit tehdä sen klikkaamalla seuraavaa painiketta."
+
+#: settings.php:175
+msgid "Please note that after deleting your profile, there's no way of restoring any data of it. Also note that after deletion, a new profile will be created for you automatically."
+msgstr "Huomioithan, että poistamisen jälkeen ei ole mitään keinoa palauttaa mitään dataa profiilistasi. Lisäksi poistamisen jälkeen sinulle luodaan automaattisesti uusi profiili."
+
+#: settings.php:176
+msgid "Are you sure you want to delete all of your personalized settings?"
+msgstr "Haluatko varmasti poistaa kaikki personointiasetuksesi?"
+
+#: settings.php:176
+msgid "Delete profile"
+msgstr "Poista profiili"
+
+#: settings.php:226
+#: settings.php:299
+msgid "Changes saved!"
+msgstr "Muutokset tallennettu!"
+
+#: settings.php:226
+#: settings.php:299
+#: settings.php:334
+msgid "Returning back to settings.."
+msgstr "Palataan takaisin asetuksiin..."
+
+#: settings.php:228
+#: settings.php:301
+msgid "Saving the changes has failed due to a database error!"
+msgstr "Muutosten tallentaminen epäonnistui tietokantavirheen vuoksi!"
+
+#: settings.php:263
+msgid "The timezone you selected does not exist!"
+msgstr "Aikavyöhykettä jonka valitsit ei ole olemassa!"
+
+#: settings.php:265
+msgid "The locale you selected does not exist!"
+msgstr "Kieltä jonka valitsit ei ole olemassa!"
+
+#: settings.php:267
+msgid "The stylesheet you selected does not exist!"
+msgstr "Tyylitiedostoa jonka valitsit ei ole olemassa!"
+
+#: settings.php:334
+msgid "Settings loaded successfully!"
+msgstr "Asetusten lataaminen onnistui!"
+
+#: settings.php:338
+msgid "The username or password was wrong or the profile does not exist."
+msgstr "Käyttäjätunnus ja salasana oli väärin tai profiilia ei ole olemassa."
+
+#: settings.php:341
+msgid "Database error! Please try again."
+msgstr "Tietokantavirhe! Yritä uudelleen."
+
+#: settings.php:345
+msgid "You did not fill in your username or password."
+msgstr "Et täyttänyt salasanaasi tai käyttäjätunnustasi."
+
+#: settings.php:361
+msgid "Your profile was deleted successfully. To further clear your information, please delete all cookies before loading any other page."
+msgstr "Profiilisi poistaminen onnistui. Poistaaksesi kaiken mahdollisen tiedon itsestäsi, tyhjennä selaimesi evästeet ennen seuraavan sivun avaamista."
+
+#: settings.php:364
+msgid "Deleting your profile failed due to a database error."
+msgstr "Profiilisi poistaminen epäonnistui tietokantavirheen vuoksi."
+
+#: settings.php:367
+msgid "Wrong confirmation code. Your profile was not deleted. Please try again."
+msgstr "Virheellinen vahvistuskoodi! Profiiliasi ei poistettu. Yritä myöhemmin uudelleen."
+
+#: personal.php:35
+msgid "The threads you are following are shown on this page."
+msgstr "Langat, joita seuraat, näytetään tällä sivulla."
+
+#: personal.php:48
+msgid "The threads you have made are shown on this page."
+msgstr "Langat, jotka olet tehnyt, näytetään tällä sivulla."
+
+#: personal.php:56
+msgid "The threads you have replied to are shown on this page."
+msgstr "Langat, joihin olet vastannut, näytetään tällä sivulla."
+
+#: personal.php:69
+msgid "Unknown function!"
+msgstr "Tuntematon toiminto!"
+
+#: personal.php:78
+msgid "You have no threads here."
+msgstr "Sinulla ei ole lankoja täällä."
+
+#: personal.php:104
+#: thread.php:128
+msgid "Previous"
+msgstr "Edellinen"
+
+#: personal.php:113
+#: thread.php:137
+msgid "Next"
+msgstr "Seuraava"
+
+#: thread.php:28
+msgid "The page you are trying to open contains material not appropriate for minors and according to your settings, you don't want to see such content."
+msgstr "Sivu, jota yritit avata, sisältää materiaalia joka ei sovellu alaikäisille ja henkilökohtaisten asetustesi mukaan et halua nähdä kyseistä sisältöä."
+
+#: thread.php:28
+#, php-format
+msgid "If you still want to continue to this page, you can disable the hiding of NSFW-content by %sclicking here%s."
+msgstr "Jos kaikesta huolimatta haluat jatkaa tälle sivustolle, voit poistaa epätyöturvallisen sisällön piilottamisen käytöstä %sklikkaamalla tästä%s."
+
+#: thread.php:28
+msgid "Access prevented!"
+msgstr "Pääsy estetty!"
+
+#: thread.php:91
+msgid "This thread is locked and you cannot reply to it."
+msgstr "Lanka on lukittu etkä voi vastata siihen."
+
+#: thread.php:97
+msgid "You have hidden this thread."
+msgstr "Olet piilottanut tämän langan."
+
+#: thread.php:102
+msgid "Please remember that this board is worksafe."
+msgstr "Muistathan, että tämä lauta on työturvallinen"
+
+#: thread.php:104
+#, php-format
+msgid "Your message will be sent as a reply to the thread %s"
+msgstr "Viestisi lähetetään vastauksena lankaan %s"
+
+#: search.php:16
+msgid "Search term"
+msgstr "Hakusana"
+
+#: search.php:19
+msgid "Search"
+msgstr "Hae"
+
+#: search.php:38
+#, php-format
+msgid "%s %s found"
+msgstr "%s %s löytyi"
+
+#: search.php:38
+msgid "result"
+msgstr "tulos"
+
+#: search.php:38
+msgid "results"
+msgstr "tulosta"
+
+#: search.php:42
+#, php-format
+msgid "However, only the newest %s posts will be shown."
+msgstr "Kuitenkin vain %s uusinta viestiä näytetään."
+
+#: search.php:60
+msgid "No matching posts found."
+msgstr "Vastaavia viestejä ei löytynyt."
+
+#: search.php:63
+msgid "The search term has to be over or exactly 3 characters long."
+msgstr "Hakusanan pitää olla vähitään 3 merkkiä pitkä."
+
+#: 403.php:8
+msgid "403 Forbidden"
+msgstr "403 Kielletty"
+
+#: 403.php:12
+msgid "HTTP-403"
+msgstr "HTTP-403"
+
+#: 403.php:13
+msgid "You do not have the permission to open the requested page."
+msgstr "Sinulla ei ole oikeutta avata tätä sivua."
+
+#: 403.php:14
+#, php-format
+msgid "If you clicked a link at %s, please inform the board administrator at %s."
+msgstr "Jos klikkasit linkkiä sivulla %s, ole hyvä ja ota yhteys laudan ylläpitoon osoitteessa %s."
+
+#: 403.php:15
+#: 404.php:19
+#, php-format
+msgid "Return to %sfront page%s or %swhere you came from%s."
+msgstr "Palaa %setusivulle%s tai %ssinne mistä tulitkin%s."
+
+#: 404.php:8
+msgid "404 Not Found"
+msgstr "404 Ei Löydy"
+
+#: 404.php:16
+msgid "HTTP-404"
+msgstr "HTTP-404"
+
+#: 404.php:17
+msgid "The requested page does not exist."
+msgstr "Sivua ei ole olemassa."
+
+#: 404.php:18
+msgid "Why? How would I know?"
+msgstr "Miksikö? Mistä minä tietäisin?"
+
+#: 404.php:20
+msgid "The page really cannot be found, damn!"
+msgstr "Sivua ei oikeasti löydy, pahus!"
+
+#: board.php:20
+msgid "Board url is missing!"
+msgstr "Laudan osoite puuttuu!"
+
+#: singlepost.php:31
+#, php-format
+msgid "Showing a single post from thread %s on board /%s/."
+msgstr "Näytetään yskittäinen viesti langasta %s laudalla /%s/."
+
+#: threadlist.php:34
+#: threadlist.php:43
+#, php-format
+msgid "Thread list of the board /%s/"
+msgstr "Laudan /%s/ lankaluettelo"
+
+#: threadlist.php:47
+msgid "Only 150 latest threads will be shown in the thread list of an overboard."
+msgstr "Vain 150 viimeisintä lankaa näytetään ylilaudan lankaluettelossa."
+
+#: threadlist.php:149
+msgid "No image"
+msgstr "Ei kuvaa"
+
+#: threadlist.php:159
+msgid "reply"
+msgstr "vastaus"
+
+#: threadlist.php:159
+msgid "replies"
+msgstr "vastausta"
+
+#: threadlist.php:160
+msgid "hide"
+msgstr "piilotus"
+
+#: threadlist.php:160
+msgid "hides"
+msgstr "piilotusta"
+
+#: threadlist.php:161
+msgid "follower"
+msgstr "seuraaja"
+
+#: threadlist.php:161
+msgid "followers"
+msgstr "seuraajaa"
+
+#: threadlist.php:168
+#, php-format
+msgid "%s threads shown"
+msgstr "Yhteensä %s lankaa"
+
+#: 410.php:8
+msgid "410 Gone"
+msgstr "410 Gone"
+
+#: 410.php:16
+msgid "HTTP-410"
+msgstr "HTTP-410"
+
+#: 410.php:17
+msgid "The requested page does not exist anymore."
+msgstr "Hakemaasi sivua ei ole enää olemassa."
+
+#: 410.php:18
+msgid "This means that the thread you are looking is deleted and no longer available."
+msgstr "Tämä tarkoittaa sitä, että lanka jota etsit on poistettu, eikä ole enää saatavilla."
+
+#: 410.php:20
+msgid "The page does not exist anymore!"
+msgstr "Sivua ei ole enää olemassa!"
+
+#: banned.php:41
+#: banned.php:47
+msgid "You are banned"
+msgstr "Olet bannattu"
+
+#: banned.php:41
+#: banned.php:47
+msgid "You were banned"
+msgstr "Olit bannattu"
+
+#: banned.php:48
+msgid "Banned!"
+msgstr "Bannattu!"
+
+#: banned.php:50
+#, php-format
+msgid "%s from posting to the board%s for the following reason:"
+msgstr "%s postaamasta laudalle%s seuraavasta syystä:"
+
+#: banned.php:51
+msgid "You are blocked"
+msgstr "Olet estetty"
+
+#: banned.php:51
+msgid "You were blocked"
+msgstr "Olit estetty"
+
+#: banned.php:52
+msgid " and reading it"
+msgstr " ja lukemasta sitä"
+
+#: banned.php:55
+#: banned.php:84
+msgid "No reason given"
+msgstr "Ei syytä annettu"
+
+#: banned.php:57
+#, php-format
+msgid "Your ban was placed at <strong>%s</strong> and %s"
+msgstr "Bannisi tuli voimaan <strong>%s</strong> ja %s"
+
+#: banned.php:61
+#, php-format
+msgid "it will expire at <strong>%s</strong>."
+msgstr "se vanhenee <strong>%s</strong>."
+
+#: banned.php:63
+msgid "it <strong>will not expire.</strong>"
+msgstr "se <strong>ei vanhene.</strong>"
+
+#: banned.php:66
+msgid "it <strong>has now expired.</strong>"
+msgstr "se <strong>on nyt vanhentunut.</strong>"
+
+#: banned.php:70
+#, php-format
+msgid "Your encrypted IP-address was:<br /><strong>%s</strong>"
+msgstr "Kryptattu IP-osoitteesi oli:<br /><strong>%s</strong>"
+
+#: banned.php:70
+msgid "(Unknown)"
+msgstr "(Tuntematon)"
+
+#: banned.php:73
+#, php-format
+msgid "If you think you have been banned inadvertently or you want to appeal against your ban, please contact the board administration at %s."
+msgstr "Jos olet mielestäsi bannattu tahattomasti tai haluat valittaa bannistasi, ota yhteys ylläpitäjään osoitteessa %s."
+
+#: banned.php:77
+msgid "Your earlier bans"
+msgstr "Aiemmat bannisi"
+
+#: banned.php:81
+#, php-format
+msgid "%s, <strong>length:</strong> %s, <strong>reason:</strong> %s, <strong>banned by:</strong> %s%s"
+msgstr "%s, <strong>pituus:</strong> %s, <strong>syy:</strong> %s, <strong>sinut bannasi:</strong> %s%s"
+
+#: banned.php:83
+msgid "permanent"
+msgstr "päättymätön"
+
+#: banned.php:85
+msgid "(Expired)"
+msgstr "(Vanhentunut)"
+
+#: banned.php:90
+msgid "Return to front page"
+msgstr "Palaa etusivulle"
+
+#~ msgid "The requested thread cannot be found"
+#~ msgstr "Lankaa ei löydy"
+
+#~ msgid ""
+#~ "Thread %s has been added to followed threads. It will be seen on the "
+#~ "'Followed threads' -board now."
+#~ msgstr ""
+#~ "Lanka %s on lisätty seurattuihin lankoihin. Se näkyy nyt 'Seuratut "
+#~ "langat' -laudalla."
+
+#~ msgid "Adding the thread to followed threads failed!"
+#~ msgstr "Langan lisääminen seurattuihin lankoihin epäonnistui!"
+
+#~ msgid "Please refresh this page and try again."
+#~ msgstr "Päivitä tämä sivu ja yritä uudelleen."
+
+#~ msgid "The thread you tried to follow does not exist."
+#~ msgstr "Lankaa, jota yritit seurata, ei ole olemassa."
+
+#~ msgid ""
+#~ "Thread %s is no longer followed. It will no longer be seen on the "
+#~ "'Followed threads' -board."
+#~ msgstr ""
+#~ "Lanka %s ei ole enää seurattu. Se ei enää näy 'Seuratut langat' -laudalla."
+
+#~ msgid "Removing the thread from followed threads has failed!"
+#~ msgstr "Langan poistaminen seuratuista langoista epäonnistui!"
+
+#~ msgid ""
+#~ "Thread %s has been hidden. It can be restored from the sidebar after "
+#~ "refreshing the page."
+#~ msgstr ""
+#~ "Lanka %s piilotettiin. Voit palauttaa sen sivupalkista päivitettyäsi "
+#~ "sivun."
+
+#~ msgid "Hiding the thread failed!"
+#~ msgstr "Langan piilottaminen epäonnistui"
+
+#~ msgid "The thread you tried to hide does not exist."
+#~ msgstr "Lankaa, jota yritit piilottaa, ei ole olemassa."
+
+#~ msgid ""
+#~ "All hidden threads have been restored. They can be seen after refreshing "
+#~ "the page."
+#~ msgstr ""
+#~ "Kaikki piilotetut langat on palautettu. Ne näkyy sivun päivityksen "
+#~ "jälkeen."
+
+#~ msgid ""
+#~ "Thread %s has been restored. It can be seen after refreshing the page."
+#~ msgstr "Lanka %s palautettiin. Se näkyy sivun päivityksen jälkeen."
+
+#~ msgid "Restoring the thread failed!"
+#~ msgstr "Langan palauttaminen epäonnistui."
+
+#~ msgid ""
+#~ "Your post was not saved because you might be using a proxy server. "
+#~ "Posting through a proxy is not allowed because high amounts of spam is "
+#~ "involved."
+#~ msgstr ""
+#~ "Viestiäsi ei tallennettu koska käytät mahdollisesti välityspalvelinta. "
+#~ "Välityspalvelinten käyttäminen ei ole sallittua suuren roskamäärän takia, "
+#~ "joka niiden kautta saapuu."
+
+#~ msgid ""
+#~ "Are you sure you want to hide the ads? You might know that the ads are "
+#~ "here for a single purpose, to help cover the server costs. If you want, "
+#~ "you can restore the ads later by removing cookies. You need to have "
+#~ "cookies allowed to keep the ads hidden."
+#~ msgstr ""
+#~ "Haluatko varmasti piilottaa mainokset? Mahdat ehkä tietää, että mainokset "
+#~ "ovat täällä vain yhtä tarkoitusta varten; auttaa kattamaan "
+#~ "palvelinkuluja. Jos haluat, voit palauttaa mainokset myöhemmin "
+#~ "poistamalla evästeet. Sinulla pitää olla evästeet sallittuna, jotta "
+#~ "mainokset pysyvät piilossa."
+
+#~ msgid ""
+#~ "You are going to unhide non-worksafe boards. These boards contain "
+#~ "material inappropriate for minors and they may offence some people. If "
+#~ "you are exactly or over 18 years old and you are sure you wish to show "
+#~ "these boards, click OK. You need to have cookies allowed to continue."
+#~ msgstr ""
+#~ "Aiot ottaa esille ei-työturvalliset laudat. Nämä laudat sisältävät "
+#~ "materiaalia joka on sopimatonta alaikäisille ja saattavat loukata joitain "
+#~ "ihmisiä. Jos olet yli 18-vuotias ja olet varma että haluat nähdä nämä "
+#~ "laudat, paina OK. Sinulla pitää olla evästeet sallittuna jatkaaksesi."
+
+#~ msgid ""
+#~ "This ban has been added automatically. Some of the automatically banned "
+#~ "IP-addresses could have changed it's owner and you may now have one of "
+#~ "them. If this is the case and you are sure that you are using your own "
+#~ "private IP-address, please contact the board administration at %s."
+#~ msgstr ""
+#~ "Tämä on automaattibanni. Jotkut automaattisesti bannatuista IP-"
+#~ "osoitteista ovat voineet vaihtaa omistajaa, ja sinulla voi nyt olla "
+#~ "sellainen. Jos näin on käynyt ja olet varma, että käytät omaa "
+#~ "henkilökohtaista IP-osoitettasi, ota yhteys ylläpitäjään osoitteessa %s."
+
+#~ msgid "You have no followed threads"
+#~ msgstr "Sinulla ei ole seurattuja lankoja"
+
+#~ msgid "ImageMagick binary was not found from %s!"
+#~ msgstr "ImageMagick -binääriä ei löytynyt kohteesta %s!"
+
+#, fuzzy
+#~ msgid "gifsicle binary was not found from %s!"
+#~ msgstr "%s ei löytynyt annetusta kohteesta (%s)!"
+
+#, fuzzy
+#~ msgid "jpegtran binary was not found from %s!"
+#~ msgstr "%s ei löytynyt annetusta kohteesta (%s)!"
+
+#, fuzzy
+#~ msgid "optipng binary was not found from %s!"
+#~ msgstr "%s ei löytynyt annetusta kohteesta (%s)!"
+
+#~ msgid "Image generation failed!"
+#~ msgstr "Kuvan luominen epäonnistui!"
+
+#~ msgid "File"
+#~ msgstr "Tiedosto"
+
+#~ msgid "Board address is missing!"
+#~ msgstr "Laudan osoite puuttuu!"
+
+#~ msgid "Anonymous"
+#~ msgstr "Nyymi"
+
+#~ msgid "America/New_York"
+#~ msgstr "Europe/Helsinki"
+
+#~ msgid "Site styles"
+#~ msgstr "Sivun tyylit"
+
+#~ msgid "Select a style..."
+#~ msgstr "Valitse tyyli..."
+
+#~ msgid "Show NSFW-boards"
+#~ msgstr "Näytä ei-työturvalliset laudat"
+
+#~ msgid "Select a thread..."
+#~ msgstr "Valitse lanka..."
+
+#~ msgid "You were banned by <strong>%s</strong>"
+#~ msgstr "Sinut bannasi <strong>%s</strong>"
+
+#~ msgid ""
+#~ "If you are over or exactly 18 years old, you can unlock this board by "
+#~ "clicking \"%s\" -link on the sidebar."
+#~ msgstr ""
+#~ "Jos olet vähintään 18-vuotias, voit avata tämän laudan painamalla \"%s\" -"
+#~ "linkkiä sivupalkissa."
+
+#~ msgid "You may also click %shere%s."
+#~ msgstr "Voit myös painaa %stästä%s."
+
+#~ msgid "Access to the board is denied!"
+#~ msgstr "Laudan avaaminen on estetty!"
+
+#~ msgid ""
+#~ "You are posting from an overboard. Your message will be sent to the "
+#~ "board /%s/."
+#~ msgstr "Lähetät viestiä ylilaudalta. Viestisi lähetetään laudalle /%s/."
+
+#~ msgid "Please remember that the board /%s/ is worksafe."
+#~ msgstr "Muistathan, että lauta /%s/ on työturvallinen."
+
+#~ msgid "Information"
+#~ msgstr "Tietoa"
+
+#~ msgid "Welcome to %s!"
+#~ msgstr "%s, tervetuloa!"
+
+#~ msgid ""
+#~ "The thread you are trying to open contains material not appropriate for "
+#~ "minors."
+#~ msgstr ""
+#~ "Lanka jota yrität avata, sisältää materiaalia joka ei sovellu alaikäisten "
+#~ "katseltavaksi."
+
+#~ msgid "Access to the thread is denied!"
+#~ msgstr "Langan avaaminen on estetty!"
+
+#~ msgid "Sticking the message failed!"
+#~ msgstr "Sticking the message failed!"
+
+#~ msgid " users"
+#~ msgstr " käyttäjää"
+
+#~ msgid " user"
+#~ msgstr " käyttäjä"
+
+#~ msgid "Moderator menu"
+#~ msgstr "Ylläpitovalikko"
+
+#~ msgid "Hello world!"
+#~ msgstr "Hei maailma!"
+
+#~ msgid "are"
+#~ msgstr "olet"
+
+#~ msgid "were"
+#~ msgstr "olit"
+
+#~ msgid "s"
+#~ msgstr "fgsfds"
+
+#~ msgid "a"
+#~ msgstr "wutwat"
+
+#~ msgid "\"Vastaa\""
+#~ msgstr "En vastaa"
+
+#~ msgid "Kb"
+#~ msgstr "Kt"
+
+#~ msgid "b"
+#~ msgstr "t"
+
+#~ msgid "Mb"
+#~ msgstr "Mt"
+
+#~ msgid "Gb"
+#~ msgstr "Gt"
+
+#~ msgid "Tb"
+#~ msgstr "Tt"

@@ -1,0 +1,194 @@
+<?php
+// NorthBoard
+// Global settings
+// 6.1.2010
+
+// Alustetaan muuttuja
+$cfg = array();
+
+//*** DATABASE
+$cfg['dbhost'] = '127.0.0.1';
+$cfg['dbname'] = 'database';
+$cfg['dbuser'] = 'user';
+$cfg['dbpass'] = 'abcd1234';
+
+//*** SERVER SPECIFIC
+$cfg['https_port'] = "443"; // Web-server HTTPS -port
+$cfg['srvdir'] = '/home/northpole/public_html'; // Sivuston absoluuttinen hakemisto palvelimella, ilman perässäolevaa /
+$cfg['load_max'] = 30; // Upper limit of load average to load the board, if the avg-load gets over this value, the board will not load
+$cfg['use_apc'] = true; // Use PHP-APC or not? This is used to fetch the upload progress
+$cfg['imagick_bin'] = "/usr/bin/convert"; // Full location of the ImageMagick convert binary, this is required
+$cfg['use_imagick'] = true; // Use ImageMagick convert binary
+$cfg['nice_bin'] = "/usr/bin/nice"; // Full location of the nice binary, this is required if $cfg['lower_imgconvert_priority'] is set to true
+$cfg['use_mp4box'] = true; // Use MP4Box to make sure that the MP4 -files are streamable
+$cfg['mp4box_bin'] = "/usr/bin/MP4Box"; // Full location of the MP4Box binary, can be downloaded from http://gpac.sourceforge.net/
+$cfg['use_jpegtran'] = true;
+$cfg['jpegtran_bin'] = "/usr/bin/jpegtran";
+$cfg['use_pngcrush'] = true;
+$cfg['pngcrush_bin'] = "/usr/bin/pngcrush";
+$cfg['use_optipng'] = true;
+$cfg['optipng_bin'] = "/usr/bin/optipng";
+$cfg['use_gifsicle'] = true;
+$cfg['gifsicle_bin'] = "/usr/bin/gifsicle";
+
+//*** BOARD SPECIFIC
+$cfg['htmldir'] = 'northpole.fi'; // Sivuston hakemisto, ilman perässäolevaa /, sekä ilman http(s):// alkua
+$cfg['static_htmldir'] = 'northpole.fi'; // Used for serving files, aka. static content
+$cfg['admin_email'] = 'admin@northpole.fi'; // Board administrator's email address
+$cfg['site_name'] = "Northpole"; // Your website's name
+$cfg['site_title'] = " | board.northpole"; // Common HTML title
+$cfg['fp_title'] = "main.northpole"; // HTML title in front page
+$cfg['fp_text'] = 'Valittavia ihmisperseitä joiden elämä on oikeasti ihan hyvin.'; // Text under the "Welcome to..." -text in front page
+$cfg['meta_keywords'] = "northpole, northboard, pohjoisnapa, kuvafoorumi, kuvalauta, anonyymi, anonyymit, pelit, media, ruoka, juoma, ohjelmointi, taide, tiede, tekniikka, uutiset, paranormaali, anime, japani, keskustelu, tietokone, tietokoneet"; // Common HTML meta keywords
+$cfg['meta_common_desc'] = ', Northpole on suomalainen anonyymi kuvafoorumi, jolla korostetaan laadukasta sisältöä ja yhteisöllisyyttä.'; // Common HTML meta description
+
+//*** Proxy detection
+$cfg['proxy_detection'] = true; // Query the free online databases for user IPs
+$cfg['proxy_query_urls'] = 'http://www.stopforumspam.com/downloads/bannedips.zip'; // The URL to query for the blocklist.
+$cfg['proxy_list_ttl'] = 86400; // How long to save the proxy query information
+$cfg['proxy_disallow_posting'] = true; // Disallow posting with a proxy?
+$cfg['proxy_advanced_detection'] = true; // If no proxy is detected with X-Forwarded-For and blacklists, try to connect to the remote IP
+$cfg['proxy_ports'] = array(80, 3128, 8080, 8909); // Probe for these ports on the remote IP. If any of these are accepting connections, the user will be listed as a proxy.
+$cfg['proxy_connect_timeout'] = 4; // Timeout on fsockopen if connection hangs (= firewalled and not answering "connection rejected")
+$cfg['proxy_cache_ttl'] = 604800; // How long to save the detection information in the database so we don't need to re-check it
+
+$cfg['tor_query_url'] = 'https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip='. $_SERVER['SERVER_ADDR']; // The URL to query for the list
+$cfg['tor_list_ttl'] = 86400; // How often to update the exit node list? Fetching the list is slow, so don't update on every page load.
+
+//*** Server load / bandwith optimization
+$cfg['light_omit_count'] = true; // Does not show how many files are omitted if true. Reduces server load.
+$cfg['minimize_js'] = true; // Do you want to minimize the JS files? Saves bandwith but slows down page generation time.
+$cfg['minimize_css'] = true; // Do you want to minimize the CSS files? Saves bandwith but slows down page generation time.
+$cfg['gzip_js'] = true; // Send the JS files GZIPped to the client? Saves bandwith. Recommended
+$cfg['gzip_css'] = true; // Send the CSS files GZIPped to the client? Saves bandwith. Recommended
+$cfg['use_tmpfs'] = false; // Use the temporary file system (/dev/shm = RAM) for caching several files.
+$cfg['resolve_dns'] = true; // Resolve the rDNS of IP-addresses?
+$cfg['dnscache_ttl'] = 86400; // DNS-cache TimeToLive
+
+//*** SNMP load display
+$cfg['show_loads'] = true; // Show server loads under post form, requires php5-snmp. AFAIK only linux is supported.
+$cfg['snmp_domain'] = 'secret'; // SNMP domain to use
+$cfg['snmp_cache_ttl'] = 10;
+$cfg['snmp_hosts'] = array( // Hosts to query loads from ('Server name' => 'IP/FQDN')
+	'Server load' => 'localhost' // localhost does not query thru SNMP, uses sys_getloadavg() instead.
+);
+
+//*** JAVASCRIPT SETTINGS
+$cfg['js']['style_cookie_duration'] = 365;
+$cfg['js']['msgbox_max_height'] = 400; // Max height of the messagebox. Used when autoexpanding the box while typing.
+$cfg['js']['image_max_width'] = 80; // Max width of an expanded image in percents of browser window width
+
+//*** Board settings
+$cfg['modlog_expire'] = 2592000; // How long to keep entries in modlog
+$cfg['tpp'] = 10; // TPP = Threads Per Page, lankojen määrä sivulla
+$cfg['rpt'] = 3; // RPT = Replies Per Thread, näytettyjen langan vastausten määrä laudan etusivulla
+$cfg['ppp'] = 100; // PPP = Posts Per Page, postausten määrä langan sivulla
+$cfg['expand_limit'] = 50; // How many newest posts to show when expanding the thread
+
+//*** Overboard
+$cfg['use_overboard'] = true; // True to display the overboard, false to disable it
+$cfg['overboard_url'] = 'ukko'; // The url of the overboard, without slashes
+$cfg['overboard_name'] = 'Ylilauta'; // The name of the overboard
+$cfg['overboard_desc'] = 'Postaukset kaikilta laudoilta'; // Description of the overboard
+$cfg['overboard_pages'] = 20; // How many pages should the overboard have?
+$cfg['overboard_namefield'] = '2'; // 1 for regular namefield, 2 for OP checkbox. Note that with option '1', names sent into boards without namefield will be discarded.
+
+$cfg['bumplimit'] = 300; // Maksimimäärä kertoja, mitä lankaa voi bumpata
+$cfg['floodlimit'] = 5; // Minimiaika sekunneissa postausten välillä
+$cfg['threadlimit'] = 30; // Minimiaika sekunneissa uusien lankojen välillä
+
+$cfg['max_word_length'] = 120; // Max length of a single word. After this point, a space is added.
+
+$cfg['onlinetime'] = 300; // How long to keep the user online after the last page load (in seconds)
+$cfg['onlinetime_cache_ttl'] = 10; // How often to update the online users counter (in seconds)
+$cfg['save_guest_info_time'] = 30; // How long to save the user data after the last visit (in days)
+
+$cfg['post_bin_ttl'] = 0; // How many days to save posts after their deletion
+
+//*** File uploads and posting
+$cfg['convert_lower_priority'] = true; // Lower the convert -binary priority (sets nice to 10)
+$cfg['convert_memory_limit'] = "128"; // Image conversion memory limit in megabytes (Set to false to disable)
+$cfg['high_thumb_quality'] = true; // True = use -resize, false = use -sample
+$cfg['thumbsize_x'] = 200; // Pikkukuvan maksimi leveys pikseleissä
+$cfg['thumbsize_y'] = 200; // Pikkukuvan maksimi korkeus pikseleissä
+$cfg['repthumbsize_x'] = 128; // Vastauksen pikkukuvan maksimi leveys pikseleissä
+$cfg['repthumbsize_y'] = 128; // Vastauksen pikkukuvan maksimi korkeus pikseleissä
+$cfg['anim_thumbs'] = true; // Animoidut pikkukuvat, ei huomioi seuraavaa asetusta (gif) OVERRIDES USER PERSONALIZATION SETTING IF SET TO FALSE!
+$cfg['anim_thumbs_small'] = true; // Animoidut pienikokoiset (tiedostokoko) pikkukuvat (gif)
+$cfg['anim_thumbs_small_size'] = 512000; // Maksimi tiedostokoko tavuina jonka alle menevät pikkukuvat animoidaan (gif)
+$cfg['anim_thumbs_resize_filter'] = imagick::FILTER_QUADRATIC; // http://www.php.net/manual/en/imagick.constants.php
+$cfg['gif_caption'] = true; // Show the "GIF!" -caption on non-animated thumbnails of animated gifs
+$cfg['gif_caption_font_size'] = 24;
+$cfg['gif_caption_text'] = 'GIF!';
+$cfg['gifsicle_options_thumb'] = '+x +c --color-method blend-diversity --colors 255 -O3'; // man gifsicle, http://www.lcdf.org/gifsicle/man.html
+$cfg['optipng_options_thumb'] = ''; // man optipng, http://optipng.sourceforge.net/manual.html
+$cfg['pngcrush_options_thumb'] = '-reduce -fix -rem allb -l 9'; // man pngcrush, http://pmt.sourceforge.net/pngcrush/
+$cfg['thumbquality'] = 70; // Pikkukuvien laatu (1-100)
+$cfg['png_compression'] = 95; // http://www.imagemagick.org/script/command-line-options.php#quality
+$cfg['png_thumbs_max_file_size'] = 40960; // File size limit for PNG thumbnails in bytes. false = no limit
+$cfg['max_img_size_x'] = 20000; // Max image size in pixels (width)
+$cfg['max_img_size_y'] = 40000; // Max image size in pixels (height)
+$cfg['max_filesize'] = 157286400; // Maksimi tiedostokoko tavuissa
+$cfg['max_dl_filesize'] = 157286400; // Maksimi tiedostokoko ladattavalle paketille tavuissa
+$cfg['max_tmpfs_filesize'] = 157286400; // Max file size that is saved in tmpfs instead of hard drive when downloading files
+$cfg['max_files'] = 4; // Maksimi tiedostojen määrä yhdessä postauksessa
+$cfg['allow_embeds'] = true; // Allow embedding?
+$cfg['embedandfile'] = true; // Sallitaanko sekä upote että kuva yhtäaikaa viesteissä, false = jos molemmat lähetetty, tallennetaan pelkkä kuva
+$cfg['free_space_limit'] = 1073741824; // Tavuina, jos vapaa kovalevytila palvelimella laskee tämän alle, ei vastaanoteta uusia tiedostoja
+$cfg['thumbnail_filetypes'] = array('jpeg', 'jpg', 'png', 'gif', 'psd', 'pdf', 'svg', 'tif', 'tiff'); // File extensions to create thumbnails from
+
+$cfg['name_maxlength'] = 30; // Nimen maksimipituus
+$cfg['msg_maxlength'] = 8000; // Viestin maksimipituus
+$cfg['subj_maxlength'] = 60; // Aiheen maksimipituus
+$cfg['msg_prevlength'] = 1000; // Viestin näytettävä merkkimäärä kun lankaa ei ole avattu
+$cfg['gen_fileicon'] = "generic.png"; // Oletus tiedostoikoni tiedostoille joilla ei ole omaa ikonia
+$cfg['min_post_age'] = 10; // Time in which the post cannot be deleted after posting (seconds)
+$cfg['post_countries'] = true; // Show the posting countries
+
+$cfg['st_salt'] = 'replace'; // ST = Secure Tripcode, paremmin suojatun matkakoodin suolaus
+$cfg['ip_salt'] = 'replace'; // IP-osoitteen salauksen suolaus
+$cfg['pw_salt'] = 'replace'; // Viestien salasanojen suolaus
+
+//*** COUNTRY/LANGUAGE
+$cfg['fallback_timezone'] = "Europe/London";
+$cfg['local_country_code'] = "fi"; // Local country code, lowercase
+$cfg['default_locale'] = "en_US.UTF-8"; // Default board language, used as a failsafe or when HTTP_ACCEPT_LANGUAGE -header is not sent and language is not defined
+mb_internal_encoding("UTF-8"); // PHP multibyte encoding, changing should not be needed
+
+$cfg['default_theme'] = "NorthBoard"; // Default theme
+$cfg['themes'] = array( // "Theme name" => "css_file.css"
+	"NorthBoard" => "northboard.css",
+	"Dark" => "dark.css",
+	"Orange" => "orange.css",
+	"Foliage" => "foliage.css",
+	"Yotsuba" => "yotsuba.css",
+	"Yotsuba B" => "yotsuba_b.css",
+	"Harvest Moon" => "harvest_moon.css",
+	"Galtsulauta" => "galtsulauta.css"
+/*	"Futaba" => "futaba.css",
+	"Burichan" => "burichan.css",
+*/
+);
+
+// Language files, these files must be existent in the inc/locales/ -folder with the exact same name as here
+$cfg['locales'] = array( // "Name as shown in the menu" => "Language files folder"
+	"Suomi" => "fi_FI.UTF-8",
+	"American English" => "en_US.UTF-8",
+	"Polski" => "pl_PL.UTF-8"
+);
+
+// Osoite ilman http(s):// -alkua
+$cfg['htmldir_plain'] = $cfg['htmldir'];
+// Tarkistetaan onko HTTPS käytössä
+if($_SERVER["SERVER_PORT"] == $cfg['https_port']) {
+	$cfg['htmldir'] = "https://". $cfg['htmldir'];
+	$cfg['static_htmldir'] = "https://". $cfg['static_htmldir'];
+	$cfg['https'] = true;
+}
+else {
+	$cfg['htmldir'] = "http://". $cfg['htmldir'];
+	$cfg['static_htmldir'] = "http://". $cfg['static_htmldir'];
+	$cfg['https'] = false;
+}
+$cfg['version'] = "0.9.8"; // Softan versionumero, älä muuta tätä!
+

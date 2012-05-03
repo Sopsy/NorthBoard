@@ -1,0 +1,284 @@
+/* NorthBoard - Yotsuba style */
+
+@import url('global.css');
+
+/* General */
+body {
+	color: #800000;
+	font: 10pt arial,helvetica,sans-serif;
+	background: #FFFFEE url("yotsuba_img/fade.png") repeat-x 0 0;
+	line-height: 1.28em;
+}
+
+/* Typographic */
+a {
+	color: #555500;
+}
+a:hover {
+	color: #DD0000;
+	text-decoration: none;
+}
+h1 {
+	margin: 5px 0px;
+	padding: 5px;
+	font-size: 18px;
+	text-align: center;
+	background-color: #FFCCAA;
+	color: #000000;
+	border-right: 1px solid #D9BFB7;
+	border-bottom: 1px solid #D9BFB7;
+}
+h2 {
+	margin: 0 0 5px 0;
+	padding: 0;
+	font-size: 22px;
+	text-align: center;
+}
+h3 {
+	margin: 0;
+	padding: 0;
+	font-style: oblique;
+	font-size: 12px;
+	text-align: center;
+}
+h4 {
+	background-color: #FFCCAA;
+	color: #000000;
+	padding: 2px 5px;
+	margin: 10px 0 0 0;
+}
+h4 span {
+	font-weight: bold;
+}
+
+/* Sidebar */
+#left {
+	background: #FFFFEE url("yotsuba_img/fade.png") repeat-x 0 0
+}
+#left li.active {
+	background: #fff4dd;
+}
+#left li.header {
+	background-color: #FFCCAA;
+	color: #000000;
+}
+#left li a:hover {
+	background: #ffeecc;
+}
+
+/* Front page */
+#fp_menu ul li {
+	background-color: #666;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+/* Header board-navigation */
+.boardnav,
+.topnav {
+	font-size: 0.9em;
+	color: #BB8866;
+}
+.boardnav a,
+.topnav a {
+	color: #880000 !important;
+	text-decoration: none;
+}
+.boardnav a:hover,
+.topnav a :hover {
+	text-decoration: none !important;
+}
+
+/* Some Yotsuba specific */
+#right a {
+	color: #0000EE;
+}
+#right a:hover {
+	color: #EE0000 !important;
+	text-decoration: underline;
+}
+
+/* Board title and description */
+.title {
+	font: 28px tahoma;
+	font-weight: bold;
+	color: #800000;
+	letter-spacing: -2px;
+}
+
+/* The information bar above postform ("Please remember blah blah" etc) */
+.infobar {
+	background-color: #FFCCAA;
+	color: #000000;
+}
+.infobar a {
+	color: #000000;
+}
+
+/* Posting form */
+#postform td.label {
+	border: 1px solid #880000;
+	background-color: #EEAA88;
+	color: #800000;
+	font-weight: 900;
+}
+#postform td input#submit {
+	padding: 0;
+}
+#postform td input#name,
+#postform td input#embed,
+#postform td input#password {
+	width: 250px;
+}
+#postform td input#subject{
+	width: 275px;
+}
+.postboxinfo {
+	/* "Max. n files" */
+	color: #606060;
+}
+#postinfo {
+	font-size: 10px;
+	list-style: disc;
+	line-height: 1.4em;
+}
+
+/* File upload progress */
+#postform #sending td {
+	background-color: #eeaa88;
+	border: 1px solid #444;
+}
+#postform #sending_bg {
+	background-color: #e04000;
+}
+
+/* Threads */
+.omitted {
+	color: #707070;
+}
+.quote {
+	/* >"Greentext" */
+	color: #789922;
+}
+.line {
+	/* hr -line between threads */
+	border: 0;
+	margin: 15px 0;
+	border-bottom: 1px solid #D9BFB7;
+}
+
+/* Post info (Post time, ID, name etc) */
+.postinfo {
+	padding-top: 3px;
+}
+.post_subject {
+	font: 800 10pt arial,helvetica,sans-serif;
+	color: #cc1105;
+}
+.postername {
+	font-weight: 800;
+	color: #117743;
+}
+.post_number a {
+	color: #880000 !important;
+	text-decoration: none;
+}
+.post_number a:hover {
+	text-decoration: none !important;
+}
+.sage {
+	color: #0000FF;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.tripcode {
+	color: #117743;
+}
+
+/* Posts themselves */
+.gtgt {
+	display: inline;
+	color: #D9BFB7;
+}
+.checkbox_post {
+	float: left;
+	margin-right: 5px;
+}
+.button_wrap {
+	display: inline;
+}
+.answers {
+	clear: none !important;
+}
+.answer {
+	background-color: #F0E0D6;
+	border-right: 1px solid #D9BFB7;
+	border-bottom: 1px solid #D9BFB7;
+	margin-left: 20px;
+}
+.tooltip {
+	min-width: 0;
+}
+.highlighted {
+	border: 2px dashed #eeaa88;
+	background-color: #ffeee3;
+}
+.post p {
+	padding: 5px 30px;
+}
+
+/* Files in posts */
+.file_single,
+.fileinfo_single {
+	margin: -3px 15px 5px 15px !important;
+	padding: 0;
+}
+.file_many {
+	border: 1px solid black;
+	background-color: #f0ceb9;
+}
+
+/* Page footer (Pagination, delete/report -form etc) */
+#pages {
+	background-color: #F0E0D6;
+	border-bottom: 1px solid #D9BFB7;
+	border-right: 1px solid #D9BFB7;
+	padding-top: 6px;
+}
+#pages a {
+	text-decoration: none;
+}
+#pages a:hover {
+	text-decoration: none;
+}
+#pages .button {
+	background-color: #EBEBEB;
+	border: 1px solid #707070;
+	border-radius: 3px;
+	padding: 2px 5px;
+	color: black;
+}
+
+/* Moderation panel */
+#login {
+	border: 1px solid #333;
+}
+form#adminform legend,
+.subtitle {
+	font-weight: bold;
+	border-bottom: 1px solid #777777;
+}
+.table {
+	/* Tables in modpanel */
+	border-left: 1px solid white;
+}
+.table th {
+	background-color: #444;
+	border-top: 1px solid white;
+}
+.table th,
+.table td {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}

@@ -1,0 +1,244 @@
+/* NorthBoard - Harvest Moon style */
+
+@import url('global.css');
+
+/* General */
+body {
+	color: #F0F090;
+	font: 12px/1.5em verdana;
+	background: #354D61;
+}
+
+/* Typographic */
+a {
+	color: #77DCF9;
+}
+a:hover {
+	color: #40F0F0;
+	text-decoration: none;
+}
+h1 {
+	margin: 5px 0px;
+	padding: 5px;
+	font-size: 16px;
+	text-align: center;
+	background-color: #444;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+h2 {
+	margin: 0 0 5px 0;
+	font-size: 22px;
+	text-align: center;
+}
+h3 {
+	margin: 0;
+	font-style: oblique;
+	font-size: 12px;
+	text-align: center;
+}
+h4 {
+	background-color: #333;
+	padding: 2px 5px;
+	margin: 10px 0 0 0;
+	font-weight: normal;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+h4 span {
+	font-weight: bold;
+}
+
+/* Sidebar */
+#left {
+	background: #354D61;
+}
+#left li.active {
+	background: #444;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+#left li.header {
+	background-color: #333;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+#left li a:hover {
+	background: #222;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+/* Front page */
+#fp_menu ul li {
+	background-color: #666;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+/* Board title and description */
+.title {
+	font-size: 26px;
+	color: #F0CC40;
+}
+
+/* The information bar above postform ("Please remember blah blah" etc) */
+.infobar {
+	background-color: #2C5E77;
+	color: #F0CC40;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.infobar a {
+	color: #F0CC40;
+}
+
+/* Posting form */
+#postform td.label {
+	border: 1px solid #888;
+	background-color: #444;
+}
+#postform td input,
+#postform td textarea,
+#postform td select {
+	background-color: #222;
+	border: 1px solid #888;
+	color: #DDD;
+}
+.postboxinfo {
+	/* "Max. n files" */
+	color: #DDD;
+}
+
+/* File upload progress */
+#postform #sending td {
+	background-color: #444;
+	border: 1px solid #888;
+}
+#postform #sending_bg {
+	background-color: #222;
+}
+
+/* Threads */
+.thread {
+	background: #213F5D;
+}
+.omitted {
+	color: #F0CC40;
+	font-size: 10px;
+}
+.msg_cut {
+	font-size: 10px;
+}
+.quote {
+	/* >Quote */
+	color: #70E769;
+}
+.line {
+	/* hr -line between threads */
+	border: 0;
+	margin: 15px 0;
+	border-top: 1px solid #F0CC40;
+	border-bottom: 1px solid #F0CC40;
+}
+
+/* Post info (Post time, ID, name etc) */
+.postinfo {
+	background-color: #2C5E77;
+}
+.post_subject {
+	font-weight: bold;
+	font-size: 16px;
+	color: #F0CC40;
+	display: block;
+	padding: 0 0 5px 2px;
+}
+.postername {
+	font-weight: bold;
+	color: #70E769;
+}
+.sage {
+	color: #77DCF9;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.tripcode {
+	color: #70E769;
+}
+
+/* Posts themselves */
+.answer {
+	background-color: #153452;
+	border: 1px solid #354D61;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.highlighted {
+	border: 3px dashed #63a3dc;
+}
+
+/* Files in posts */
+.file_many {
+	background-color: #2C5E77;
+}
+
+/* Buttons (Links, mostly) */
+.button {
+	color: #F0F090;
+	font-size: 12px;
+	padding: 2px 5px;
+	text-decoration: none;
+	border: 1px outset #999;
+	background-color: #213F5D;
+}
+.button:hover {
+	background-color: #444;
+}
+.button:active {
+	border-style: inset;
+}
+
+/* Page footer (Pagination, delete/report -form etc) */
+#buttons_bottom input {
+	background-color: #aaa;
+	border: 1px solid #888;
+	color: #000;
+}
+
+/* Moderation panel */
+#login {
+	border: 1px solid #333;
+}
+form#adminform legend,
+.subtitle {
+	font-weight: bold;
+	border-bottom: 1px solid #777;
+}
+.table {
+	/* Tables in modpanel */
+	border-left: 1px solid white;
+}
+.table th {
+	background-color: #444;
+	border-top: 1px solid white;
+}
+.table th,
+.table td {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}

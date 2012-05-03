@@ -1,0 +1,237 @@
+/* NorthBoard - Yotsuba B style */
+
+@import url('global.css');
+
+/* General */
+body {
+	color: #000000;
+	font: 10pt arial;
+	background: #EEF2FF url("yotsuba_b_img/fade.png") repeat-x 0 0;
+}
+
+/* Typographic */
+a {
+	color: #34345C;
+}
+a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+h1 {
+	margin: 5px 0px;
+	padding: 5px;
+	font: bold 1.3em Verdana;
+	text-align: center;
+	background-color: #d6daf0;
+	border: 1px solid #B7C5D9;
+	border-left: none;
+	border-top: none;
+}
+h2 {
+	margin: 0 0 5px 0;
+	font: bold 1.5em Verdana;
+	text-align: center;
+}
+h3 {
+	margin: 0;
+	font: oblique 1.0em Verdana;
+	text-align: center;
+}
+h4 {
+	background-color: #d6daf0;
+	padding: 2px 5px;
+	margin: 10px 0 0 0;
+	font: normal 1.0em Verdana;
+	border: 1px solid #B7C5D9;
+	border-left: none;
+	border-top: none;
+}
+h4 span {
+	font-weight: bold;
+}
+
+/* Sidebar */
+#left {
+	background: #eef2ff url("yotsuba_b_img/fade.png") repeat-x 0 0;
+}
+#left li.active {
+	background: #d8e3f0;
+}
+#left li.header {
+	background-color: #d6daf0;
+	border: 1px solid #B7C5D9;
+	border-left: none;
+	border-top: none;
+}
+#left li a:hover {
+	background: #c6daf0;
+}
+
+/* Front page */
+#fp_menu ul li {
+	background-color: #dfdffe;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+/* Header board-navigation */
+.boardnav,
+.topnav {
+	color: #8899AA;
+	font-size: 0.9em;
+}
+.boardnav a,
+.topnav a {
+	color: #34345C;
+	text-decoration: none;
+}
+.boardnav a:hover,
+.topnav a :hover {
+	color: #CC0000;
+	text-decoration: none !important;
+}
+
+/* Board title and description */
+.title {
+	font: 28px tahoma;
+	font-weight: bold;
+	color: #af0a0f;
+	letter-spacing: -2px;
+}
+
+/* The information bar above postform ("Please remember blah blah" etc) */
+.infobar {
+	background-color: #e04000;
+	color: #fff;
+	border: 1px solid #B7C5D9;
+	border-left: none;
+	border-top: none;
+}
+.infobar a {
+	color: #fff;
+}
+
+/* Posting form */
+#postform td.label {
+	border: 1px solid #000;
+	background-color: #9988ee;
+}
+#postform td input,
+#postform td textarea,
+#postform td select {
+	border: 1px solid #888;
+}
+.postboxinfo {
+	/* "Max. n files" */
+	color: #444;
+}
+
+/* File upload progress */
+#postform #sending td {
+	border: 1px solid #B7C5D9;
+	background-color: #d6daf0;
+}
+#postform #sending_bg {
+	background-color: #9988ee;
+}
+
+/* Threads */
+.quote {
+	/* >Quote */
+	color: #008800;
+}
+.line {
+	/* hr -line between threads */
+	border: 0;
+	margin: 15px 0;
+	border-bottom: 1px solid #B7C5D9;
+}
+
+/* Post info (Post time, ID, name etc) */
+.post_subject {
+	font:800 10pt arial, helvetica, sans-serif;
+	color: #0f0c5d;
+}
+.postername {
+	font-weight: 800;
+	color: #117743;
+}
+.checkbox_post {
+	float: left;
+	margin-right: 5px;
+}
+.sage {
+	color: #34345C;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.tripcode {
+	color: #117743;
+}
+
+/* Posts themselves */
+.gtgt {
+	display: inline;
+	color: #B7C5D9;
+}
+.answer {
+	background-color: #d6daf0;
+	border: 1px solid #B7C5D9;
+	border-left: none;
+	border-top: none;
+}
+.answers {
+	clear: none !important;
+}
+.highlighted {
+	background-color: #D6BAD0;
+	border-color: #BA9DBF;
+}
+.post p {
+	padding: 5px 30px;
+}
+
+/* Files in posts */
+.file_single,
+.fileinfo_single {
+	margin: 0 15px !important;
+	padding: 0;
+}
+.file_many {
+	border: 1px solid black;
+	background-color: #bfc7f0;
+}
+
+/* Buttons (Links, mostly) */
+.button_wrap {
+	display: inline;
+}
+
+/* Page footer (Pagination, delete/report -form etc) */
+#buttons_bottom input {
+	border: 1px solid #888;
+}
+
+/* Moderation panel */
+#login {
+	border: 1px solid #333;
+}
+form#adminform legend,
+.subtitle {
+	font-weight: bold;
+	border-bottom: 1px solid #777;
+}
+.table {
+	/* Tables in modpanel */
+	border-left: 1px solid white;
+}
+.table th {
+	background-color: #444;
+	border-top: 1px solid white;
+}
+.table th,
+.table td {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}

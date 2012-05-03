@@ -1,0 +1,276 @@
+/* NorthBoard - "Galtsulauta" style */
+
+@import url('global.css');
+
+/* General */
+body {
+	color: #61dbee;
+	font: 12px/1.5em verdana;
+	background: #002b45 url('galtsulauta_img/galtsu.gif') top repeat-x;
+}
+
+/* Typographic */
+a {
+	color: #FFFFFF;
+}
+a:hover {
+	color: #82c2fe;
+	text-decoration: none;
+}
+h1 {
+	margin: 5px 0px;
+	padding: 5px;
+	font-size: 16px;
+	text-align: center;
+	color: #a5c32b;
+}
+h2 {
+	margin: 0 0 5px 0;
+	font-size: 22px;
+	text-align: center;
+}
+h3 {
+	margin: 0;
+	font-style: oblique;
+	font-size: 12px;
+	text-align: center;
+}
+h4 {
+	background-color: #03202f;
+	color: #60a0dc;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 2px 5px;
+	margin: 10px 0 0 0;
+	font-weight: normal;
+}
+h4 span {
+	font-weight: bold;
+}
+
+/* Sidebar */
+#left {
+	background: #002b45 url('galtsulauta_img/galtsu.gif') top repeat-x;
+}
+#left li.active {
+	background: #204564;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+#left li.header {
+	background-color: #03202f;
+	color: #FFFFFF;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+#left li a:hover {
+	background: #204564;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+/* Front page */
+#fp_menu ul li {
+	background-color: #666;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+/* Board title and description */
+.title {
+	font: 32px Verdana;
+	color: #FFF;
+}
+
+/* The information bar above postform ("Please remember blah blah" etc) */
+.infobar {
+	background-color: #e98300;
+	color: #000;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.infobar a {
+	color: #000;
+}
+
+/* Posting form */
+#postform td.label {
+	background-color: #03202f;
+	color: #60a0dc;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#postform td input,
+#postform td textarea,
+#postform td select {
+	background-color: #CCC;
+	border: 1px solid #666;
+	color: #000000;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.postboxinfo {
+	/* "Max. n files" */
+	color: #BBB;
+}
+
+/* File upload progress */
+#postform #sending td {
+	background-color: #538abe;
+	border: 1px solid #444;
+}
+#postform #sending_bg {
+	background-color: #206098;
+}
+
+/* Threads */
+.thread {
+	background: #204564;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.omitted {
+	color: #999;
+	font-size: 10px;
+}
+.msg_cut {
+	font-size: 10px;
+}
+.quote {
+	/* >Quote */
+	color: #008800;
+}
+.line {
+	/* hr -line between threads */
+	border: 0;
+	margin: 15px 0;
+	border-bottom: 1px solid #666;
+}
+
+/* Post info (Post time, ID, name etc) */
+.postinfo {
+	background-color: #03202f;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-o-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+}
+.answer .postinfo {
+	color: #d4d4d4;
+}
+.post_subject {
+	font-weight: bold;
+	font-size: 16px;
+	color: #e98300;
+	display: block;
+	padding: 0 0 5px 2px;
+}
+.postername {
+	font-weight: bold;
+	color: #a5c32b;
+}
+.sage {
+	color: #60a0dc;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.tripcode {
+	color: #667a13;
+}
+
+/* Posts themselves */
+.answer {
+	background: #123756;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.highlighted {
+	border: 3px dotted #667a13;
+}
+
+/* Files in posts */
+.file_single,
+.embed {
+	background-color: #03202f;
+	-moz-border-radius: 0px 0px 5px 0px;
+	-o-border-radius: 0px 0px 5px 0px;
+	-webkit-border-radius: 0px 0px 5px 0px;
+	border-radius: 0px 0px 5px 0px;
+}
+.file_many {
+	background-color: #03202f;
+}
+.fileinfo_single {
+	background-color: #03202f;
+	color: #d4d4d4;
+}
+
+/* Buttons (Links, mostly) */
+.button {
+	border: 1px outset #7aac40;
+	background-color: #7aac40;
+	color: #000;
+	padding: 2px 5px;
+	text-decoration: none;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.button:hover {
+	background-color: #5b852b;
+	border: 1px outset #5b852b;
+	color: #000;
+}
+.button:active {
+	border-style: inset;
+}
+
+/* Page footer (Pagination, delete/report -form etc) */
+#buttons_bottom input {
+	background-color: #aaa;
+	border: 1px solid #888;
+	color: #000;
+}
+
+/* Moderation panel */
+#login {
+	border: 1px solid #333;
+}
+form#adminform legend,
+.subtitle {
+	font-weight: bold;
+	border-bottom: 1px solid #777;
+}
+.table {
+	/* Tables in modpanel */
+	border-left: 1px solid white;
+}
+.table th {
+	background-color: #444;
+	border-top: 1px solid white;
+}
+.table th,
+.table td {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}

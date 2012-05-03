@@ -1,0 +1,2408 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NorthBoard 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-16 12:20+0200\n"
+"PO-Revision-Date: 2011-08-16 12:20+0200\n"
+"Last-Translator: Aleksi Kinnunen <info@npn.fi>\n"
+"Language-Team: www.northpole.fi <admin@northpole.fi>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;T_\n"
+"X-Poedit-Basepath: ../../../../\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: scripts\n"
+"X-Poedit-SearchPath-1: mod\n"
+"X-Poedit-SearchPath-2: inc\n"
+"X-Poedit-SearchPath-3: js\n"
+"X-Poedit-SearchPath-4: css\n"
+"X-Poedit-SearchPath-5: .\n"
+
+#: scripts/fp_content.php:12
+msgid "No categories exist!"
+msgstr "Brak kategorii!"
+
+#: scripts/fp_content.php:41
+#, php-format
+msgid "<span>%s</span>, written by %s - %s"
+msgstr "<span>%s</span>, napisane przez %s - %s"
+
+# How to print the time without seconds?
+# Check http://www.php.net/manual/en/function.date.php
+#: scripts/fp_content.php:41
+msgid "Y/m/d g:i A"
+msgstr "d.m.Y H:i"
+
+#: scripts/fp_content.php:48
+msgid "This category does not contain anything."
+msgstr "Ta kategoria niczego nie zawiera."
+
+#: scripts/fp_content.php:51
+msgid "Category not found"
+msgstr "Nie znaleziono kategorii."
+
+#: scripts/sfw_redirect.php:15
+#: scripts/ajax/follow_thread.php:24
+#: scripts/ajax/follow_thread.php:32
+#: scripts/ajax/save_settings.php:39
+#: scripts/ajax/hide_thread.php:25
+#: scripts/ajax/hide_thread.php:39
+msgid "Error in SQL query!"
+msgstr ""
+
+#: scripts/delete.php:36
+msgid "Password is missing!"
+msgstr "Brak hasła!"
+
+#: scripts/delete.php:48
+msgid "You cannot report without a reason!"
+msgstr "Nie możesz zgłaszać wiadomości bez powodu!"
+
+#: scripts/delete.php:58
+msgid "Message reported."
+msgstr ""
+
+#: scripts/delete.php:61
+msgid "The message you tried to report does not exist."
+msgstr ""
+
+#: scripts/delete.php:65
+msgid "This message has been reported already"
+msgstr "Ta wiadomość była już zgłaszana"
+
+#: scripts/delete.php:109
+#: scripts/delete.php:119
+msgid "Generating the archive failed!"
+msgstr ""
+
+#: scripts/delete.php:122
+msgid "Opening the generated archive failed!"
+msgstr ""
+
+#: scripts/delete.php:146
+#, php-format
+msgid "The files you have selected exceeds the maxium size of a downloadable archive (%s)!"
+msgstr ""
+
+#: scripts/delete.php:148
+msgid "You did not select any posts with files to download."
+msgstr ""
+
+#: scripts/delete.php:155
+msgid "ID"
+msgstr "ID"
+
+#: scripts/delete.php:158
+msgid "Returning to the board in 2 seconds..."
+msgstr "Powrót do dzału za 2 sekundy..."
+
+#: scripts/redirect.php:11
+#, fuzzy
+msgid "Malformed message ID!"
+msgstr "Nieprawidłowy ID wiadomości."
+
+#: scripts/redirect.php:31
+msgid "The board where the requested message is does not exist!"
+msgstr "Dział, w którym znajduje się wiadomość nie istnieje!"
+
+#: scripts/redirect.php:33
+#, php-format
+msgid "The requested message (%s) does not exist!"
+msgstr "Wiadomość (%s) nie istnieje!"
+
+#: scripts/post.php:36
+msgid "Board ID is missing"
+msgstr "Brak ID działu"
+
+#: scripts/post.php:45
+msgid "The board does not exist!"
+msgstr "Dział nie istnieje!"
+
+#: scripts/post.php:47
+msgid "The board is locked and cannot be posted to"
+msgstr "Dział jest zamknięty i nie można w nim postować."
+
+#: scripts/post.php:81
+msgid "Thread ID is missing"
+msgstr "Brak ID tematu"
+
+#: scripts/post.php:91
+#: scripts/post.php:94
+msgid "You are posting too fast. Please wait a while beetween your posts."
+msgstr "Postujesz zbyt szybko. Proszó odczekaj chwilę między postami."
+
+#: scripts/post.php:96
+msgid "Spambot detected. Your message will not be saved."
+msgstr "Wykryto Spambota. Twoja wiadomość nie zostanie zapisana."
+
+#: scripts/post.php:102
+msgid "Your browser did not send a HTTP-Referer -value or it was incorrect. Please check your browser settings."
+msgstr ""
+
+#: scripts/post.php:145
+#, php-format
+msgid "Post subject is too long! The maximum is %s characters."
+msgstr "Temat wiadomości jest za długi! Maksimum to %s znaków."
+
+#: scripts/post.php:153
+#: scripts/post.php:157
+msgid "Message, file or embed is missing!"
+msgstr "Brakuje wiadomości, pliku lub embeded."
+
+#: scripts/post.php:159
+#, php-format
+msgid "Your message is too long! The maximum is %s characters."
+msgstr "Twoja wiadomość jest zbyt długa! Maksimum to %s znaków."
+
+#: scripts/post.php:202
+msgid "Sorry, posting from the country you are posting from at the moment is disallowed to this board."
+msgstr ""
+
+#: scripts/post.php:370
+msgid "Sorry, posting through a proxy is not allowed."
+msgstr ""
+
+#: scripts/post.php:381
+msgid "The thread you tried to post to is locked."
+msgstr "Temat, w którym starasz się pisać, jest zamknięty."
+
+#: scripts/post.php:383
+msgid "Thread does not exist!"
+msgstr "Temat nie istnieje!"
+
+#: scripts/post.php:401
+#, php-format
+msgid "The sum of file sizes of the files you uploaded exceeded the maxium allowed file size of %s."
+msgstr ""
+
+#: scripts/post.php:407
+msgid "The server is running out of free hard drive space. New files will not be accepted before some space is freed."
+msgstr "Serwer nie ma już przestrzeni dyskowej. Nowe pliki będą akceptowane dopiero, gdy zwolni się miejsce."
+
+#: scripts/post.php:411
+msgid "File directory is missing and it cannot be created automatically! Please create a directory called \"files\" to the board root and give the script full read/write access into it."
+msgstr ""
+
+#: scripts/post.php:414
+#: scripts/post.php:417
+#: scripts/post.php:420
+msgid "Cannot create file directories! Please make sure that the script has full read/write access to the \"files\" -directory."
+msgstr "Nie można utworzyć katalogów. Proszę się upewnić, że skrypt ma pełny dostęp do \"files\"."
+
+#: scripts/post.php:428
+#, php-format
+msgid "File %s: The maximum amount of files has been reached, excess files will be discarded."
+msgstr ""
+
+#: scripts/post.php:466
+#: scripts/post.php:468
+msgid "Uploading a file has failed. Please try again."
+msgstr "Wgrywanie pliku nie powiodło się. Spróbuj ponownie."
+
+#: scripts/post.php:501
+#: scripts/post.php:504
+#: scripts/post.php:548
+#: scripts/post.php:550
+msgid "Destination file already exists! Please try uploading again."
+msgstr ""
+
+#: scripts/post.php:525
+#: scripts/post.php:527
+#, php-format
+msgid "Thumbnail generation failed: %s.%s"
+msgstr ""
+
+#: scripts/post.php:537
+#: scripts/post.php:539
+msgid "Your image file is larger than the maxium allowed. File discarded."
+msgstr ""
+
+#: scripts/post.php:580
+#: scripts/post.php:582
+#, php-format
+msgid "Saving the uploaded file has failed: %s.%s"
+msgstr ""
+
+#: scripts/post.php:665
+#: scripts/post.php:667
+msgid "Thumbnail generation failed!"
+msgstr "Generowanie miniatury nie powiodło się!"
+
+#: scripts/post.php:693
+#: scripts/post.php:695
+msgid "Temporary file directory is missing! Please create a folder called \"tmp\" to the board root."
+msgstr "Brak katalogu tymczasoego! Proszę utworzyć folder \"tmp\" w katalogu głównym działu."
+
+#: scripts/post.php:715
+#: scripts/post.php:717
+#: scripts/post.php:736
+#: scripts/post.php:738
+msgid "Saving the uploaded file failed. Is there write access to the \"files\" -folder?"
+msgstr "Zapisywanie wgranego pliku nie powiodło się. Czy jest pełen dostęp do katalogu \"files\"?"
+
+#: scripts/post.php:751
+#: scripts/post.php:753
+msgid "Saving the file has failed!"
+msgstr "Zapisywanie pliku nie powiodło się!"
+
+#: scripts/post.php:765
+#: scripts/post.php:767
+#, php-format
+msgid "File %s: Wrong extension (%s) for the file mime-type (%s)! This usually means that your file is faulty."
+msgstr ""
+
+#: scripts/post.php:774
+#: scripts/post.php:776
+#, php-format
+msgid "The type of the file you tried to upload is not allowed (%s, %s)."
+msgstr "Typ pliku, który chciałeś wgrać jest niedozwolony (%s, %s)."
+
+#: scripts/post.php:783
+#: scripts/post.php:785
+#, php-format
+msgid "Your file is too big (%s)! The maximum allowed file size is (%s)."
+msgstr "Plik jest zbyt duży  (%s)! Maksymalny rozmiar pliku to (%s)."
+
+#: scripts/post.php:801
+msgid "All of your files had errors while uploading. This post will not be saved."
+msgstr ""
+
+#: scripts/post.php:819
+msgid "Posting a NSFW-embed is disallowed to SFW boards!"
+msgstr ""
+
+#: scripts/post.php:826
+#, php-format
+msgid "Embedding failed. Checking %s%s resulted in an HTTP-404 error."
+msgstr "Linkowanie nie powiodło się. Sprawdzanie %s%s napotkało błąd HTTP-404."
+
+#: scripts/post.php:831
+msgid "Malformed embed-ID"
+msgstr "Niepoprawne ID linku."
+
+#: scripts/post.php:836
+#, fuzzy, php-format
+msgid "Embedding failed. Embed source could not be confirmed because an error occurred at the source. (%s)"
+msgstr "Linkowanie nie powiodło się. Źródło nie mogło zostać odczytane z powodu błędu w nim występującego (HTTP-%s)"
+
+#: scripts/post.php:844
+msgid "Malformed embed type!"
+msgstr "Niepoprawny linkowany typ!"
+
+#: scripts/post.php:856
+msgid "A file or an embed is required to make a new thread!"
+msgstr "Plik lub link jest niezbędny do utworzenia nowego tematu!"
+
+#: scripts/post.php:1043
+msgid "There were errors when uploading some of your files. These files were discarded, but your post was saved."
+msgstr ""
+
+#: scripts/post.php:1045
+msgid "Click here to continue"
+msgstr ""
+
+#: scripts/post.php:1053
+msgid "An error occurred while saving your message!"
+msgstr "Wystąpił błąd podczas zapisywania Twojej wiadomości!"
+
+#: scripts/ajax/message.php:17
+#: scripts/ajax/untruncate.php:16
+#, php-format
+msgid "Message %s does not exist"
+msgstr "Wiadomość %s nie istnieje."
+
+#: scripts/ajax/message.php:22
+msgid "Copy this part of the address to the embed -field."
+msgstr "Skopiuj tę częćś adresu do pola 'embed'."
+
+#: scripts/ajax/message.php:37
+#: scripts/ajax/untruncate.php:24
+msgid "Malformed message ID"
+msgstr "Nieprawidłowy ID wiadomości."
+
+#: scripts/ajax/follow_thread.php:8
+#: scripts/ajax/hide_thread.php:8
+msgid "Thread ID is missing or is malformed!"
+msgstr ""
+
+#: scripts/ajax/follow_thread.php:15
+msgid "This thread is already being followed!"
+msgstr ""
+
+#: scripts/ajax/follow_thread.php:18
+msgid "The thread you tried to follow does not exist!"
+msgstr ""
+
+#: scripts/ajax/save_settings.php:14
+#: scripts/ajax/save_settings.php:32
+msgid "No data to save!"
+msgstr ""
+
+#: scripts/ajax/save_settings.php:18
+#: scripts/ajax/save_settings.php:23
+#: scripts/ajax/save_settings.php:28
+msgid "The selected value does not exist!"
+msgstr ""
+
+#: scripts/ajax/hide_thread.php:15
+msgid "This thread is already hidden!"
+msgstr ""
+
+#: scripts/ajax/hide_thread.php:18
+msgid "The thread you tried to hide does not exist!"
+msgstr ""
+
+#: scripts/ajax/expand_thread.php:44
+msgid "Expand all images"
+msgstr "Powiększ wszystkie obrazki"
+
+#: scripts/ajax/expand_thread.php:48
+#, fuzzy, php-format
+msgid "Only latest %s messages are shown."
+msgstr "Pokazano %s ostatnich wiadomości."
+
+#: scripts/ajax/expand_thread.php:48
+#, php-format
+msgid "%s messages omitted"
+msgstr ""
+
+#: scripts/ajax/expand_thread.php:59
+#: scripts/ajax/expand_thread.php:64
+msgid "No omitted posts to display"
+msgstr ""
+
+#: mod/statistics.php:10
+msgid "Statistics"
+msgstr "Statystyka"
+
+#: mod/statistics.php:10
+#: mod/users.php:12
+msgid "Board administration"
+msgstr "Administracja działu"
+
+#: mod/statistics.php:20
+#, fuzzy
+msgid "Post count by board"
+msgstr "Liczba postów"
+
+#: mod/statistics.php:33
+msgid "Board"
+msgstr ""
+
+#: mod/statistics.php:34
+msgid "Posts last hour"
+msgstr ""
+
+#: mod/statistics.php:35
+#, fuzzy
+msgid "Posts last day"
+msgstr "Wiadomość usunięta"
+
+#: mod/statistics.php:36
+msgid "Total posts"
+msgstr ""
+
+#: mod/statistics.php:55
+msgid "Total"
+msgstr ""
+
+#: mod/users.php:24
+msgid "Board administrators"
+msgstr ""
+
+#: mod/users.php:27
+msgid "User ID"
+msgstr ""
+
+#: mod/users.php:28
+#: mod/users.php:71
+#: mod/users.php:143
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: mod/users.php:29
+#: mod/users.php:77
+#: mod/users.php:149
+msgid "E-mail"
+msgstr ""
+
+#: mod/users.php:30
+#: mod/users.php:80
+#: mod/users.php:152
+msgid "User class"
+msgstr ""
+
+#: mod/users.php:31
+msgid "Last login"
+msgstr ""
+
+#: mod/users.php:32
+msgid "Last active"
+msgstr ""
+
+#: mod/users.php:33
+msgid "Created by"
+msgstr ""
+
+#: mod/users.php:34
+msgid "Added"
+msgstr "Dodano"
+
+#: mod/users.php:35
+#: mod/users.php:55
+msgid "Edit"
+msgstr ""
+
+#: mod/users.php:41
+#: mod/users.php:82
+#: mod/users.php:154
+msgid "Admin"
+msgstr "Admin"
+
+#: mod/users.php:42
+#: mod/users.php:83
+#: mod/users.php:155
+msgid "SMod"
+msgstr ""
+
+#: mod/users.php:43
+#: mod/users.php:84
+#: mod/users.php:156
+msgid "Mod"
+msgstr ""
+
+# Time with seconds
+# Check
+# http://www.php.net/manual/en/function.date.php
+#: mod/users.php:51
+#: mod/users.php:52
+#: mod/users.php:54
+msgid "Y/m/d g:i:s A"
+msgstr "d.m.Y H:i:s"
+
+#: mod/users.php:66
+msgid "Create an account"
+msgstr "Załóż konto"
+
+#: mod/users.php:70
+#: mod/users.php:142
+msgid "User details"
+msgstr ""
+
+#: mod/users.php:74
+#: mod/users.php:146
+msgid "Password"
+msgstr "Hasło"
+
+#: mod/users.php:87
+#: mod/users.php:159
+msgid "You need to type in your password to prevent automated account creations"
+msgstr ""
+
+#: mod/users.php:89
+#: mod/users.php:161
+msgid "Your password"
+msgstr ""
+
+#: mod/users.php:92
+#: mod/users.php:164
+msgid "Create"
+msgstr ""
+
+#: mod/users.php:101
+#: mod/users.php:173
+msgid "Username is missing."
+msgstr ""
+
+#: mod/users.php:107
+#, php-format
+msgid "Password is missing or is too short (min. %s characters)."
+msgstr ""
+
+#: mod/users.php:112
+#: mod/users.php:185
+msgid "User class is missing or is malformed."
+msgstr ""
+
+#: mod/users.php:119
+#: mod/users.php:192
+msgid "Your password was wrong."
+msgstr ""
+
+#: mod/users.php:123
+#: mod/users.php:196
+msgid "The given username is already in use!"
+msgstr ""
+
+#: mod/users.php:127
+#: mod/users.php:202
+msgid "User added successfully!"
+msgstr ""
+
+#: mod/users.php:129
+#: mod/users.php:204
+msgid "Adding the user failed!"
+msgstr ""
+
+#: mod/users.php:138
+#, php-format
+msgid "Edit account for %s"
+msgstr ""
+
+#: mod/users.php:207
+msgid "User ID is missing or is not numeric!"
+msgstr ""
+
+#: mod/login.php:11
+#: mod/login.php:15
+#: mod/login.php:32
+msgid "Login"
+msgstr "Login"
+
+#: mod/login.php:28
+msgid "Remember me"
+msgstr "Zapamiętaj mnie"
+
+#: mod/login.php:58
+msgid "Wrong username or password!"
+msgstr "Nieprawidłowa nazwa użytkownika lub hasło!"
+
+#: mod/mod_sidebar.php:5
+msgid "Administration"
+msgstr "Administracja"
+
+#: mod/mod_sidebar.php:12
+msgid "Return to the board"
+msgstr "Powrót do działu"
+
+#: mod/mod_sidebar.php:13
+#: mod/mod_sidebar.php:20
+#: mod/index.php:18
+msgid "Notifications"
+msgstr "Powiadomienia"
+
+#: mod/mod_sidebar.php:14
+msgid "You are logged in"
+msgstr "Zalogowałeś się"
+
+#: mod/mod_sidebar.php:15
+msgid "Class:"
+msgstr "Klasa:"
+
+#: mod/mod_sidebar.php:15
+msgid "Super Moderator"
+msgstr "Super Moderator"
+
+#: mod/mod_sidebar.php:15
+msgid "Moderator"
+msgstr "Moderator"
+
+#: mod/mod_sidebar.php:16
+msgid "My account"
+msgstr "Moje konto"
+
+#: mod/mod_sidebar.php:17
+msgid "Logout"
+msgstr "Wyloguj"
+
+#: mod/mod_sidebar.php:21
+msgid "Manage notifications"
+msgstr "Obsługa powiadomień"
+
+#: mod/mod_sidebar.php:22
+msgid "Add a notification"
+msgstr "Dodaj powiadomienie"
+
+#: mod/mod_sidebar.php:25
+msgid "Administrators"
+msgstr "Administratorzy"
+
+#: mod/mod_sidebar.php:26
+msgid "Manage administrators"
+msgstr "Obsługa administratorów"
+
+#: mod/mod_sidebar.php:28
+msgid "Moderation log"
+msgstr "Log moderacji"
+
+#: mod/mod_sidebar.php:29
+#: mod/errorlog.php:8
+msgid "Errorlog"
+msgstr ""
+
+#: mod/mod_sidebar.php:32
+msgid "Front page"
+msgstr "Strona główna"
+
+#: mod/mod_sidebar.php:33
+#: mod/mod_sidebar.php:53
+msgid "Manage categories"
+msgstr "Obsługa kategorii"
+
+#: mod/mod_sidebar.php:34
+#: mod/mod_sidebar.php:54
+msgid "Create a category"
+msgstr "Stwórz kategorię"
+
+#: mod/mod_sidebar.php:35
+msgid "Manage content"
+msgstr "Obsługa zawartości"
+
+#: mod/mod_sidebar.php:36
+msgid "Add content"
+msgstr "Dodaj zawartość"
+
+#: mod/mod_sidebar.php:39
+msgid "Wordfilters"
+msgstr "Filtry"
+
+#: mod/mod_sidebar.php:40
+msgid "Manage wordfilters"
+msgstr "Obsługa filtrów"
+
+#: mod/mod_sidebar.php:41
+msgid "Add a wordfilter"
+msgstr "Dodaj filtr"
+
+#: mod/mod_sidebar.php:44
+#: mod/bans.php:10
+msgid "Bans"
+msgstr "Bany"
+
+#: mod/mod_sidebar.php:45
+msgid "Manage bans"
+msgstr "Obsługa banów"
+
+#: mod/mod_sidebar.php:46
+msgid "Expired bans"
+msgstr "Wygasłe bany"
+
+#: mod/mod_sidebar.php:47
+#: mod/bans.php:33
+msgid "Add a ban"
+msgstr "Dodaj bana"
+
+#: mod/mod_sidebar.php:50
+msgid "Boards and categories"
+msgstr "Działy i kategorie"
+
+#: mod/mod_sidebar.php:51
+msgid "Manage boards"
+msgstr "Obsługa działów"
+
+#: mod/mod_sidebar.php:52
+msgid "Create a board"
+msgstr "Stwórz dział"
+
+#: mod/mod_sidebar.php:57
+#: inc/functions_html.php:906
+msgid "Files"
+msgstr "Pliki"
+
+#: mod/mod_sidebar.php:58
+msgid "Latest uploaded files"
+msgstr "Ostatnio dodane pliki"
+
+#: mod/mod_sidebar.php:60
+#: mod/messages.php:10
+#: mod/files.php:10
+msgid "Messages"
+msgstr "Wiadomości"
+
+#: mod/mod_sidebar.php:61
+msgid "Latest messages"
+msgstr "Ostatnie wiadomości"
+
+#: mod/mod_sidebar.php:62
+#, php-format
+msgid "Reports (%s)"
+msgstr "Raporty (%s)"
+
+#: mod/mod_sidebar.php:63
+#: mod/messages.php:93
+msgid "Locked threads"
+msgstr "Zamknięte tematy"
+
+#: mod/mod_sidebar.php:64
+#: mod/messages.php:123
+msgid "Stickied threads"
+msgstr "Przyklejone tematy"
+
+#: mod/mod_sidebar.php:65
+#: mod/messages.php:197
+msgid "Move thread"
+msgstr "Przenieś temat"
+
+#: mod/mod_sidebar.php:66
+#: mod/messages.php:154
+msgid "Merge threads"
+msgstr "Połącz tematy"
+
+#: mod/mod_sidebar.php:69
+msgid "Post count"
+msgstr "Liczba postów"
+
+#: mod/mod_sidebar.php:70
+msgid "Posting countries"
+msgstr "Posty w krajach"
+
+#: mod/mod_sidebar.php:71
+msgid "Files and disk space"
+msgstr "Pliki i przestrzeń dyskowa"
+
+#: mod/messages.php:19
+msgid "100 newest posts"
+msgstr "100 najnowszych wiadomości"
+
+#: mod/messages.php:25
+#: mod/messages.php:99
+#: mod/messages.php:129
+msgid "Board-ID"
+msgstr "ID-działu"
+
+#: mod/messages.php:26
+msgid "Thread"
+msgstr "Thread"
+
+#: mod/messages.php:27
+msgid "File-ID"
+msgstr "ID pliku"
+
+#: mod/messages.php:28
+#: mod/files.php:26
+#: inc/functions_html.php:846
+#: inc/functions_html.php:847
+msgid "Name"
+msgstr "Nazwa"
+
+#: mod/messages.php:29
+#: mod/messages.php:100
+#: mod/messages.php:130
+#: inc/functions_html.php:899
+msgid "Message"
+msgstr "Wiadomość"
+
+#: mod/messages.php:30
+msgid "Sent"
+msgstr "Wysłane"
+
+#: mod/messages.php:31
+#: mod/files.php:29
+#: mod/bans.php:185
+#: mod/bans.php:199
+msgid "Remove"
+msgstr "Usuń"
+
+#: mod/messages.php:32
+msgid "Remove all"
+msgstr ""
+
+#: mod/messages.php:52
+#: mod/messages.php:86
+#: mod/messages.php:116
+#: mod/messages.php:146
+msgid "No messages were found"
+msgstr "Nie znaleziono wiadomości"
+
+#: mod/messages.php:63
+msgid "Reported messages"
+msgstr "Zgłoszone wiadomości"
+
+#: mod/messages.php:69
+#: mod/bans.php:70
+#: mod/bans.php:94
+#: mod/bans.php:178
+#: inc/functions_html.php:709
+msgid "Reason"
+msgstr "Przyczyna"
+
+#: mod/messages.php:70
+#: mod/errorlog.php:25
+msgid "Time"
+msgstr "czas"
+
+#: mod/messages.php:71
+#: mod/messages.php:81
+msgid "Checked"
+msgstr "Sprawdzony"
+
+#: mod/messages.php:101
+#: mod/messages.php:111
+#: inc/functions_html.php:444
+msgid "Unlock"
+msgstr "Odblokuj"
+
+#: mod/messages.php:131
+#: mod/messages.php:141
+#: inc/functions_html.php:450
+msgid "Unstick"
+msgstr "Odklej"
+
+#: mod/messages.php:158
+msgid "Merge this thread-ID"
+msgstr "Połącz ID tego tematu"
+
+#: mod/messages.php:160
+msgid "with this thread-ID"
+msgstr "z tym ID-tematu"
+
+#: mod/messages.php:162
+#: inc/functions_html.php:440
+msgid "Merge"
+msgstr "Połącz"
+
+#: mod/messages.php:166
+#: mod/messages.php:170
+#: mod/messages.php:218
+msgid "Thread-ID is missing"
+msgstr "Brak ID tematu"
+
+#: mod/messages.php:168
+#: mod/messages.php:172
+#: mod/messages.php:220
+msgid "Malformed thread-ID"
+msgstr "Nieprawidłowy ID tematu"
+
+#: mod/messages.php:177
+msgid "One of the threads to be merged does not exist or it is not a thread."
+msgstr "Jeden z tematów do połączenia nie istnieje lub nie jest tematem."
+
+#: mod/messages.php:189
+msgid "Threads successfully merged"
+msgstr "Tematy połączone"
+
+#: mod/messages.php:191
+msgid "Merging the threads failed!"
+msgstr "Połączenie tematów nie powiodło się!"
+
+#: mod/messages.php:201
+msgid "Thread-ID"
+msgstr "ID tematu"
+
+#: mod/messages.php:203
+msgid "Move to board"
+msgstr "Przenieś do działu"
+
+#: mod/messages.php:214
+#: inc/functions_html.php:441
+msgid "Move"
+msgstr "Przemieść"
+
+#: mod/messages.php:222
+msgid "Board-ID is missing"
+msgstr "Brak ID działu"
+
+#: mod/messages.php:224
+msgid "Malformed board-ID"
+msgstr "Niepoprawne ID działu"
+
+#: mod/messages.php:228
+msgid "Thread is moved"
+msgstr "Temat jest przeniesiony"
+
+#: mod/messages.php:230
+msgid "Moving the thread failed!"
+msgstr "Przenoszenie tematu nie powiodło się!"
+
+#: mod/messages.php:235
+msgid "Message deleted!"
+msgstr "Wiadomość usunięta!"
+
+#: mod/messages.php:239
+#, php-format
+msgid "%s messages deleted!"
+msgstr ""
+
+#: mod/messages.php:243
+msgid "Thread locked!"
+msgstr "Temat zamknięty!"
+
+#: mod/messages.php:244
+msgid "Locking the thread failed!"
+msgstr "Nie udało się zamknąć tematu!"
+
+#: mod/messages.php:248
+msgid "Thread stickied!"
+msgstr "Temat przyklejony!"
+
+#: mod/messages.php:249
+msgid "Sticking the thread failed!"
+msgstr "Nie udało się przykleić tematu!"
+
+#: mod/messages.php:253
+msgid "Thread is now unlocked!"
+msgstr "Temat jest teraz otwarty!"
+
+#: mod/messages.php:254
+msgid "Unlocking the thread failed!"
+msgstr "Nie udało się otworzyć tematu!"
+
+#: mod/messages.php:258
+msgid "Thread is no longer stickied!"
+msgstr "Temat nie jest już przyklejony!"
+
+#: mod/messages.php:259
+msgid "Unsticking the thread failed!"
+msgstr "Nie udało się odkleić tematu!"
+
+#: mod/messages.php:261
+msgid "Function does not exist (or insufficient permissions)"
+msgstr "Funkcja nie istieje (lub nie posiadasz wystarczających uprawnień)"
+
+#: mod/files.php:20
+msgid "100 newest files"
+msgstr "100 najnowszych plików"
+
+#: mod/files.php:27
+msgid "Size"
+msgstr "Rozmiar"
+
+#: mod/files.php:28
+msgid "Folder"
+msgstr "Katalog"
+
+#: mod/files.php:45
+msgid "No files were found"
+msgstr "Nie znaleziono plików"
+
+#: mod/files.php:53
+msgid "File deleted"
+msgstr "Usunięto plik"
+
+#: mod/files.php:54
+msgid "File deletion failed!"
+msgstr "Usuwanie pliku nie powiodło się!"
+
+#: mod/files.php:56
+msgid "Malformed file id!"
+msgstr "Nieprawidłowy ID pliku!"
+
+#: mod/bans.php:30
+msgid "Message sent by the user:"
+msgstr "Wiadomość wysłana przez użytkownika:"
+
+#: mod/bans.php:38
+msgid "IP-Address and ban type"
+msgstr "Adres IP i typ bana"
+
+#: mod/bans.php:39
+msgid "IP-Address (SHA512-encrypted)"
+msgstr "Adres IP (zakodowany SHA512)"
+
+#: mod/bans.php:42
+msgid "IP-Address (Unencrypted - replaces the former field, leave empty if using it)"
+msgstr "IP-Address (Niekodowany - zastępuje poprzednie pole, zostaw puste jeśli jest w użyciu)"
+
+#: mod/bans.php:45
+msgid "Allow reading of the boards"
+msgstr "Pozwól na czytanie działów"
+
+#: mod/bans.php:47
+#: mod/bans.php:109
+#: mod/bans.php:112
+#: mod/bans.php:194
+msgid "Yes"
+msgstr "Tak"
+
+#: mod/bans.php:48
+#: mod/bans.php:109
+#: mod/bans.php:112
+#: mod/bans.php:194
+msgid "No"
+msgstr "Nie"
+
+#: mod/bans.php:52
+msgid "Note to add after the message"
+msgstr "Komentarz do dodania po wiadomości"
+
+#: mod/bans.php:53
+msgid "User was banned for this post"
+msgstr "Użytkownik został wygnany hen daleko za ten post"
+
+#: mod/bans.php:56
+msgid "Ban length and reason"
+msgstr "Długość i przyczyna bana"
+
+#: mod/bans.php:57
+msgid "Length in seconds"
+msgstr "Długość w sekundach"
+
+#: mod/bans.php:59
+msgid "Choose"
+msgstr "Wybierz"
+
+# hour
+#: mod/bans.php:60
+msgid "h"
+msgstr "g"
+
+# day
+#: mod/bans.php:61
+#: mod/bans.php:62
+msgid "d"
+msgstr "d"
+
+# week
+#: mod/bans.php:63
+#: mod/bans.php:64
+msgid "w"
+msgstr "t"
+
+# month
+#: mod/bans.php:65
+msgid "m"
+msgstr "m"
+
+# year
+#: mod/bans.php:66
+msgid "y"
+msgstr "r"
+
+#: mod/bans.php:67
+msgid "Permanent"
+msgstr "Stały"
+
+#: mod/bans.php:73
+msgid "Note to another moderators"
+msgstr "Komentarz dla innych moderatorów"
+
+#: mod/bans.php:76
+msgid "Add ban"
+msgstr "Dodaj bana"
+
+#: mod/bans.php:85
+msgid "Previous 20 bans"
+msgstr "Poprzednie 20 banów"
+
+#: mod/bans.php:89
+msgid "Previous bans for this user"
+msgstr "Poprzednie bany tego użytkownika"
+
+#: mod/bans.php:95
+#: mod/bans.php:179
+msgid "Note"
+msgstr "Komentarz"
+
+#: mod/bans.php:96
+#: mod/bans.php:180
+msgid "Can read"
+msgstr "Może czytać"
+
+#: mod/bans.php:98
+#: mod/bans.php:182
+msgid "Length"
+msgstr "Długość"
+
+#: mod/bans.php:98
+#: mod/bans.php:182
+msgid "Expires"
+msgstr "Wygasa"
+
+#: mod/bans.php:99
+msgid "Expired/Deleted"
+msgstr "Wygasł/Usunięto"
+
+#: mod/bans.php:100
+#: mod/bans.php:183
+msgid "Banned by"
+msgstr "Zbanowany przez"
+
+# seconds
+#: mod/bans.php:111
+#: mod/bans.php:196
+msgid "sec"
+msgstr "sek"
+
+#: mod/bans.php:111
+#: mod/bans.php:196
+msgid "Never"
+msgstr "Nigdy"
+
+#: mod/bans.php:118
+#: mod/bans.php:204
+msgid "No bans were found."
+msgstr "Nie znaleziono banów"
+
+#: mod/bans.php:136
+msgid "IP-Address is missing!"
+msgstr "Brak adresu IP!"
+
+#: mod/bans.php:139
+msgid "Malformed form field"
+msgstr "Nieprawidłowe pole formularza"
+
+#: mod/bans.php:145
+msgid "Ban reason is missing!"
+msgstr "Brak przyczyny bana!"
+
+#: mod/bans.php:153
+msgid "Ban added!"
+msgstr "Dodano bana!"
+
+#: mod/bans.php:155
+msgid "Adding the ban failed!"
+msgstr "Dodawanie bana nie powiodło się!"
+
+#: mod/bans.php:161
+msgid "Ban removed!"
+msgstr "Usunięto bana!"
+
+#: mod/bans.php:162
+msgid "Removing the ban failed!"
+msgstr "Usuwanie bana nie powiodło się!"
+
+#: mod/bans.php:168
+msgid "All valid bans"
+msgstr "Wszystkie prawidłowe bany."
+
+#: mod/bans.php:172
+msgid "Last 100 expired bans"
+msgstr "Ostatnie 100 wygasłych banów"
+
+#: mod/errorlog.php:18
+msgid "100 latest errors logged"
+msgstr ""
+
+#: mod/errorlog.php:23
+msgid "Info"
+msgstr ""
+
+#: mod/errorlog.php:24
+msgid "Error data"
+msgstr ""
+
+#: mod/errorlog.php:26
+msgid "User IP"
+msgstr ""
+
+#: mod/errorlog.php:34
+msgid "Click here to toggle saved data"
+msgstr ""
+
+#: mod/errorlog.php:41
+#, fuzzy
+msgid "No errors logged"
+msgstr "Zalogowałeś się"
+
+#: mod/index.php:22
+#: mod/index.php:28
+#, php-format
+msgid "Posted by %s at %s"
+msgstr "Wysłany przez %s w %s"
+
+#: inc/functions_text.php:164
+msgid "here"
+msgstr "tutaj"
+
+# Please keep the backslashes
+#: inc/functions_text.php:169
+msgid "\"Reply\""
+msgstr "\"Odpowiedz\""
+
+#: inc/functions_text.php:217
+#, php-format
+msgid "This message was truncated, click %s to see the rest of it."
+msgstr "Ta wiadomość została zwinięta, kliknij %s by zobaczyć ją całą."
+
+#: inc/functions_db.php:18
+#: inc/functions_db.php:27
+msgid "Database error!"
+msgstr "Błąd bazy danych!"
+
+#: inc/functions_db.php:18
+#: inc/functions_db.php:27
+#, php-format
+msgid "Database is down (%s)! Dispatching repair droids..."
+msgstr "Baza danych jest niedostępna (%s)! Rozmieszczam droidy naprawcze..."
+
+#: inc/functions_db.php:18
+#: inc/functions_db.php:27
+#, php-format
+msgid "An email has been automatically sent to the site administration at %s"
+msgstr "Wiadomość email została automatycznie wysłana do administacji strony na %s"
+
+#: inc/functions_general.php:12
+#: inc/functions_general.php:14
+#: inc/functions_general.php:18
+#, php-format
+msgid "%s could not be found! Please install the module or set %s in config.php to false."
+msgstr "Nie odnaleziono %s! Proszę zainstalować moduł lub ustawić %s w config.php na 'false'."
+
+#: inc/functions_general.php:12
+#: inc/functions_general.php:14
+#: inc/functions_general.php:16
+#: inc/functions_general.php:18
+#: inc/functions_general.php:20
+#: inc/functions_general.php:22
+#: inc/functions_general.php:26
+#: inc/functions_general.php:28
+#: inc/functions_general.php:30
+#, php-format
+msgid "Debian package name: %s"
+msgstr ""
+
+#: inc/functions_general.php:16
+#, php-format
+msgid "%s could not be found! Please install the module."
+msgstr ""
+
+#: inc/functions_general.php:20
+#: inc/functions_general.php:22
+#: inc/functions_general.php:24
+#: inc/functions_general.php:26
+#: inc/functions_general.php:28
+#: inc/functions_general.php:30
+#, php-format
+msgid "%s was not found from %s!"
+msgstr "Nie odnaleziono %s w %s!"
+
+#: inc/functions_general.php:20
+msgid "ImageMagick is required to run the board."
+msgstr "ImageMagick jest niezbędne by uruchomić dział."
+
+#: inc/functions_general.php:20
+#, php-format
+msgid "Please check the value of %s in config.php."
+msgstr "Proszę sprawdzić wartość %s w config.php."
+
+#: inc/functions_general.php:22
+#: inc/functions_general.php:24
+#: inc/functions_general.php:26
+#: inc/functions_general.php:28
+#: inc/functions_general.php:30
+#, php-format
+msgid "Please check the value of %s or change %s to false in config.php."
+msgstr "Proszę sprawdzić wartość %s lub zmienić %s na 'false' w config.php."
+
+#: inc/functions_general.php:32
+msgid "You have not deleted the file install.php. This is a serious security issue!"
+msgstr "Nie usunąłeś pliku install.php. To jest poważny problem bezpieczeństwa!"
+
+#: inc/functions_general.php:36
+msgid "Fatal error! Script execution halted."
+msgstr "Krytyczny błąd! Działanie skryptu wstrzymane."
+
+#: inc/functions_general.php:55
+#, php-format
+msgid "You are banned! %sDetails%s"
+msgstr "Zostałeś zbanowany! %sSzczegóły%s"
+
+#: inc/functions_general.php:82
+msgid "B"
+msgstr "B"
+
+#: inc/functions_general.php:82
+msgid "KB"
+msgstr "KB"
+
+#: inc/functions_general.php:82
+msgid "MB"
+msgstr "MB"
+
+#: inc/functions_general.php:82
+msgid "GB"
+msgstr "GB"
+
+#: inc/functions_general.php:82
+msgid "TB"
+msgstr "TB"
+
+#: inc/functions_general.php:113
+msgid "Unknown error."
+msgstr "Nieznany błąd."
+
+#: inc/functions_general.php:116
+#: inc/functions_general.php:120
+#: inc/functions_general.php:128
+msgid "An error occurred!"
+msgstr "Wystąpił błąd!"
+
+#: inc/functions_general.php:163
+msgid "What the hell just happened?"
+msgstr "Co tu się kurwa stało!?"
+
+#: inc/functions_general.php:164
+msgid "Operation completed!"
+msgstr "Operacja zakończona!"
+
+#: inc/functions_html.php:51
+msgid "Open media player"
+msgstr ""
+
+#: inc/functions_html.php:51
+msgid "Java"
+msgstr ""
+
+#: inc/functions_html.php:51
+msgid "Flash"
+msgstr ""
+
+#: inc/functions_html.php:81
+msgid "Proxy server"
+msgstr ""
+
+#: inc/functions_html.php:86
+msgid "TOR Exit node"
+msgstr ""
+
+#: inc/functions_html.php:208
+#: inc/functions_html.php:225
+#: inc/functions_html.php:228
+msgid "message"
+msgstr "wiadomość"
+
+#: inc/functions_html.php:208
+#: inc/functions_html.php:225
+#: inc/functions_html.php:228
+msgid "messages"
+msgstr "wiadomości"
+
+#: inc/functions_html.php:209
+#: inc/functions_html.php:226
+#: inc/functions_html.php:229
+msgid "and"
+msgstr "i"
+
+#: inc/functions_html.php:209
+#: inc/functions_html.php:226
+#: inc/functions_html.php:229
+msgid "file"
+msgstr "plik"
+
+#: inc/functions_html.php:209
+#: inc/functions_html.php:226
+#: inc/functions_html.php:229
+msgid "files"
+msgstr "pliki"
+
+#: inc/functions_html.php:210
+#: inc/functions_html.php:230
+msgid "omitted."
+msgstr "ominięto"
+
+#: inc/functions_html.php:220
+msgid "No omitted posts."
+msgstr "Nie ominięto wiadomości."
+
+#: inc/functions_html.php:223
+#, php-format
+msgid "Page %s:"
+msgstr "Strona %s:"
+
+#: inc/functions_html.php:227
+msgid "from older posts and also"
+msgstr "ze starszych wiadomości oraz"
+
+#: inc/functions_html.php:230
+msgid "from newer posts"
+msgstr "z nowych wiadomości"
+
+#: inc/functions_html.php:309
+msgid "This thread is being followed"
+msgstr ""
+
+#: inc/functions_html.php:312
+msgid "Thread location:"
+msgstr "Lokalizacja tematu:"
+
+#: inc/functions_html.php:327
+#: inc/functions_html.php:861
+msgid "Sage"
+msgstr "Saga"
+
+#: inc/functions_html.php:331
+#: inc/functions_html.php:865
+msgid "RAGE!"
+msgstr ""
+
+#: inc/functions_html.php:335
+#: inc/functions_html.php:869
+msgid "Love"
+msgstr ""
+
+#: inc/functions_html.php:339
+msgid "Tsundere!"
+msgstr ""
+
+#: inc/functions_html.php:347
+#: inc/functions_html.php:357
+#: inc/functions_html.php:847
+msgid "OP"
+msgstr "OP"
+
+#: inc/functions_html.php:372
+msgid "## Admin ##"
+msgstr "## Admin ##"
+
+#: inc/functions_html.php:373
+msgid "## SMod ##"
+msgstr "## SMród ##"
+
+#: inc/functions_html.php:374
+msgid "## Mod ##"
+msgstr "## Mod ##"
+
+#: inc/functions_html.php:380
+msgid "No."
+msgstr "Nie."
+
+#: inc/functions_html.php:383
+msgid "Locked"
+msgstr "Zamknięty"
+
+#: inc/functions_html.php:385
+msgid "Stickied"
+msgstr "Przyklejony"
+
+#: inc/functions_html.php:396
+msgid "Hide thread"
+msgstr "Ukryj temat"
+
+#: inc/functions_html.php:399
+msgid "Follow thread"
+msgstr "Obserwuj temat"
+
+#: inc/functions_html.php:399
+msgid "Remove from followed threads."
+msgstr "Usuń z obserwowanych tematów."
+
+#: inc/functions_html.php:407
+msgid "Expand thread"
+msgstr "Rozwiń temat"
+
+#: inc/functions_html.php:411
+msgid "Quick reply"
+msgstr ""
+
+#: inc/functions_html.php:429
+msgid "Reply"
+msgstr "Odpowiedź"
+
+#: inc/functions_html.php:435
+msgid "Ban"
+msgstr "Ban"
+
+#: inc/functions_html.php:436
+#: inc/functions_html.php:718
+msgid "Delete"
+msgstr "Usuń"
+
+#: inc/functions_html.php:437
+msgid "Delete all"
+msgstr ""
+
+#: inc/functions_html.php:446
+msgid "Lock"
+msgstr "Zablokuj"
+
+#: inc/functions_html.php:452
+msgid "Stick"
+msgstr "Przyklej"
+
+#: inc/functions_html.php:485
+msgid "Open embedded media"
+msgstr ""
+
+#: inc/functions_html.php:597
+msgid "Details"
+msgstr "Szczegóły"
+
+#: inc/functions_html.php:631
+msgid "Loading..."
+msgstr "Ładowanie..."
+
+#: inc/functions_html.php:632
+#: inc/functions_html.php:637
+msgid "Image"
+msgstr "Obrazek"
+
+#: inc/functions_html.php:642
+msgid "Hide flash"
+msgstr ""
+
+#: inc/functions_html.php:668
+msgid "Site personalization"
+msgstr ""
+
+#: inc/functions_html.php:682
+msgid "Hide postform"
+msgstr ""
+
+#: inc/functions_html.php:685
+msgid "Show postform"
+msgstr ""
+
+#: inc/functions_html.php:704
+msgid "Toggle all posts"
+msgstr ""
+
+#: inc/functions_html.php:705
+msgid "Download files"
+msgstr ""
+
+#: inc/functions_html.php:705
+#, php-format
+msgid "(Max size %s)"
+msgstr ""
+
+#: inc/functions_html.php:706
+msgid "Archive name"
+msgstr ""
+
+#: inc/functions_html.php:706
+msgid "Download"
+msgstr ""
+
+#: inc/functions_html.php:708
+msgid "Report message"
+msgstr "Zgłoś wiadomość"
+
+#: inc/functions_html.php:709
+msgid "Report"
+msgstr "Zgłoś"
+
+#: inc/functions_html.php:711
+msgid "Delete message"
+msgstr "Usunięte wiadomości"
+
+#: inc/functions_html.php:711
+msgid "File only"
+msgstr "Tylko pliki"
+
+#: inc/functions_html.php:730
+msgid "Followed"
+msgstr "Obserwowane"
+
+#: inc/functions_html.php:730
+#: inc/functions_html.php:735
+#, fuzzy
+msgid "My threads"
+msgstr "Połącz tematy"
+
+#: inc/functions_html.php:730
+#, fuzzy
+msgid "Replied"
+msgstr "Odpowiedź"
+
+#: inc/functions_html.php:733
+msgid "Boards"
+msgstr ""
+
+#: inc/functions_html.php:734
+msgid "Followed threads"
+msgstr "Obserwowane tematy"
+
+#: inc/functions_html.php:736
+#, fuzzy
+msgid "Replied threads"
+msgstr "Połącz tematy"
+
+#: inc/functions_html.php:847
+msgid "Sets your name to OP if you are the OP of this thread"
+msgstr "Zmienia nazwę na OP jeśli jesteś OP tego tematu"
+
+#: inc/functions_html.php:857
+msgid "Options"
+msgstr ""
+
+#: inc/functions_html.php:861
+msgid "Don't bump the thread"
+msgstr "Nie podbijaj tematu"
+
+#: inc/functions_html.php:865
+#: inc/functions_html.php:869
+msgid "Show your feelings!"
+msgstr ""
+
+#: inc/functions_html.php:873
+msgid "After posting, return to the thread instead of the board"
+msgstr "Po wysłaniu wiadomości wraca do tematu zamiast do działu"
+
+#: inc/functions_html.php:873
+msgid "Noko"
+msgstr "Noko"
+
+#: inc/functions_html.php:892
+msgid "Subject"
+msgstr "Temat"
+
+#: inc/functions_html.php:895
+msgid "Submit"
+msgstr "Wyślij"
+
+#: inc/functions_html.php:901
+msgid "Widen text field"
+msgstr "Poszerz pole tekstowe"
+
+#: inc/functions_html.php:902
+msgid "characters remaining"
+msgstr ""
+
+#: inc/functions_html.php:909
+msgid "CTRL/Shift + click in file browser to select multiple files"
+msgstr ""
+
+#: inc/functions_html.php:909
+#, php-format
+msgid "Max. %s files"
+msgstr ""
+
+#: inc/functions_html.php:913
+msgid "Clear the EXIF-data from JPG-images."
+msgstr ""
+
+#: inc/functions_html.php:913
+msgid "Clear JPG EXIF"
+msgstr ""
+
+#: inc/functions_html.php:920
+msgid "Embed"
+msgstr "Linkuj"
+
+#: inc/functions_html.php:933
+msgid "NSFW"
+msgstr ""
+
+#: inc/functions_html.php:936
+msgid "(Embed help)"
+msgstr "(pomoc)"
+
+#: inc/functions_html.php:942
+msgid "Used to delete files and posts"
+msgstr "Używane do usunięcia plików i wiadomości"
+
+#: inc/functions_html.php:950
+msgid "Show the admin tag after poster name"
+msgstr "Pokazuj symbol admina po nazwie"
+
+#: inc/functions_html.php:950
+msgid "Modpost"
+msgstr "Modpost"
+
+#: inc/functions_html.php:977
+#, php-format
+msgid "Allowed file types are: %s"
+msgstr "Dozwolone pliki to: %s"
+
+#: inc/functions_html.php:982
+#, php-format
+msgid "There is %s user online."
+msgstr "%s użytkownik online."
+
+#: inc/functions_html.php:984
+#, php-format
+msgid "There are %s users online."
+msgstr "%s użytkowników online."
+
+#: inc/functions_html.php:1005
+#, php-format
+msgid "Max allowed file size is %s."
+msgstr "Maksymalny rozmiar to %s."
+
+#: inc/functions_html.php:1008
+msgid "Show thread list"
+msgstr "Pokaż listę tematów"
+
+#: inc/header.php:42
+msgid "This page requires JavaScript to run properly. Please configure your browser to allow JavaScript for this site."
+msgstr ""
+
+#: inc/header.php:45
+msgid "Cookies are required to have your personalized settings saved and for some functions to work. Please configure your browser to allow cookies for this site."
+msgstr ""
+
+#: inc/functions_posts.php:68
+msgid "Post deleted"
+msgstr "Wiadomość usunięta"
+
+#: inc/functions_posts.php:113
+msgid "This message cannot be deleted yet because it was posted only a while ago."
+msgstr "Ta wiadomość jeszcze nie może zostać usunięta ponieważ została dodana chwilę temu."
+
+#: inc/functions_posts.php:123
+msgid "Wrong password!"
+msgstr "Nieprawidłowe hasło!"
+
+#: inc/functions_posts.php:125
+msgid "The message requested for deletion cannot be found!"
+msgstr "Usuwana wiadomość nie została znaleziona!"
+
+#: inc/functions_mod.php:50
+msgid "Trying to write to modlog as a non-privileged user"
+msgstr ""
+
+#: inc/functions_mod.php:57
+msgid "Deleted a file"
+msgstr "Usuń plik"
+
+#: inc/functions_mod.php:59
+msgid "Deleted a post"
+msgstr "Usuń wiadomość"
+
+#: inc/functions_mod.php:61
+msgid "Modposted"
+msgstr "Modposted"
+
+#: inc/sidebar.php:9
+msgid "Message search"
+msgstr ""
+
+#: inc/sidebar.php:37
+#, php-format
+msgid "%s unchecked reports!"
+msgstr "%s zgłoszeń do sprawdzenia!"
+
+#: inc/sidebar.php:50
+msgid "Hide sidebar"
+msgstr "Ukryj pasek boczny"
+
+#: inc/sidebar.php:52
+msgid "Show sidebar"
+msgstr "Pokaż pasek boczny"
+
+#: inc/include.php:23
+#, php-format
+msgid "The server is too busy at the moment. Please try again later.<br />Current load is %s, the limit is %s."
+msgstr "Serwer zbyt zajęty. Proszę spróbować później.<br/>Aktualne obciążenie to %s, limit to %s."
+
+#: inc/functions_statistics.php:126
+msgid "Not responding!"
+msgstr ""
+
+#: inc/functions_upload.php:77
+#: inc/functions_upload.php:84
+#: inc/functions_upload.php:90
+#: inc/functions_upload.php:96
+#: inc/functions_upload.php:102
+#: inc/functions_upload.php:108
+#, php-format
+msgid "%s binary was not found from %s!"
+msgstr ""
+
+#: js/js.php:14
+msgid "Sending..."
+msgstr "Wysyłanie..."
+
+#: js/js.php:15
+msgid "Saving post..."
+msgstr "Zapis wiadomości..."
+
+#: js/js.php:21
+msgid "Your message has reached it's maximum length.<br />Any characters beyond this limit will be removed."
+msgstr ""
+
+#: js/js.php:24
+msgid "The requested message cannot be found on this page!"
+msgstr "Wiadomość nie została znaleziona na tej stronie!"
+
+#: js/js.php:25
+msgid "Thread hidden. If you wish to, you can restore this thread from the 'Site Personalization' -page."
+msgstr ""
+
+#: js/js.php:26
+msgid "Thread added to followed threads."
+msgstr ""
+
+#: js/js.php:27
+msgid "Thread removed from followed threads."
+msgstr ""
+
+#: js/js.php:28
+msgid "Replying to thread"
+msgstr ""
+
+#: js/js.php:29
+msgid "Undo"
+msgstr ""
+
+#: js/js.php:30
+msgid "Undo successful. Thread will be restored after a page reload."
+msgstr ""
+
+#: js/js.php:31
+msgid "Your browser seems to be outdated or is unsupported. Please update your browser or change it into a supported one! Supported browsers are: "
+msgstr ""
+
+#: js/js.php:79
+msgid "Opening the JavaScript cache file has failed!"
+msgstr ""
+
+#: css/css.php:40
+msgid "Opening the CSS cache file has failed!"
+msgstr ""
+
+#: settings.php:6
+msgid "You need to have cookies allowed to personalize the site. If you just deleted your cookies and therefore receive this error, please reload this page."
+msgstr ""
+
+#: settings.php:20
+msgid "General site settings"
+msgstr ""
+
+#: settings.php:28
+msgid "Stylesheet"
+msgstr ""
+
+#: settings.php:43
+msgid "Locale"
+msgstr ""
+
+#: settings.php:68
+msgid "Timezone"
+msgstr ""
+
+#: settings.php:80
+msgid "Hide NSFW-boards"
+msgstr ""
+
+#: settings.php:81
+msgid "Unckecking this box will unlock parts of the site which may contain nudity, gore etc. and thus are not recommended for persons under the age of 18."
+msgstr ""
+
+#: settings.php:86
+msgid "Autoload media players and embeds"
+msgstr ""
+
+#: settings.php:87
+msgid "Uncheck this to make page loading faster if you are on a slow computer or behind a slow connection."
+msgstr ""
+
+#: settings.php:92
+msgid "Hide all poster names"
+msgstr ""
+
+#: settings.php:93
+msgid "Check this to hide names and tripcodes of posters in all posts. This does not include the name 'OP' when the 'Name: OP' -checkbox was checked when posting, but includes the board default poster name (eg. Anonymous)."
+msgstr ""
+
+#: settings.php:98
+msgid "Hide my region"
+msgstr ""
+
+#: settings.php:99
+msgid "Check this to hide your region and city from the flag in your posts."
+msgstr ""
+
+#: settings.php:103
+msgid "Save settings"
+msgstr ""
+
+#: settings.php:109
+msgid "Hidden threads"
+msgstr ""
+
+#: settings.php:117
+msgid "No subject"
+msgstr "Bez tematu"
+
+#: settings.php:117
+msgid "Restore"
+msgstr ""
+
+#: settings.php:121
+msgid "Restore all"
+msgstr ""
+
+#: settings.php:123
+msgid "You have no hidden threads"
+msgstr ""
+
+#: settings.php:128
+msgid "Overboard settings"
+msgstr ""
+
+#: settings.php:129
+msgid "Boards to hide from the overboard"
+msgstr ""
+
+#: settings.php:150
+msgid "Save"
+msgstr ""
+
+#: settings.php:156
+msgid "Saved settings"
+msgstr ""
+
+#: settings.php:157
+#, php-format
+msgid "Your personalization settings are automatically saved and are deleted if you are inactive for more than %s days."
+msgstr ""
+
+#: settings.php:158
+msgid "These settings include your selected stylesheet, sidebar hidden or not, NSFW-boards hidden or not, locale, timezone, hidden- and followed threads, overboard customization and the message deletion password."
+msgstr ""
+
+#: settings.php:159
+msgid "If you would like to clear your cookies or load the settings into another computer or browser, you can use these automatically generated username and password (Note that as for now, you cannot change these)"
+msgstr ""
+
+#: settings.php:163
+msgid "Load saved settings"
+msgstr ""
+
+#: settings.php:170
+msgid "Load settings"
+msgstr ""
+
+#: settings.php:173
+msgid "Delete saved settings"
+msgstr ""
+
+#: settings.php:174
+msgid "If you, for some reason, would like to completely delete all of your personalization settings and saved information about you from the service, you can do it by clicking the following button."
+msgstr ""
+
+#: settings.php:175
+msgid "Please note that after deleting your profile, there's no way of restoring any data of it. Also note that after deletion, a new profile will be created for you automatically."
+msgstr ""
+
+#: settings.php:176
+msgid "Are you sure you want to delete all of your personalized settings?"
+msgstr ""
+
+#: settings.php:176
+msgid "Delete profile"
+msgstr ""
+
+#: settings.php:226
+#: settings.php:299
+msgid "Changes saved!"
+msgstr ""
+
+#: settings.php:226
+#: settings.php:299
+#: settings.php:334
+msgid "Returning back to settings.."
+msgstr ""
+
+#: settings.php:228
+#: settings.php:301
+msgid "Saving the changes has failed due to a database error!"
+msgstr ""
+
+#: settings.php:263
+msgid "The timezone you selected does not exist!"
+msgstr ""
+
+#: settings.php:265
+msgid "The locale you selected does not exist!"
+msgstr ""
+
+#: settings.php:267
+msgid "The stylesheet you selected does not exist!"
+msgstr ""
+
+#: settings.php:334
+msgid "Settings loaded successfully!"
+msgstr ""
+
+#: settings.php:338
+msgid "The username or password was wrong or the profile does not exist."
+msgstr ""
+
+#: settings.php:341
+msgid "Database error! Please try again."
+msgstr ""
+
+#: settings.php:345
+msgid "You did not fill in your username or password."
+msgstr ""
+
+#: settings.php:361
+msgid "Your profile was deleted successfully. To further clear your information, please delete all cookies before loading any other page."
+msgstr ""
+
+#: settings.php:364
+msgid "Deleting your profile failed due to a database error."
+msgstr ""
+
+#: settings.php:367
+msgid "Wrong confirmation code. Your profile was not deleted. Please try again."
+msgstr ""
+
+#: personal.php:35
+#, fuzzy
+msgid "The threads you are following are shown on this page."
+msgstr "Tematy, które obserwujesz są na tej stronie"
+
+#: personal.php:48
+#, fuzzy
+msgid "The threads you have made are shown on this page."
+msgstr "Tematy, które obserwujesz są na tej stronie"
+
+#: personal.php:56
+#, fuzzy
+msgid "The threads you have replied to are shown on this page."
+msgstr "Tematy, które obserwujesz są na tej stronie"
+
+#: personal.php:69
+msgid "Unknown function!"
+msgstr ""
+
+#: personal.php:78
+#, fuzzy
+msgid "You have no threads here."
+msgstr "Nie posiadasz żadnych obserwowanych tematów"
+
+#: personal.php:104
+#: thread.php:128
+msgid "Previous"
+msgstr "Poprzedni"
+
+#: personal.php:113
+#: thread.php:137
+msgid "Next"
+msgstr "Następny"
+
+#: thread.php:28
+msgid "The page you are trying to open contains material not appropriate for minors and according to your settings, you don't want to see such content."
+msgstr ""
+
+#: thread.php:28
+#, php-format
+msgid "If you still want to continue to this page, you can disable the hiding of NSFW-content by %sclicking here%s."
+msgstr ""
+
+#: thread.php:28
+msgid "Access prevented!"
+msgstr ""
+
+#: thread.php:91
+msgid "This thread is locked and you cannot reply to it."
+msgstr "Ten temat jest zamknięty i nie możesz w nim się wypowiadać."
+
+#: thread.php:97
+msgid "You have hidden this thread."
+msgstr ""
+
+#: thread.php:102
+msgid "Please remember that this board is worksafe."
+msgstr ""
+
+#: thread.php:104
+#, php-format
+msgid "Your message will be sent as a reply to the thread %s"
+msgstr ""
+
+#: search.php:16
+msgid "Search term"
+msgstr ""
+
+#: search.php:19
+msgid "Search"
+msgstr ""
+
+#: search.php:38
+#, php-format
+msgid "%s %s found"
+msgstr ""
+
+#: search.php:38
+msgid "result"
+msgstr ""
+
+#: search.php:38
+msgid "results"
+msgstr ""
+
+#: search.php:42
+#, php-format
+msgid "However, only the newest %s posts will be shown."
+msgstr ""
+
+#: search.php:60
+msgid "No matching posts found."
+msgstr ""
+
+#: search.php:63
+msgid "The search term has to be over or exactly 3 characters long."
+msgstr ""
+
+#: 403.php:8
+msgid "403 Forbidden"
+msgstr "403 Zakazane"
+
+#: 403.php:12
+msgid "HTTP-403"
+msgstr "HTTP-403"
+
+#: 403.php:13
+msgid "You do not have the permission to open the requested page."
+msgstr "Nie masz pozwolenia na otwarcie tej strony."
+
+#: 403.php:14
+#, php-format
+msgid "If you clicked a link at %s, please inform the board administrator at %s."
+msgstr "Jeśli kliknąłeś link na %s, proszę skontaktuj się z administratorem na %s."
+
+#: 403.php:15
+#: 404.php:19
+#, php-format
+msgid "Return to %sfront page%s or %swhere you came from%s."
+msgstr "Wróć do %sstrony głównej%s lub %stam skąd przyszedłeś%s."
+
+#: 404.php:8
+msgid "404 Not Found"
+msgstr "404 Nie znaleziono"
+
+#: 404.php:16
+msgid "HTTP-404"
+msgstr "HTTP-404"
+
+#: 404.php:17
+msgid "The requested page does not exist."
+msgstr "Strona nie istnieje."
+
+#: 404.php:18
+msgid "Why? How would I know?"
+msgstr "Dlaczego? Skąd ja mam do cholery wiedzieć?"
+
+#: 404.php:20
+msgid "The page really cannot be found, damn!"
+msgstr "Kuurcze, strona na serio nie może zostać znaleziona!"
+
+#: board.php:20
+msgid "Board url is missing!"
+msgstr ""
+
+#: singlepost.php:31
+#, php-format
+msgid "Showing a single post from thread %s on board /%s/."
+msgstr ""
+
+#: threadlist.php:34
+#: threadlist.php:43
+#, php-format
+msgid "Thread list of the board /%s/"
+msgstr "Lista tematów działu /%s/"
+
+#: threadlist.php:47
+msgid "Only 150 latest threads will be shown in the thread list of an overboard."
+msgstr "Jedynie ostatnie 150 tematów jest pokazywane w liście tematów naddziału."
+
+#: threadlist.php:149
+msgid "No image"
+msgstr "Brak obrazka"
+
+#: threadlist.php:159
+msgid "reply"
+msgstr ""
+
+#: threadlist.php:159
+msgid "replies"
+msgstr ""
+
+#: threadlist.php:160
+msgid "hide"
+msgstr ""
+
+#: threadlist.php:160
+msgid "hides"
+msgstr ""
+
+#: threadlist.php:161
+msgid "follower"
+msgstr ""
+
+#: threadlist.php:161
+msgid "followers"
+msgstr ""
+
+#: threadlist.php:168
+#, php-format
+msgid "%s threads shown"
+msgstr "%s pokazywanych tematów"
+
+#: 410.php:8
+msgid "410 Gone"
+msgstr ""
+
+#: 410.php:16
+msgid "HTTP-410"
+msgstr ""
+
+#: 410.php:17
+msgid "The requested page does not exist anymore."
+msgstr ""
+
+#: 410.php:18
+msgid "This means that the thread you are looking is deleted and no longer available."
+msgstr ""
+
+#: 410.php:20
+msgid "The page does not exist anymore!"
+msgstr ""
+
+#: banned.php:41
+#: banned.php:47
+msgid "You are banned"
+msgstr "Zostałeś zbanowany"
+
+#: banned.php:41
+#: banned.php:47
+msgid "You were banned"
+msgstr "Byłeś zbanowany"
+
+#: banned.php:48
+msgid "Banned!"
+msgstr "Zbanowany!"
+
+#: banned.php:50
+#, php-format
+msgid "%s from posting to the board%s for the following reason:"
+msgstr ""
+
+#: banned.php:51
+msgid "You are blocked"
+msgstr "Jesteś zablokowany"
+
+#: banned.php:51
+msgid "You were blocked"
+msgstr "Byłeś zablokowany"
+
+#: banned.php:52
+msgid " and reading it"
+msgstr "i czytasz to"
+
+#: banned.php:55
+#: banned.php:84
+msgid "No reason given"
+msgstr "Bez przyczyny"
+
+#: banned.php:57
+#, php-format
+msgid "Your ban was placed at <strong>%s</strong> and %s"
+msgstr "Twój ban wystawiono <strong>%s</strong> i %s"
+
+#: banned.php:61
+#, php-format
+msgid "it will expire at <strong>%s</strong>."
+msgstr "wygaśnie <strong>%s</strong>."
+
+#: banned.php:63
+msgid "it <strong>will not expire.</strong>"
+msgstr "<strong>nie wygaśnie.</strong>"
+
+#: banned.php:66
+msgid "it <strong>has now expired.</strong>"
+msgstr "<strong>wygasł.</strong>"
+
+#: banned.php:70
+#, php-format
+msgid "Your encrypted IP-address was:<br /><strong>%s</strong>"
+msgstr "Twój zaszyfrowany adres IP:<br /><strong>%s</strong>"
+
+#: banned.php:70
+msgid "(Unknown)"
+msgstr "(Nieznany)"
+
+#: banned.php:73
+#, php-format
+msgid "If you think you have been banned inadvertently or you want to appeal against your ban, please contact the board administration at %s."
+msgstr "Jeżeli uważasz, że zostałeś zbanowany niesłusznie, lub chcesz odwołać się od bana, skontaktuj się z administracją działu na %s."
+
+#: banned.php:77
+msgid "Your earlier bans"
+msgstr "Twoje wcześniejsze bany"
+
+#: banned.php:81
+#, php-format
+msgid "%s, <strong>length:</strong> %s, <strong>reason:</strong> %s, <strong>banned by:</strong> %s%s"
+msgstr "%s, <strong>długość:</strong> %s, <strong>powód:</strong> %s, <strong>zbanowany przez:</strong> %s%s"
+
+#: banned.php:83
+msgid "permanent"
+msgstr "stały"
+
+#: banned.php:85
+msgid "(Expired)"
+msgstr "(Wygasł)"
+
+#: banned.php:90
+msgid "Return to front page"
+msgstr "Powrót do strony głównej"
+
+#~ msgid "The requested thread cannot be found"
+#~ msgstr "Nie można znaleźć tematu"
+
+#~ msgid ""
+#~ "Thread %s has been added to followed threads. It will be seen on the "
+#~ "'Followed threads' -board now."
+#~ msgstr ""
+#~ "Temat %s został dodany do obserwowanych tematów. Będzie widoczny w dziale "
+#~ "'Obserwowane tematy'"
+
+#~ msgid "Adding the thread to followed threads failed!"
+#~ msgstr "Dodawanie tematu do obserwowanych tematów nie udało się!"
+
+#~ msgid "Please refresh this page and try again."
+#~ msgstr "Odśwież stronę i spróbuj ponownie."
+
+#~ msgid "The thread you tried to follow does not exist."
+#~ msgstr "Temat nie istnieje."
+
+#~ msgid ""
+#~ "Thread %s is no longer followed. It will no longer be seen on the "
+#~ "'Followed threads' -board."
+#~ msgstr ""
+#~ "Temat %s nie będzie już obserwowany. Nie będzie widoczny w dziale "
+#~ "'Obserwowane tematy'."
+
+#~ msgid "Removing the thread from followed threads has failed!"
+#~ msgstr "Nie udało się usunąć tematu z działu 'Obserwowane tematy'"
+
+#~ msgid ""
+#~ "Thread %s has been hidden. It can be restored from the sidebar after "
+#~ "refreshing the page."
+#~ msgstr ""
+#~ "Temat %s został ukryty. Zostanie ponownie włączony po odświeżeniu strony."
+
+#~ msgid "Hiding the thread failed!"
+#~ msgstr "Nie udało się ukryć tematu!"
+
+#~ msgid "The thread you tried to hide does not exist."
+#~ msgstr "Temat, który chcesz ukryć nie istnieje."
+
+#~ msgid ""
+#~ "All hidden threads have been restored. They can be seen after refreshing "
+#~ "the page."
+#~ msgstr ""
+#~ "Wszystkie ukryte tematy zostały odkryte. Będą widoczne po odświeżeniu "
+#~ "strony."
+
+#~ msgid ""
+#~ "Thread %s has been restored. It can be seen after refreshing the page."
+#~ msgstr "Temat %s został odkryty. Będzie widoczny po odświeżeniu strony."
+
+#~ msgid "Restoring the thread failed!"
+#~ msgstr "Przywrócenie tematu nie powiodło się!"
+
+#~ msgid ""
+#~ "This ban has been added automatically. Some of the automatically banned "
+#~ "IP-addresses could have changed it's owner and you may now have one of "
+#~ "them. If this is the case and you are sure that you are using your own "
+#~ "private IP-address, please contact the board administration at %s."
+#~ msgstr ""
+#~ "Ten ban został wystawiony automatycznie. Niektóre automatycznie zbanowane "
+#~ "adresy IP mogły zmienić właściciela i Ty możesz mieć jeden z nich. Jeśli "
+#~ "tak jest w tym przypadku i jesteś pewien, że używasz swojego prywatnego "
+#~ "adresu IP, proszę skontaktuj się z adminisracją na %s."
+
+#~ msgid "Image generation failed!"
+#~ msgstr "Generowanie obrazu nie powiodło się!"
+
+#~ msgid "File"
+#~ msgstr "Plik"
+
+#~ msgid "Board address is missing!"
+#~ msgstr "Brak adresu działu!"
+
+#~ msgid "ImageMagick was not found from %s!"
+#~ msgstr "Nie znaleziono ImageMagick z %s!"
+
+#~ msgid "Anonymous"
+#~ msgstr "Anonim"

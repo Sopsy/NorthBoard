@@ -1,0 +1,44 @@
+AddCharset UTF-8 .js .php
+AddDefaultCharset UTF-8
+
+ErrorDocument 404 /404/
+ErrorDocument 410 /410/
+ErrorDocument 403 /403/
+
+RewriteEngine On
+
+#no-www!
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L] 
+
+# Disable MultiViews, it breaks the mod panel
+Options -MultiViews
+
+# Edit the domain to match yours:
+#RewriteCond %{HTTP_REFERER} !^http(s)?://(.+\.)?northpole\.fi/ [NC]
+
+# Everything below should be left as is.
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteRule (.*\.)(jpg|jpeg|png|gif|swf|mp3|ogg|flac|psd|tiff|tif|mp4|flv)$ /scripts/file-redirect.php?s=$1$2 [R=301,L]
+
+RewriteRule ^banned/$ banned.php
+RewriteRule ^settings/([a-z0-9\_]+)?(/)?([a-z0-9\_]+)?(/)?$ settings.php?do=$1&id=$3
+RewriteRule ^search(/)?$ search.php
+RewriteRule ^personal/([a-z0-9\_]+)(-[0-9]+)?(/)?$ personal.php?do=$1&page=$2
+#RewriteRule ^personal/([a-z0-9\_]+)(/)threadlist(/)?$ threadlist_personal.php?do=$1
+RewriteRule ^redirect/([0-9]+)(/)?$ scripts/redirect.php?id=$1
+RewriteRule ^post/$ scripts/post.php
+RewriteRule ^delete/(.*)?$ scripts/delete.php$1
+RewriteRule ^410/$ 410.php
+RewriteRule ^404/$ 404.php
+RewriteRule ^403/$ 403.php
+
+RewriteRule ^mod/([a-z\_]+)(/)?([a-z0-9]+)?(/)?([a-z0-9]+)?(/)?([a-z0-9]+)?$ mod/$1.php?a=$3&b=$5&c=$7
+
+RewriteRule ^singlepost/([0-9]+)(/)?$ singlepost.php?msg=$1
+RewriteCond %{REQUEST_URI} !^/blinkenworld
+RewriteRule ^([a-z0-9\_]+)(-[0-9]+)?(/)?$ board.php?id=$1&page=$2
+RewriteRule ^([a-z0-9\_]+)(/)([0-9]+)(-[0-9]+)?(/)?$ thread.php?board=$1&id=$3&page=$4
+RewriteRule ^([a-z0-9\_]+)(/)threadlist(/)?$ threadlist.php?id=$1
+
+RewriteRule ^download/([0-9]+)/([^/]+)$ scripts/download.php?file=$1&fn=$2

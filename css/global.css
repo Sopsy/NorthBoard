@@ -1,0 +1,572 @@
+/* General */
+html,
+body,
+#wrapper {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+#cookiewarning,
+#charsremaining,
+#replyto_info {
+	display: none;
+}
+fieldset {
+	border: 0 none;
+}
+a {
+	outline: 0 none;
+}
+a img {
+	border: 0 none;
+}
+
+/* Sidebar */
+#left {
+	width: 190px;
+	height: 100%;
+	padding: 0 5px;
+	position: fixed;
+	overflow: auto;
+	font-size: 0.95em;
+}
+#logo {
+	text-align: center;
+	margin-top: 5px;
+}
+#left ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+#left li {
+	line-height: 14px;
+}
+#left li.header {
+	margin: 3px 0 2px 0;
+	padding: 1px 5px;
+}
+#left li a {
+	text-decoration: none;
+	display: block;
+}
+#left #software {
+	font-size: 0.8em;
+	text-align: center;
+}
+
+/* Sidebar hiding */
+#hide_sidebar {
+	position: fixed;
+	left: 200px;
+	top: 50%;
+}
+#hide_sidebar a {
+	text-decoration: none;
+}
+	
+/* Content area */
+#right {
+	margin: 0 5px 0 205px;
+	padding: 0 5px;
+	min-width: 400px;
+}
+#right p {
+	margin: 5px;
+}
+.omitted {
+	margin: 0 5px !important;
+}
+
+/* Front page */
+#fp_menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 15px;
+}
+#fp_menu ul li {
+	display: inline;
+	padding: 5px 5px 2px 5px;
+}
+#fp_menu ul li a {
+	text-decoration: none;
+	padding: 5px 5px 2px 5px;
+}
+.news {
+	margin-bottom: 20px;
+}
+h4.newstitle {
+	margin-top: 1px;
+}
+
+/* Boards */
+.boardnav {
+	display: inline;
+	font-size: 0.9em;
+	padding: 5px;
+	margin: 5px 0;
+	display: table;
+	box-shadow: 1px 1px 3px 0px #000000;
+	border-radius: 2px;
+}
+.boardnav .active {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Board title and description */
+.title {
+	text-align: center;
+}
+.title_sub {
+	text-align: center;
+	font-style: oblique;
+}
+
+
+/* The information bar above postform ("Please remember blah blah" etc) */
+.infobar {
+	margin: 5px 0 0 0;
+	padding: 2px 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Postform hiding */
+#hide_postform {
+	text-align: center;
+}
+.hide_link,
+.show_link {
+	padding: 50px 12px 50px 0;
+}
+.hide_link_vertical,
+.show_link_vertical {
+	padding: 0 50px 0 50px;
+	position: relative;
+	top: -16px;
+}
+.hide_link {
+	background: transparent url('img/hide.png') no-repeat 0 0;
+}
+.show_link {
+	background: transparent url('img/show.png') no-repeat 0 0;
+}
+.hide_link_vertical {
+	background: transparent url('img/hide_vertical.png') no-repeat 0 0;
+}
+.show_link_vertical {
+	background: transparent url('img/show_vertical.png') no-repeat 0 0;
+}
+
+/* Postfield widening button */
+.wide {
+	width: 95% !important;
+}
+
+/* Posting form */
+#postform {
+	margin: auto;
+}
+#postform td {
+	padding: 0;
+}
+fieldset {
+	padding: 0;
+}
+#postform .box {
+	display: inline;
+}
+#postform td.label {
+	font-weight: bold;
+	padding: 2px 5px;
+}
+#postform td input {
+	padding: 3px 0;
+}
+#postform td input#submit {
+	padding: 2px 0;
+}
+#postform td select {
+	padding: 2px 0;
+}
+#postform td select {
+	width: 402px;
+}
+#postform td input#name,
+#postform td input.fileinput,
+#postform td input#password {
+	width: 400px;
+}
+#postform td input#subject,
+#postform td input#embed {
+	width: 300px;
+}
+#postform td .notsowide {
+	width: 96px;
+}
+#postform td textarea#msg {
+	width: 400px;
+	height: 100px;
+}
+#fileinputs input {
+	display: block;
+}
+.postboxinfo {
+	/* "Max. n files" */
+	padding: 0 !important;
+	margin: 0 !important;
+}
+acronym {
+	border-width: 0 0 1px 0;
+	border-style: dotted;
+}
+#embedhelp {
+	/* (Embedhelp) -link */
+	font-size: 0.8em;
+}
+#embedhelp a {
+	text-decoration: none;
+}
+
+/* File upload progress */
+#postform #sending {
+	visibility: hidden;
+}
+#postform #sending td {
+	height: 0;
+}
+#postform #sending_bg {
+	float: left;
+	width: 0;
+}
+#postform #sending_text {
+	position: absolute;
+	padding-left: 10px;
+}
+
+/* The textwall under the postform (with allowed filetypes etc) */
+#postinfo {
+	display: table;
+	list-style: none;
+	margin: auto;
+	padding: 0;
+	font-size: 10px;
+	line-height: 1.3em;
+	width: 525px;
+}
+
+/* Posts */
+.gtgt {
+	display: none;
+	float: left;
+	margin-right: 2px;
+}
+.button_wrap {
+	display: none;
+}
+.postinfo {
+	padding: 1px 2px 2px 2px;
+}
+div.post {
+	margin: 0 5px 5px 5px;
+	word-wrap: break-word;
+}
+div.post p {
+	margin: 5px 0 0 0 !important;
+}
+div.post pre {
+	white-space: pre-wrap;
+}
+div.files_many {
+	clear: both;
+	padding-top: 5px;
+}
+.location {
+	font-size: 0.9em;
+}
+.answers {
+	clear: both;
+}
+.padded {
+	padding: 5px;
+}
+.answer,
+.highlighted {
+	margin: 2px;
+	display: table;
+}
+
+/* Post feelings */
+.rage {
+	font-weight: bold;
+	color: #FF0000;
+}
+.love {
+	font-weight: bold;
+	color: #ff3399;
+}
+.tsundere {
+	font-weight: bold;
+	color: #999900;
+}
+
+/* Spoilers */
+.spoiler {
+	background-color: #000000;
+	color: #000000;
+}
+.spoiler .quote {
+	color: #000000;
+}
+.spoiler:hover .quote {
+	color: #008800;
+}
+.spoiler a {
+	color: #000000;
+}
+.spoiler:hover {
+	color: #ffffff;
+}
+.spoiler:hover a {
+	color: #60a0dc;
+}
+
+/* Modpost colors */
+.admin {
+	color: #FF22A2;
+}
+.smod {
+	color: #FF2222;
+}
+.mod {
+	color: #FFAAAA;/*CCCCCKKKK!*/
+}
+
+/* Files in posts */
+.file_single,
+.embed {
+	float: left;
+	display: inline-block;
+	padding: 5px;
+	margin: 0 5px 1px 0;
+}
+.file_many {
+	float: left;
+	min-height: 250px;
+	margin: 5px 5px 0 0;
+	text-align: center;
+}
+.fileinfo_single {
+	margin: 0 !important;
+	padding: 2px 5px !important;
+}
+.fileinfo_many {
+	text-align: left;
+}
+
+/* [quote] -tag [/quote] */
+.bbquote  {
+	margin: 5px 10px;
+	border: 1px dashed gray;
+	padding: 5px 10px;
+	font-style: italic;
+	display: inline-table;
+}
+.bbquote span {
+	font-weight: bold;
+	display: block;
+	margin: 5px 10px 0 10px;
+}
+
+/* Page footer (Pagination, delete/report -form etc) */
+#pages {
+	padding: 5px;
+	display: table;
+	box-shadow: 1px 1px 3px 0px #000000;
+	border-radius: 2px;
+}
+#buttons_bottom {
+	float: right;
+	display: inline-table;
+}
+#buttons_bottom p {
+	margin: 0;
+	font-weight: bold;
+}
+#buttons_bottom label {
+	padding-right: 5px;
+	text-align: right;
+}
+.tcell {
+	display: table-cell;
+}
+.trow {
+	display: table-row;
+}
+
+/* Floaty tooltips */
+.tooltip {
+	position: absolute;
+	z-index: 9999;
+	left: -9999px;
+	top: -9999px;
+	padding: 0;
+	display: table;
+	border: 1px dotted #666;
+}
+.tooltip p {
+	margin: 0 5px;
+}
+.borderless {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.tooltip h4 {
+	margin: 0;
+}
+
+/* Buttons */
+.button {
+	white-space: nowrap;
+}
+
+/* Random */
+.clear {
+	clear: both;
+}
+
+/* Site personalization */
+div#padded {
+	padding: 20px 0 0 0;
+}
+div#padded form label,
+div#padded form input {
+	display: block;
+}
+div#padded form select {
+	width: 250px;
+}
+div#padded form .inline {
+	display: inline;
+}
+div#padded form .list {
+	display: inline-block;
+	min-width: 100px;
+}
+div#padded form {
+	padding: 5px;
+}
+input.button {
+	margin-top: 5px;
+}
+
+/* Thread list */
+#list {
+	margin: 5px auto;
+	border-spacing: 0;
+}
+#list img.mini_img {
+	max-width: 80px;
+	max-height: 100px;
+}
+
+/* Hmm? Dunno where this is used. */
+.bottom_border {
+	margin-bottom: 50px;
+}
+
+/* Moderation panel */
+#loginbox {
+	text-align: center;
+}
+#login {
+	margin: auto;
+	width: 300px;
+	text-align: left;
+	padding: 5px;
+}
+#login ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#login label {
+	width: 150px;
+	float: left;
+}
+#login input {
+	width: 140px;
+	margin-top: 2px;
+}
+#mod {
+	/* Content padding in modpanel */
+	padding: 5px;
+}
+form#adminform label,
+form#adminform #more {
+	/* Forms in modpanel */
+	display: block;
+}
+form#adminform legend,
+.subtitle {
+	margin: 10px 0;
+}
+.table {
+	/* Tables in modpanel */
+	border-spacing: 0;
+}
+.table th,
+.table td {
+	padding: 2px 10px;
+}
+
+/* Errorpages */
+#error_404 {
+	text-align: center;
+}
+
+/* You're banned! */
+#banned {
+	width: 1000px;
+	margin: 20px auto;
+}
+#banimage {
+	float: right
+}
+.banbar {
+	margin: 5px 0 0 0;
+	padding: 2px 5px;
+	height: 20px;
+	background-color: #FF0000;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	clear: both;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* You're using an outdated browser */
+#browserwarning {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #990000;
+	color: #ffffff;
+	padding: 5px 10px;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}

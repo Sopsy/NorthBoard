@@ -1,0 +1,271 @@
+/* NorthBoard - Orange style */
+
+@import url('global.css');
+
+/* General */
+body {
+	color: #fff;
+	font: 12px/1.5em verdana;
+	background: #0B0B0B;
+}
+
+/* Typographic */
+a {
+	color: #aaa;
+}
+a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+h1 {
+	margin: 5px 0px;
+	padding: 5px;
+	font-size: 16px;
+	text-align: center;
+	background-color: #bb4201;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+h2 {
+	margin: 0 0 5px 0;
+	font-size: 22px;
+	text-align: center;
+}
+h3 {
+	margin: 0;
+	font-style: oblique;
+	font-size: 12px;
+	text-align: center;
+}
+h4 {
+	background-color: #bb4201;
+	padding: 2px 5px;
+	margin: 10px 0 0 0;
+	font-weight: normal;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+h4 span {
+	font-weight: bold;
+}
+
+/* Sidebar */
+#left {
+	background: #000000;
+}
+#left li.active {
+	background: #111;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+#left li.header {
+	background-color: #bb4201;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+#left li a:hover {
+	background: #222;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;	
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+/* Front page */
+#fp_menu ul li {
+	background-color: #666;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+/* Board title and description */
+.title {
+	font: 32px "Times New Roman";
+	color: #bb4201;
+}
+
+/* The information bar above postform ("Please remember blah blah" etc) */
+.infobar {
+	background-color: #bb4201;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.infobar a {
+	color: #fff;
+}
+
+/* Posting form */
+#postform td.label {
+	border: 1px solid #666;
+	background-color: #591900;
+}
+#postform td input,
+#postform td textarea,
+#postform td select {
+	background-color: #222;
+	border: 1px solid #666;
+	color: #ddd;
+}
+.postboxinfo {
+	/* "Max. n files" */
+	color: #BBBBBB;
+}
+
+/* File upload progress */
+#postform #sending td {
+	background-color: #bb4201;
+	border: 1px solid #666;
+}
+#postform #sending_bg {
+	background-color: #591900;
+}
+
+/* Threads */
+.thread {
+	border: 1px solid #333;
+	background: #1C1C1C;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.omitted {
+	color: #999;
+	font-size: 10px;
+}
+.msg_cut {
+	font-size: 10px;
+}
+.quote {
+	/* >Quote */
+	color: #dd7700;
+}
+.line {
+	/* hr -line between threads */
+	border: 0;
+	margin: 15px 0;
+	border-bottom: 1px solid #666;
+}
+
+/* Post info (Post time, ID, name etc) */
+.postinfo {
+	background-color: #4D1E0C;
+	border-bottom: 1px solid #331408;
+}
+.answer .postinfo {
+	background-color: #4D1E0C;
+	border-bottom: 1px solid #331408;
+}
+.post_subject {
+	font-weight: bold;
+	font-size: 16px;
+	color: #ff8422;
+	display: block;
+	padding: 0 0 5px 2px;
+}
+.postername {
+	font-weight: bold;
+	color: #ffc393;
+}
+.sage {
+	color: #bb4201;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.tripcode {
+	color: #ffc393;
+}
+
+/* Posts themselves */
+.answer {
+	background-color: #591900;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.highlighted {
+	border: 3px dashed #bb4201;
+}
+
+/* Files in posts */
+.file_single,
+.embed {
+	background-color: #202020;
+	border-right: 1px solid #111;
+	border-bottom: 1px solid #111;
+}
+.answer .file_single,
+.answer .embed {
+	background-color: #40190A;
+	border-color: #331408;
+}
+.file_many {
+	border: 1px solid black;
+	background-color: #333;
+}
+.fileinfo_single {
+	background-color: #202020;
+	border-bottom: 1px solid #111;
+}
+.answer .fileinfo_single {
+	background-color: #40190A;
+	border-color: #331408;
+}
+
+/* Buttons (Links, mostly) */
+.button {
+	color: #CCC;
+	font-size: 12px;
+	padding: 2px 5px;
+	text-decoration: none;
+	border: 1px outset #999;
+	background-color: #bb4201;
+}
+.button:hover {
+	background-color: #cc5312;
+}
+.button:active {
+	border-style: inset;
+}
+
+/* Page footer (Pagination, delete/report -form etc) */
+#buttons_bottom input {
+	background-color: #aaa;
+	border: 1px solid #888;
+	color: #000;
+}
+
+/* Moderation panel */
+#login {
+	border: 1px solid #333;
+}
+form#adminform legend,
+.subtitle {
+	font-weight: bold;
+	border-bottom: 1px solid #777;
+}
+.table {
+	/* Tables in modpanel */
+	border-left: 1px solid white;
+}
+.table th {
+	background-color: #444;
+	border-top: 1px solid white;
+}
+.table th,
+.table td {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}
