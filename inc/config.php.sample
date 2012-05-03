@@ -55,6 +55,12 @@ $cfg['proxy_cache_ttl'] = 604800; // How long to save the detection information 
 $cfg['tor_query_url'] = 'https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip='. $_SERVER['SERVER_ADDR']; // The URL to query for the list
 $cfg['tor_list_ttl'] = 86400; // How often to update the exit node list? Fetching the list is slow, so don't update on every page load.
 
+// IP Whitelist
+$whitelist = array(
+//	'123.123.123.123',
+//	'123.123.123.123',
+);
+
 //*** Server load / bandwith optimization
 $cfg['light_omit_count'] = true; // Does not show how many files are omitted if true. Reduces server load.
 $cfg['minimize_js'] = true; // Do you want to minimize the JS files? Saves bandwith but slows down page generation time.

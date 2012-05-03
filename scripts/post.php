@@ -195,18 +195,9 @@ else {
 	);
 }
 
-$whitelist = array();
-$whitelist[] = '189.7.53.175'; // hyy (IRC) 4.8.11
-$whitelist[] = '86.179.250.3'; // Joose 4.9.11
-$whitelist[] = '145.94.77.43'; // htns (IRC) 5.9.11
-$whitelist[] = '24.79.112.239'; // Email (Kanada, 1.12.2011)
-$whitelist[] = '187.23.167.106'; // amma (IRC, Brazil, 27.1.2012)
-$whitelist[] = '90.244.227.99'; // /meta/ (UK, 9.4.2012)
-
-if($cfg['user_class'] == 0 AND strtolower($geoip_data['country_code']) != "fi" AND !$international AND !in_array(get_ip(false), $whitelist)) {
+if($cfg['user_class'] == 0 AND strtolower($geoip_data['country_code']) != "fi" AND !$international AND !in_array(get_ip(false), $cfg['ip_whitelist'])) {
 	error(T_("Sorry, posting from the country you are posting from at the moment is disallowed to this board."), true, false, false);
 }
-
 
 //-----------------------------
 //Proxy and TOR detection START
