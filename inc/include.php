@@ -50,7 +50,4 @@ if(!$min) {
 	if(!defined("INITIALIZED"))
 		initialize();
 
-	if( substr(get_ip(), -9) == '.keuda.fi' )
-		die("<h1>Pääsy evätty</h1><p>Keudan verkko on estetty selaamasta tätä sivustoa jatkuvan aktiivisen häiriköinnin vuoksi.</p><p>Lisätietoja voi udella Keudan oppilaalta Samu \"arska-testo\" Lahdenperä.</p>");
 }
-?>

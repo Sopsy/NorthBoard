@@ -201,18 +201,6 @@ function print_thread($thread, $location = "board", $open_board = false, $overbo
 		
 		echo '
 		<div class="thread" id="thread_'. $thread['id'] .'">';
-/*
-$texts = array(
-	array("http://ads.guava-affiliate.com/z/36149/CD2102/?redirect=http://track.adform.net/C/?bn=700914;C=0", "Uuden sukupolven nettikasino Mr Green - voit pelata kolikkoautomaatteja, blackjackiä, Caribbean pokeria, rulettia ja videopokeria."),
-	array("http://ads.guava-affiliate.com/z/36149/CD2102/?redirect=http://track.adform.net/C/?bn=700914;C=0", "Jaossa yli 10 miljoonaa, liity nyt niin Mr Green tuplaa rahasi!"),
-	array("http://ads.guava-affiliate.com/z/36149/CD2102/?redirect=http://track.adform.net/C/?bn=700914;C=0", "Luotettavuutensa, helppokäyttöisyytensä ja laajan pelivalikoimansa ansiosta Mr Green on palkittu kolmesti peräkkäin parhaana online-kasinona."),
-	array("http://ads.guava-affiliate.com/z/36149/CD2102/?redirect=http://track.adform.net/C/?bn=700914;C=0", "Pelaa nettikasinolla, Mr Green tuplaa ensitalletuksesi aina kahteensataan euroon asti!")
-);
-
-$rand = array_rand($texts);
-
-echo '<p class="fileinfo_single"><a href="'. $texts[$rand][0] .'">'. $texts[$rand][1] .'</a></p>';
-*/
 
 		$thread['on_page'] = 1;
 		print_post($thread, $location, $board, $open_board, $overboard);
