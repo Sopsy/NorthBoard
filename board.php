@@ -120,7 +120,12 @@ include("inc/header.php"); // Html-head
 		if($pages > $board['pages']) $pages = $board['pages'];
 		
 		// Show threads
-		$threads = mysql_query("SELECT `posts`.*, `users`.`hide_region` FROM `posts` LEFT JOIN `users` USING (uid) WHERE `posts`.`deleted_time` = '0' AND ". $boardid ."`posts`.`thread` = '0'". $hidden ." ORDER BY `posts`.`sticky`, `posts`.`bump_time` DESC LIMIT ". $a .", ". $b);
+		if( !$overboard )
+			$thread_order = "ORDER BY `posts`.`sticky`, `posts`.`bump_time` DESC";
+		else
+			$thread_order = "ORDER BY `posts`.`bump_time` DESC";
+		
+		$threads = mysql_query("SELECT `posts`.*, `users`.`hide_region` FROM `posts` LEFT JOIN `users` USING (uid) WHERE `posts`.`deleted_time` = '0' AND ". $boardid ."`posts`.`thread` = '0'". $hidden ." ". $thread_order ." LIMIT ". $a .", ". $b);
 		while($thread = mysql_fetch_assoc($threads)) {
 			print_thread($thread, "board", $board, $overboard);
 		}
