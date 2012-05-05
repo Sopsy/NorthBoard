@@ -552,10 +552,9 @@ function print_files($post, $location = "ap", $filecount, $fileq) {
 	// Are there any files on the post?
 	if($filecount > 0) {
 	
-
 		if( $filecount > 1 )
 			echo '
-			<div class="'. ($location['thread'] == 0 ? 'op_filecontainer' : 'filecontainer') .'">';
+			<div class="'. ($post['thread'] == 0 ? 'op_filecontainer' : 'filecontainer') .'">';
 		
 		// Output the files
 		$i = 1;

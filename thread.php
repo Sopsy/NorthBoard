@@ -104,12 +104,7 @@ include("inc/header.php"); // Html-headi
 		<div class="infobar">'. sprintf(T_("Your message will be sent as a reply to the thread %s"), $thread) .'</div>',
 			post_form($i, $thread, 0);
 		}
-		
-		if($cfg['user']['hide_ads'] == 0) {
-			if($i['category'] != "0")
-				include("ads/ad_top.php");
-		}
-			
+					
 		echo '
 		<form id="deleteform" method="post" action="'. $cfg['htmldir'] .'/delete/">
 		<input type="hidden" name="open_thread" value="'. $thread .'" />

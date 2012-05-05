@@ -79,10 +79,6 @@ include("inc/header.php"); // Html-head
 		<div class="infobar">'. T_("Please remember that this board is worksafe.") .'</div>';
 
 		echo post_form($board, 0, $overboard);
-		
-		if($cfg['user']['hide_ads'] != 1) {
-			include("ads/ad_top.php");
-		}
 			
 		echo '
 		<form id="deleteform" method="post" action="'. $cfg['htmldir'] .'/delete/">

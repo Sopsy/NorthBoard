@@ -36,9 +36,6 @@ include("inc/header.php"); // Html-headi
 
 	echo common_top($i);
 		
-		if($cfg['user']['hide_ads'] == 0)
-			include("ads/ad_top.php");
-			
 		echo '
 		<div class="infobar">'. sprintf(T_("Thread list of the board /%s/"), $i['url']) .'.</div>
 		<p><a href="'. $cfg['htmldir'] .'/'. $i['url'].'/" class="button">'. T_("Return to the board") .'</a></p>';
