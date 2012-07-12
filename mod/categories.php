@@ -174,6 +174,34 @@ WHERE `id` = ' . $id;
             }
         }
     }
+} elseif ($_GET['a'] == "delete") {
+    $id = mysql_real_escape_string($_GET['b']);
+    $result = mysql_query('SELECT * FROM `boards` WHERE category = ' . $id . ' LIMIT 0, 1');
+    if (mysql_num_rows($result) != 0) {
+        echo 'category must be empty! (contains ' . mysql_num_rows($result) . 'boards)';
+    } elseif (empty($_POST)) {
+        $result = mysql_query('SELECT * FROM `categories` WHERE id = ' . $id . ' LIMIT 0, 1');
+        if (mysql_num_rows($result) != 1) {
+            echo 'category not found!';
+        } else {
+            $row = mysql_fetch_assoc($result);
+            echo '<h2>Are you sure you want to delete board "' . $row['name'] . '" ?</h2>';
+
+            echo '<form method="post" action="' . $cfg['htmldir'] . '/mod/categories/delete/' . $id . '">' . PHP_EOL .
+            '<a href="' . $cfg['htmldir'] . '/mod/categories">Cancel</a>' . PHP_EOL .
+            '<input type="submit" name="delete" value="Delete" />' . PHP_EOL .
+            '</form>';
+        }
+    } elseif (isset($_POST['delete'])) {
+        mysql_query('DELETE FROM `categories` WHERE id = ' . $id);
+        if (mysql_affected_rows() == 1) {
+            echo 'success! <a href="' . $cfg['htmldir'] . '/mod/categories">continue</a>';
+        } else {
+            echo 'error! ';
+        }
+    } else {
+        echo 'not supported';
+    }
 } else {
     echo 'empty';
 }

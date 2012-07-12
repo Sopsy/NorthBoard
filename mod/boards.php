@@ -264,7 +264,7 @@ if (empty($_GET['a'])) {
             }
 
             if (mysql_affected_rows() == 1) {
-                echo 'success!';
+                echo 'success! <a href="' . $cfg['htmldir'] . '/mod/boards">continue</a>';
             } else {
                 echo 'error! ';
             }
@@ -475,7 +475,7 @@ WHERE id = ' . $id . '';
             }
 
             if (mysql_affected_rows() == 1) {
-                echo 'success!';
+                echo 'success! <a href="' . $cfg['htmldir'] . '/mod/boards">continue</a>';
             } else {
                 echo 'error! ';
             }
@@ -546,7 +546,7 @@ WHERE id = ' . $id . '';
 
                 rrmdir($cfg['srvdir'] . "/files/" . $board_val['url']);
 
-                echo 'success!';
+                echo 'success! <a href="' . $cfg['htmldir'] . '/mod/boards">continue</a>';
             }
         }
     }

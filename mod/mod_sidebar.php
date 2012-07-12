@@ -47,7 +47,7 @@ if(!empty($cfg['user_class']) AND $cfg['user_class'] >= 1) {
 			<li><a href="'. $cfg['htmldir'] .'/mod/bans/add/">'. T_("Add a ban") .'</a></li>
 			';
 			if($cfg['user_class'] == 1) echo '
-			<li class="header">'. T_("Boards and categories") .' (TODO)</li>
+			<li class="header">'. T_("Boards and categories") .'</li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/boards/">'. T_("Manage boards") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/boards/add">'. T_("Create a board") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/categories/">'. T_("Manage categories") .'</a></li>
