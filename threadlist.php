@@ -155,7 +155,15 @@ include("inc/header.php"); // Html-headi
 		</table>
 		<div class="infobar bottom_border">'. sprintf(T_("%s threads shown"), $b) .'</div>';
 
-		echo '<div class="boardnav">', boardnav(), '</div>';
+		echo '<div class="boardnav">		[ <a href="'. $cfg['htmldir'] .'/personal/followed/">'. T_("Followed") .'</a> |
+		<a href="'. $cfg['htmldir'] .'/personal/mythreads/">'. T_("My threads") .'</a> |
+		<a href="'. $cfg['htmldir'] .'/personal/repliedthreads/">'. T_("Replied") .'</a> ]
+		<div style="float: right;">
+			[ <a href="'. $cfg['htmldir'] .'/">'. T_('Front page') .'</a> |
+			<a href="'. $cfg['htmldir'] .'/search/">'. T_('Message search') .'</a> |
+			<a href="'. $cfg['htmldir'] .'/settings/">'. T_("Site personalization") .'</a> ]
+		</div>
+		<br />'. boardnav() .'</div>';
 		?>
 	</div>
 

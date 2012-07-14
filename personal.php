@@ -113,11 +113,16 @@ include("inc/header.php"); // Html-head
 						<a id="next" class="button" href="'. $cfg['htmldir'] .'/'. $i['url'] .'-'. ($page+1) .'/">'. T_("Next") .'</a>';
 					echo '
 					</p>
-					<p id="boards">
-						', boardnav(), '
-					</p>
 				</div>
-				', buttons_bottom(), '
+				<div class="boardnav">		[ <a href="'. $cfg['htmldir'] .'/personal/followed/">'. T_("Followed") .'</a> |
+		<a href="'. $cfg['htmldir'] .'/personal/mythreads/">'. T_("My threads") .'</a> |
+		<a href="'. $cfg['htmldir'] .'/personal/repliedthreads/">'. T_("Replied") .'</a> ]
+		<div style="float: right;">
+			[ <a href="'. $cfg['htmldir'] .'/">'. T_('Front page') .'</a> |
+			<a href="'. $cfg['htmldir'] .'/search/">'. T_('Message search') .'</a> |
+			<a href="'. $cfg['htmldir'] .'/settings/">'. T_("Site personalization") .'</a> ]
+		</div>
+		<br />'. boardnav() .'</div>'.buttons_bottom(), '
 			</div>
 			</fieldset>
 			</form>';
