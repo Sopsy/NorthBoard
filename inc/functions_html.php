@@ -701,6 +701,7 @@ function common_top($board) {
 		
 		<p class="title">'. $title .'</p>
 		<p class="title_sub">'. $desc .'</p>
+                ' . (isset($board['threadlist']) ? '<p class="title_sub">' . $board['threadlist'] . '</p>' : '') . '
 		<hr class="line" />
 		<div id="hide_postform">';
 	

@@ -17,6 +17,8 @@ if( !is_numeric($page) OR $page < 1 OR substr( $_SERVER['REQUEST_URI'], -3)  == 
 	die();
 }
 
+$i['threadlist'] = '<a href="'. $cfg['htmldir'] .'/personal/'. $_GET['do'] .'/threadlist/">'. T_("Show thread list") .'</a>';
+
 $threads = false;
 if( $_GET['do'] == 'followed' )
 {
@@ -72,7 +74,7 @@ else
 $title .= ' - '. $cfg['site_title']; // Site title
 include("inc/header.php"); // Html-head
 
-	echo common_top($i);
+        echo common_top($i);
 		
 		if(!$threads) echo '
 		<p>'. T_("You have no threads here.") .'</p>';
