@@ -24,7 +24,7 @@ if(!empty($cfg['user_class']) AND $cfg['user_class'] >= 1) {
 			if($cfg['user_class'] == 1) echo '
 			<li class="header">'. T_("Administrators") .'</li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/users/">'. T_("Manage administrators") .'</a></li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/users/add/">'. T_("Create an account") .'</a></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/users/create/">'. T_("Create an account") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/users/log/">'. T_("Moderation log") .' (TODO)</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/errorlog/">'. T_("Errorlog") .'</a></li>
 			';
