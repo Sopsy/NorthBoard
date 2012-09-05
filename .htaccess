@@ -25,7 +25,7 @@ RewriteRule ^banned/$ banned.php
 RewriteRule ^settings/([a-z0-9\_]+)?(/)?([a-z0-9\_]+)?(/)?$ settings.php?do=$1&id=$3
 RewriteRule ^search(/)?$ search.php
 RewriteRule ^personal/([a-z0-9\_]+)(-[0-9]+)?(/)?$ personal.php?do=$1&page=$2
-#RewriteRule ^personal/([a-z0-9\_]+)(/)threadlist(/)?$ threadlist_personal.php?do=$1
+RewriteRule ^personal/([a-z0-9\_]+)(/)threadlist(/)?$ threadlist_personal.php?do=$1
 RewriteRule ^redirect/([0-9]+)(/)?$ scripts/redirect.php?id=$1
 RewriteRule ^post/$ scripts/post.php
 RewriteRule ^delete/(.*)?$ scripts/delete.php$1
