@@ -175,6 +175,9 @@ WHERE `id` = ' . $id;
         }
     }
 } elseif ($_GET['a'] == "delete") {
+    
+    echo 'Its propably better to do this manually to db ....';
+    /*
     $id = mysql_real_escape_string($_GET['b']);
     $result = mysql_query('SELECT * FROM `boards` WHERE category = ' . $id . ' LIMIT 0, 1');
     if (mysql_num_rows($result) != 0) {
@@ -202,6 +205,7 @@ WHERE `id` = ' . $id;
     } else {
         echo 'not supported';
     }
+     */
 } else {
     echo 'empty';
 }
