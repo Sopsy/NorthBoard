@@ -17,6 +17,8 @@ if( !is_numeric($page) OR $page < 1 OR substr( $_SERVER['REQUEST_URI'], -3)  == 
 	die();
 }
 
+$i['threadlist'] = '<a href="'. $cfg['htmldir'] .'/personal/'. $_GET['do'] .'/threadlist/">'. T_("Show thread list") .'</a>';
+
 $threads = false;
 if( $_GET['do'] == 'followed' )
 {
@@ -72,7 +74,7 @@ else
 $title .= ' - '. $cfg['site_title']; // Site title
 include("inc/header.php"); // Html-head
 
-	echo common_top($i);
+        echo common_top($i);
 		
 		if(!$threads) echo '
 		<p>'. T_("You have no threads here.") .'</p>';
@@ -113,11 +115,16 @@ include("inc/header.php"); // Html-head
 						<a id="next" class="button" href="'. $cfg['htmldir'] .'/'. $i['url'] .'-'. ($page+1) .'/">'. T_("Next") .'</a>';
 					echo '
 					</p>
-					<p id="boards">
-						', boardnav(), '
-					</p>
 				</div>
-				', buttons_bottom(), '
+				<div class="boardnav">		[ <a href="'. $cfg['htmldir'] .'/personal/followed/">'. T_("Followed") .'</a> |
+		<a href="'. $cfg['htmldir'] .'/personal/mythreads/">'. T_("My threads") .'</a> |
+		<a href="'. $cfg['htmldir'] .'/personal/repliedthreads/">'. T_("Replied") .'</a> ]
+		<div style="float: right;">
+			[ <a href="'. $cfg['htmldir'] .'/">'. T_('Front page') .'</a> |
+			<a href="'. $cfg['htmldir'] .'/search/">'. T_('Message search') .'</a> |
+			<a href="'. $cfg['htmldir'] .'/settings/">'. T_("Site personalization") .'</a> ]
+		</div>
+		<br />'. boardnav() .'</div>'.buttons_bottom(), '
 			</div>
 			</fieldset>
 			</form>';

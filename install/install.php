@@ -1,4 +1,26 @@
 <?php
+
+function ImportSqlFile($fileName) {
+    // Load and explode the sql file
+    $f = fopen($fileName, "r+");
+    $sqlFile = fread($f, filesize($fileName));
+    $sqlArray = explode(';', $sqlFile);
+
+    //Process the sql file by statements
+    foreach ($sqlArray as $stmt) {
+        if (strlen($stmt) > 3) {
+            $result = mysql_query($stmt);
+            if (!$result) {
+                $sqlErrorCode = mysql_errno();
+                $sqlErrorText = mysql_error();
+                echo '<b>Error executing sql file ' . $fileName . ':</b> ' . $sqlErrorCode . ' ' . $sqlErrorText . '<br/>';
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 function TableExists( $tablename, $database = false )
 {
   if( !$database )
@@ -32,7 +54,10 @@ mysql_select_db( $cfg['dbname'] ) or die( 'Couldn\'t select the database, check 
 if( !TableExists( 'admin_users' ) )
 {
   // Works only for local mysql server, feel free to customize it to suit your needs
-  system( "mysql {$cfg['dbname']} -u{$cfg['dbuser']}  -p{$cfg['dbpass']} < ../dbschema.sql" );
+  //system( "mysql {$cfg['dbname']} -u{$cfg['dbuser']}  -p{$cfg['dbpass']} < ../dbschema.sql" );
+  
+  // v2
+  ImportSqlFile('../dbschema.sql');
 }
 
 require( '../inc/functions_general.php' );
@@ -97,6 +122,9 @@ if( mysql_num_rows( $res ) == 0 )
   }
 }
 ?>
+
+<h1 style="color: red;">REMEMBER TO DELETE OR RENAME THIS FOLDER!</h1>
+
 Now you should add a category to the categories table.<br />
 After that add a board with the same category as the id of the category just added.<br />
 If the themes don't seem to work just change the $cfg['use_tmpfs'] to false from the config.php.<br />

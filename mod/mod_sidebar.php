@@ -24,14 +24,14 @@ if(!empty($cfg['user_class']) AND $cfg['user_class'] >= 1) {
 			if($cfg['user_class'] == 1) echo '
 			<li class="header">'. T_("Administrators") .'</li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/users/">'. T_("Manage administrators") .'</a></li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/users/add/">'. T_("Create an account") .'</a></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/users/create/">'. T_("Create an account") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/users/log/">'. T_("Moderation log") .' (TODO)</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/errorlog/">'. T_("Errorlog") .'</a></li>
 			';
 			if($cfg['user_class'] == (1 OR 2)) echo '
 			<li class="header">'. T_("Front page") .' (TODO)</li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/frontpage/">'. T_("Manage content") .'</a></td></li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/frontpage/add">'. T_("Add content") .'</a></td></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/frontpage/">'. T_("Manage content") .'</a></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/frontpage/add">'. T_("Add content") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/frontpage/categories/">'. T_("Manage categories") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/frontpage/categories/add">'. T_("Create a category") .'</a></li>
 			';
@@ -44,10 +44,10 @@ if(!empty($cfg['user_class']) AND $cfg['user_class'] >= 1) {
 			<li class="header">'. T_("Bans") .'</li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/bans/">'. T_("Manage bans") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/bans/expired/">'. T_("Expired bans") .'</a></li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/bans/add/">'. T_("Add a ban") .'</a></td></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/bans/add/">'. T_("Add a ban") .'</a></li>
 			';
 			if($cfg['user_class'] == 1) echo '
-			<li class="header">'. T_("Boards and categories") .' (TODO)</li>
+			<li class="header">'. T_("Boards and categories") .'</li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/boards/">'. T_("Manage boards") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/boards/add">'. T_("Create a board") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/categories/">'. T_("Manage categories") .'</a></li>
@@ -59,15 +59,15 @@ if(!empty($cfg['user_class']) AND $cfg['user_class'] >= 1) {
 			';
 			echo '
 			<li class="header">'. T_("Files") .'</li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/files/">'. T_("Latest uploaded files") .'</a></td></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/files/">'. T_("Latest uploaded files") .'</a></li>
 			
 			<li class="header">'. T_("Messages") .'</li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/messages/">'. T_("Latest messages") .'</a></li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/messages/reports/">'. sprintf(T_("Reports (%s)"), $reportcount) .'</a></li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/messages/locked/">'. T_("Locked threads") .'</a></td></li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/messages/stickied/">'. T_("Stickied threads") .'</a></td></li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/messages/move/">'. T_("Move thread") .'</a></td></li>
-			<li><a href="'. $cfg['htmldir'] .'/mod/messages/merge/">'. T_("Merge threads") .'</a></td></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/messages/locked/">'. T_("Locked threads") .'</a></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/messages/stickied/">'. T_("Stickied threads") .'</a></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/messages/move/">'. T_("Move thread") .'</a></li>
+			<li><a href="'. $cfg['htmldir'] .'/mod/messages/merge/">'. T_("Merge threads") .'</a></li>
 			
 			<li class="header">'. T_("Statistics") .' (TODO)</li>
 			<li><a href="'. $cfg['htmldir'] .'/mod/statistics/postcount/">'. T_("Post count") .'</a></li>
