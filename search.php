@@ -49,6 +49,17 @@ if( !empty( $_POST['term'] ) AND strlen($_POST['term']) >= 4 )
 		{
 			$board = mysql_query("SELECT * FROM `boards` WHERE `id` = '". $res['board'] ."' LIMIT 1");
 			$board = mysql_fetch_assoc($board);
+                        
+                        // Try determine which page message is on
+                        if($res['thread'] == 0) {
+                            $res['on_page'] = 1;
+                        } else {
+                            $countQuery = mysql_query("SELECT count(id) as postno FROM posts WHERE thread = " . $res['thread'] . " AND id < " . $res['id'] . "");
+                            $postsOnThread = mysql_fetch_assoc($countQuery);
+                            
+                            $res['on_page'] = floor($postsOnThread['postno'] / $cfg['ppp']) + 1;
+                        }
+                        
 			
 			print_post($res, 'thread', $board);
 			echo '
