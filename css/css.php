@@ -7,6 +7,8 @@
 include("../inc/functions_db.php");
 dbconnect(true);
 
+require_once '../inc/functions_general.php';
+
 if(empty($_GET['name'])) $name = $cfg['default_theme'];
 else $name = addslashes($_GET['name']);
 

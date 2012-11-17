@@ -6,6 +6,7 @@ define('ENDTIME', microtime_float());
 ?>
 </div>
 
+<!--
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,6 +21,6 @@ define('ENDTIME', microtime_float());
   })();
 
 </script>
-
+-->
 </body>
 </html>

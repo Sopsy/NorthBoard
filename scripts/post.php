@@ -399,7 +399,7 @@ if($post_size > $cfg['max_filesize'])
 if($filecount != 0) {
 	$folder = mysql_real_escape_string($url);
 	// Check the free hdd space if files were sent
-	if(disk_free_space($cfg['srvdir']) < $cfg['free_space_limit'])
+	if($cfg['free_space_limit'] != false AND disk_free_space($cfg['srvdir']) < $cfg['free_space_limit'])
 		error(T_("The server is running out of free hard drive space. New files will not be accepted before some space is freed."));
 
 	if(!is_dir($cfg['srvdir'] ."/files/"))
