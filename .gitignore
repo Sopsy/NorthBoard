@@ -2,6 +2,7 @@ files/*
 inc/config.php
 tmp/*
 ads/*
+install/*
 
 # Netbeans project files
 /nbproject/
