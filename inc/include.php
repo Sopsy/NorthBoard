@@ -20,7 +20,7 @@ if( $load[0] > $cfg['load_max'] )
 {
 	header('HTTP/1.1 503 Too busy, try again later');
 	// WHY DON'T I SEE THIS MESSAGE!?
-	echo '<strong>HTTP/1.1 503 Too busy, try again later!</strong><br /><br />' . sprintf(T_("The server is too busy at the moment. Please try again later.<br />Current load is %s, the limit is %s."), $load[0], $cfg['load_max']);
+	//echo '<strong>HTTP/1.1 503 Too busy, try again later!</strong><br /><br />' . sprintf(T_("The server is too busy at the moment. Please try again later.<br />Current load is %s, the limit is %s."), $load[0], $cfg['load_max']);
 	die();
 }
 

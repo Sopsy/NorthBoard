@@ -10,16 +10,29 @@ function update_online_log($uid) {
 	// This also creates the user profile
 	if(!empty($_COOKIE['uid']))
 	{
-		mysql_query("
+		// Time + random value -> MD5 -> first 12 characters
+		$uname = substr( md5( time() . mt_rand( 0, 999999 ) ), 0, 12 );
+		$password = substr( md5( time() . mt_rand( 0, 999999 ) ), 0, 12 );
+		$check_duplicate = mysql_query("SELECT `uid` FROM `users` WHERE `uname` = '". mysql_real_escape_string($uname) ."' LIMIT 1");
+		while( mysql_num_rows($check_duplicate) != 0 )
+		{
+			// Was used already! Regenerate!
+			$uname = substr( md5( time() . mt_rand( 0, 999999 ) ), 0, 12 );
+		}
+		
+		$q = mysql_query("
 			INSERT INTO `users`(
-				`uid`, `ip`, `last_load`, `last_page`, `online`
+				`uid`, `ip`, `last_load`, `last_page`, `online`, `uname`, `password`
 			)
 			VALUES (
 				'". mysql_real_escape_string($uid) ."',
 				'". mysql_real_escape_string($ip) ."',
 				UNIX_TIMESTAMP(),
 				'". mysql_real_escape_string($_SERVER['REQUEST_URI']) ."',
-				'1')
+				'1',
+				'". mysql_real_escape_string($uname) ."',
+				'". mysql_real_escape_string($password) ."'
+			)
 			ON DUPLICATE KEY UPDATE
 				`last_load` = UNIX_TIMESTAMP(),
 				`last_page` = '". mysql_real_escape_string($_SERVER['REQUEST_URI']) ."',

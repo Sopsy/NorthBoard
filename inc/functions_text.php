@@ -324,7 +324,7 @@ function mb_substrws($text, $len = 160) {
 			print_r($chars);
 			echo '-->';
 */
-            if ( !empty( $chars[ord('<')] ) AND $chars[ord('<')] > $chars[ord('>')] OR !empty( $chars[ord('<')] ) AND empty( $chars[ord('>')] ) )
+            if ( ( !empty( $chars[ord('<')] ) AND !empty( $chars[ord('>')] ) AND $chars[ord('<')] > $chars[ord('>')] ) OR ( !empty( $chars[ord('<')] ) AND empty( $chars[ord('>')] ) ) )
 			{
                 $whitespaceposition = mb_strpos($text,">",$whitespaceposition)-1;
 			}
@@ -375,7 +375,7 @@ function closeUnclosedTags($text)
 						$c_tags[$tag] = 0;
 					$c_tags[$tag]++;
 				}
-				foreach ($m_open as $k => $tag) if ($c_tags[$tag]--<=0) $text.='</'.$tag.'>';
+				foreach ($m_open as $k => $tag) if ( !empty( $c_tags[$tag] ) AND $c_tags[$tag]-- <= 0 ) $text.='</'.$tag.'>';
 			}
 		}
 	}

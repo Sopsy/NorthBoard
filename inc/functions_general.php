@@ -151,8 +151,8 @@ function error($text = false, $html = true, $metarefresh = false, $log = true) {
 	$headers = ob_get_clean();
 	
 	if($log)
-		mysql_query("INSERT INTO `errorlog`(`info`, `headers`, `time`, `ip`) VALUES ('". mysql_real_escape_string($text) ."', '". mysql_real_escape_string($headers) ."', UNIX_TIMESTAMP(), '". mysql_real_escape_string($_SERVER['REMOTE_ADDR']) ."')");
-		
+		mysql_query("INSERT INTO `errorlog`(`info`, `headers`, `time`, `ip`) VALUES ('". mysql_real_escape_string($text) ."', '". mysql_real_escape_string($headers) ."', UNIX_TIMESTAMP(), '". mysql_real_escape_string(get_ip()) ."')");
+
 	die();
 }
 
@@ -259,6 +259,7 @@ function load_user($nostatsupdate = false) {
 			update_user($cfg['user']['uid'], 'post_password', $cfg['user']['post_password']);
 		}
 		
+		/*
 		// Generate random username and password for the user (for site personalization)
 		if(!$cfg['user']['uname'])
 		{
@@ -275,6 +276,7 @@ function load_user($nostatsupdate = false) {
 			update_user($cfg['user']['uid'], 'uname', $cfg['user']['uname']);
 			update_user($cfg['user']['uid'], 'password', $cfg['user']['password']);
 		}
+		*/
 		
 		// Load hidden and followed threads
 		$cfg['user']['follow'] = array();
@@ -411,10 +413,14 @@ function T_($str)
 function get_ip($resolvedns = true) {
 	global $cfg;
 
-	$ip = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
+
+//	if( !empty( $_SERVER['HTTP_CF_CONNECTING_IP'] ) )
+//		$ip = mysql_real_escape_string($_SERVER['HTTP_CF_CONNECTING_IP']);
+//	else
+		$ip = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
 
 	if($cfg['resolve_dns'] AND $resolvedns) {
-	
+
 		if(!defined('REMOTEHOSTADDR')) {
 			mysql_query("DELETE FROM `cache_dns` WHERE `time` < '". time() - $cfg['dnscache_ttl'] ."'");
 			$q = mysql_query("SELECT `host` FROM `cache_dns` WHERE `ip` = '". $ip ."' LIMIT 1");
@@ -422,7 +428,7 @@ function get_ip($resolvedns = true) {
 				$host = mysql_result($q, 0, 'host');
 			}
 			else {
-				$host = mysql_real_escape_string(gethostbyaddr($_SERVER["REMOTE_ADDR"]));
+				$host = mysql_real_escape_string(gethostbyaddr($ip));
 				mysql_query("INSERT INTO `cache_dns`(`ip`, `host`, `time`) VALUES ('". $ip ."', '". $host ."', UNIX_TIMESTAMP())");
 			}
 			define('REMOTEHOSTADDR', $host);
