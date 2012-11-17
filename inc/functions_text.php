@@ -168,10 +168,11 @@ function format_text($text) {
 	$text = bbcode_format($text);
 	
 	// Automaattinen korvaus ***://, www., mailto:, ftp. teksteille linkeiksi!
-        $text = preg_replace("#\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))#iS", "<a href=\"\\1\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\1</a>", $text);
-	// $text = preg_replace("#(^|[\n \>\(])([\w]+?://[\w]+[^\) \"\n\r\t<]*)#ise", "'\\1<a href=\"\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
-	// $text = preg_replace("#(^|[\n \>\(])((www)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"http://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
-	// $text = preg_replace("#(^|[\n \>\(])((ftp)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"ftp://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
+        // Needs more testing, does not work.
+	//$text = preg_replace("#\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))#iS", "<a href=\"\\1\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\1</a>", $text);
+	$text = preg_replace("#(^|[\n \>\(])([\w]+?://[\w]+[^\) \"\n\r\t<]*)#ise", "'\\1<a href=\"\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
+	$text = preg_replace("#(^|[\n \>\(])((www)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"http://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
+	$text = preg_replace("#(^|[\n \>\(])((ftp)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"ftp://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
 	$text = preg_replace("#(^|[\n \>\(])([a-z0-9&\-_\.]+?)@([\w\-]+\.([\w\-\.]+\.)*[\)\w]+)#i", "\\1<a href=\"mailto:\\2@\\3\">\\2@\\3</a>", $text);
 
 	// Karsitaan liiat rivinvaihdot
