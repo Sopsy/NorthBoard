@@ -900,7 +900,8 @@ function post_form($board, $thread = 0, $overboard) {
 					<td>
 						<select name="board" id="board">';
 						$boards = boardnav(false, true);
-							$return .= $boards;
+						$return .= $boards;
+						$return = str_replace('option value="28"', 'option value="28" selected="selected"', $return);
 						$return .= '
 						</select>
 					</td>

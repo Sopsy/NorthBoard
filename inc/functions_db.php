@@ -11,7 +11,7 @@ function dbconnect($onlydb = false)
 		include("config.php");
 
 	$dbconnection = false;
-	$link = @mysql_pconnect($cfg['dbhost'], $cfg['dbuser'], $cfg['dbpass']);
+	$link = @mysql_connect($cfg['dbhost'], $cfg['dbuser'], $cfg['dbpass']);
 	if (!$link)
 	{
 		if( !$onlydb )

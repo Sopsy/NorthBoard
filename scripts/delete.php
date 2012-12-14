@@ -155,15 +155,13 @@ else {
 			$goto = urldecode( $_POST['url'] );
 		else
 			$goto = '/'. $_POST['open_board'] .'/';
-			
-		if(mysql_num_rows($q) == 1)
-			$goto = urldecode($_POST['url']);
-		elseif( !empty( $_POST['open_board'] ) )
-			$goto = '/'. $_POST['open_board'] .'/';
-		else
-			$goto = '';
 	}
-	else $goto = '';
+	elseif( !empty($_POST['open_board']) )
+		$goto = '/'. $_POST['open_board'] .'/';
+	elseif( !empty($_POST['url']) )
+		$goto = urldecode($_POST['url']);
+	else
+		$goto = '';
 	
 	info($foo, true, "2;url=". $cfg['htmldir'] . $goto);
 }

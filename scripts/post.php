@@ -263,11 +263,11 @@ if($cfg['proxy_detection'])
 
 		// At least it detects Opera turbo.
 		$proxy_forwarded = false;
-		if(!empty($_SERVER['X-Forwarded-For']))
-			$proxy_forwarded = true;
+//		if(!empty($_SERVER['X-Forwarded-For']))
+//			$proxy_forwarded = true;
 		
-		if(!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-			$proxy_forwarded = true;
+//		if(!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+//			$proxy_forwarded = true;
 		
 		if( in_array( get_ip(false), $proxylist ) OR $proxy_forwarded )
 		{
@@ -845,7 +845,7 @@ if(empty($files) AND $cfg['embedandfile'] == false OR $cfg['embedandfile'] == tr
 			elseif($foo == "HTTP/1.0 303 See Other")
 			{
 				delete_file_array($inserted_files);
-				error(T_("Malformed embed-ID"));
+				error(T_('The source responded with an HTTP-303 status. Please notify the board administration that they most likely should change the embedding URL.'));
 			}
 			elseif($foo != "HTTP/1.0 301 Moved Permanently" AND $foo != "HTTP/1.0 302 Found" AND $foo != "HTTP/1.0 200 OK" AND $foo != "HTTP/1.1 200 OK")
 			{

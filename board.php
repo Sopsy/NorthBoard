@@ -75,7 +75,7 @@ include("inc/header.php"); // Html-head
 
 	echo common_top($board);
 		
-		if(!empty($board['worksafe']) AND $board['worksafe'] == 1 AND !$overboard) echo '
+		if(!empty($board['worksafe']) AND $board['worksafe'] == 1 AND !$overboard AND $board['id'] != '28') echo '
 		<div class="infobar">'. T_("Please remember that this board is worksafe.") .'</div>';
 
 		echo post_form($board, 0, $overboard);
@@ -83,6 +83,7 @@ include("inc/header.php"); // Html-head
 		echo '
 		<form id="deleteform" method="post" action="'. $cfg['htmldir'] .'/delete/">
 		<input type="hidden" name="url" value="'. urlencode($_SERVER['REQUEST_URI']) .'" />
+		<input type="hidden" name="open_board" value="'. $board['url'] .'" />
 		<fieldset>';
 		
 		if($overboard)
