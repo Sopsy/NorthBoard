@@ -93,7 +93,7 @@ include("inc/header.php"); // Html-head
 
 			$i['followed_threads'] = true;
 		
-			$threads = mysql_query("SELECT * FROM `posts` WHERE `deleted_time` = '0' AND ". $threads ." ORDER BY `sticky`, `bump_time` DESC LIMIT ". $a .", ". $b);
+			$threads = mysql_query("SELECT * FROM `posts` WHERE `deleted_time` = '0' AND ". $threads ." ORDER BY `bump_time` DESC LIMIT ". $a .", ". $b);
 			while($thread = mysql_fetch_assoc($threads)) {
 				print_thread($thread, "board", $i);
 			}
