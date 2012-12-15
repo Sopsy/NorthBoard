@@ -3,10 +3,15 @@ require_once("inc/include.php");
 
 $do = mysql_real_escape_string($_GET['do']);
 
+$threads = null;
 if ($do == 'followed') {
-    $threads = null;
-    foreach ($cfg['user']['follow'] AS $threadid) {
-        $threads .= "`id` = '" . $threadid . "'";
+    if(count($cfg['user']['follow']) > 0) {
+        foreach ($cfg['user']['follow'] AS $threadid) {
+            if($threads != null) $threads .= " OR ";
+            $threads .= "`posts`.`id` = '" . $threadid . "'";
+        }
+    } else {
+        $threads = 'false';
     }
 
     $title = T_("Followed threads"); // Site title
@@ -14,19 +19,47 @@ if ($do == 'followed') {
     $i['name'] = T_("Followed threads");
     $i['description'] = T_("The threads you are following are shown on this page.");
 } elseif ($do == 'mythreads') {
-    $q = mysql_query("SELECT `id` FROM `posts` WHERE `deleted_time` = '0' AND `uid` = '" . $cfg['user']['uid'] . "' AND `thread` = '0' ORDER BY `id` DESC");
+    $q = mysql_query("SELECT `id` FROM `posts` WHERE `deleted_time` = '0' AND `uid` = '". $cfg['user']['uid'] ."' AND `thread` = '0' ORDER BY `id` DESC");
     
     $title = T_("My threads");
     $i['url'] = 'personal/mythreads';
     $i['name'] = T_("My threads");
     $i['description'] = T_("The threads you have made are shown on this page.");
-} elseif ($do == 'repliedthreads') {
-    $q = mysql_query("SELECT `thread` AS `id` FROM `posts` WHERE `deleted_time` = '0' AND `uid` = '" . $cfg['user']['uid'] . "' AND `thread` != '0' GROUP BY `thread` ORDER BY `id` DESC");
     
+    if( mysql_num_rows( $q ) != 0 )
+	{
+		while( $thread = mysql_fetch_assoc( $q ) )
+		{
+			if($threads != null) $threads .= " OR ";
+			$threads .= "`posts`.`id` = '". $thread['id'] ."'";
+		}
+	} else {
+        $threads = 'false';
+    }
+        
+} elseif ($do == 'repliedthreads') {
+    $q = mysql_query("SELECT `thread` AS `id` FROM `posts` WHERE `deleted_time` = '0' AND `uid` = '". $cfg['user']['uid'] ."' AND `thread` != '0' GROUP BY `thread` ORDER BY `id` DESC");
+    
+    if (!$q) {
+    $message  = 'Invalid query: ' . mysql_error() . "\n";
+    die($message);
+}
     $title = T_("Replied threads");
     $i['url'] = 'personal/repliedthreads';
     $i['name'] = T_("Replied threads");
     $i['description'] = T_("The threads you have replied to are shown on this page.");
+    
+        if( mysql_num_rows( $q ) != 0 )
+	{
+		while( $thread = mysql_fetch_assoc( $q ) )
+		{
+			if($threads != null) $threads .= " OR ";
+			$threads .= "`posts`.`id` = '". $thread['id'] ."'";
+		}
+	} else {
+            $threads = 'false';
+        }
+        
 } else {
     header("Location: " . $cfg['htmldir']);
     die();
@@ -51,7 +84,7 @@ echo '
 				}
 			</style>
 		<table id="list">';
-
+/*
 $lq = mysql_query("
 			SELECT `posts`.`id`, `posts`.`board`, `posts`.`subject`, `posts`.`message`, `posts`.`time`, `boards`.`url`, `post_files`.`fileid`, `files`.`folder`, `files`.`extension`, `files`.`name`, `files`.`thumb_ext`
 			FROM `boards`, `posts`
@@ -62,6 +95,34 @@ $lq = mysql_query("
 			ORDER BY `posts`.`sticky`, `posts`.`bump_time` DESC
 			LIMIT 150 
 		");
+// */
+
+$lq = mysql_query("SELECT `posts`.`id`, 
+        `posts`.`board`, 
+        `posts`.`subject`, 
+        `posts`.`message`, 
+        `posts`.`time`, 
+        `boards`.`url`, 
+        `post_files`.`fileid`, 
+        `files`.`folder`, 
+        `files`.`extension`, 
+        `files`.`name`, 
+        `files`.`thumb_ext` 
+    FROM `boards`, `posts`
+        LEFT JOIN `post_files` ON `posts`.`id` = `post_files`.`postid`
+        LEFT JOIN `files` ON `files`.`id` = `post_files`.`fileid`
+    WHERE `posts`.`board` = `boards`.`id` 
+    AND `posts`.`thread` = '0' 
+    AND `deleted_time` = '0' 
+    AND (". $threads .")
+    ORDER BY `bump_time` DESC 
+    LIMIT 0,150");
+
+if (!$lq) {
+    $message  = 'Invalid query: ' . mysql_error() . "\n";
+    die($message);
+}
+
 
 $b = 0;
 while ($l = mysql_fetch_assoc($lq)) {
