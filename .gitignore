@@ -4,5 +4,8 @@ tmp/*
 ads/*
 install/*
 
+# Files -symlink for Northpole
+files
+
 # Netbeans project files
 /nbproject/
