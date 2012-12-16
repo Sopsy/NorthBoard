@@ -162,7 +162,7 @@ function format_text($text) {
 	$text = removeForbiddenUnicode($text);
 	
         // Automaattinen korvaus ***://, www., mailto:, ftp. teksteille linkeiksi! V2!
-        $text = preg_replace("/(([\da-z\.-]+):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([#\?%\~\;\=&\/\w \.-]*)*\/?/", "<a href=\"\\0\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\0</a>", $text);
+        $text = preg_replace("/(([\da-z\.-]+):\/\/)([\da-z\.-]+)\.([a-z\.]{2,6})([#\?%\~\;\=&\/\w \.-]*)*\/?/", "<a href=\"\\0\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\0</a>", $text);
      	//$text = preg_replace("#(^|[\n \>\(])([\w]+?://[\w]+[^\) \"\n\r\t<]*)#ise", "'\\1<a href=\"\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
 	//$text = preg_replace("#(^|[\n \>\(])((www)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"http://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
 	//$text = preg_replace("#(^|[\n \>\(])((ftp)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"ftp://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
@@ -181,7 +181,7 @@ function format_text($text) {
 	
 	$text = trim($text);
 	$text = regulateWords($text, $cfg['max_word_length']);
-	
+        
 	// Ja viimeisenä vielä poistetaan MySQL-koodi tekstistä
 	$text = mysql_real_escape_string($text);
 
