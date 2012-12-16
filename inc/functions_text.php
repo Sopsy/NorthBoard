@@ -162,11 +162,14 @@ function format_text($text) {
 	$text = removeForbiddenUnicode($text);
 	
         // Automaattinen korvaus ***://, www., mailto:, ftp. teksteille linkeiksi! V2!
-        $text = preg_replace("/(([\da-z\.-]+):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([#\?%\~\;\=&\/\w \.-]*)*\/?/", "<a href=\"\\0\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\0</a>", $text);
-     	//$text = preg_replace("#(^|[\n \>\(])([\w]+?://[\w]+[^\) \"\n\r\t<]*)#ise", "'\\1<a href=\"\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
-	//$text = preg_replace("#(^|[\n \>\(])((www)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"http://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
-	//$text = preg_replace("#(^|[\n \>\(])((ftp)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"ftp://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
-	//$text = preg_replace("#(^|[\n \>\(])([a-z0-9&\-_\.]+?)@([\w\-]+\.([\w\-\.]+\.)*[\)\w]+)#i", "\\1<a href=\"mailto:\\2@\\3\">\\2@\\3</a>", $text);
+	// Still not working correctly!
+	// http://northpole.fi/northboard/1277755/
+	// http://northpole.fi/northboard/1277848/
+        //$text = preg_replace("/(([\da-z\.-]+):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([#\?%\~\;\=&\/\w \.-]*)*\/?/", "<a href=\"\\0\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\0</a>", $text);
+     	$text = preg_replace("#(^|[\n \>\(])([\w]+?://[\w]+[^\) \"\n\r\t<]*)#ise", "'\\1<a href=\"\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
+	$text = preg_replace("#(^|[\n \>\(])((www)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"http://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
+	$text = preg_replace("#(^|[\n \>\(])((ftp)\.[^\) \"\t\n\r<]*)#ise", "'\\1<a href=\"ftp://\\2\" rel=\"nofollow\" onclick=\"window.open(this.href); return false;\">\\2</a>'", $text);
+	$text = preg_replace("#(^|[\n \>\(])([a-z0-9&\-_\.]+?)@([\w\-]+\.([\w\-\.]+\.)*[\)\w]+)#i", "\\1<a href=\"mailto:\\2@\\3\">\\2@\\3</a>", $text);
         
         // viestilinkit ja vihertekstit
 	$text = preg_replace("#(&gt;&gt;)([0-9]+)#ise", "'<a href=\"http://". $cfg['htmldir_plain'] ."/redirect/\\2\" title=\"ajax;http://". $cfg['htmldir_plain'] ."/scripts/ajax/message.php?id=\\2\" onclick=\"highlight_post(\'\\2\', this); return false;\">\\1\\2</a>'", $text);
