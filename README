@@ -24,16 +24,16 @@ This guide is for Debian based distros. Needs some changes for other distros.
 I'm going to assume you already have a functional web server with Apache2, PHP5 and a MySQL server running.
 
 If you cannot install the gpac -package, you might need to add http://deb-multimedia.org/ to sources.list. 
-See link for more info and guides.
+See the prior link for more information and guides.
 
 1. Install required PHP-libraries and software:
   - apt-get install php-apc php5-mysql php5-curl php5-imagick imagemagick gifsicle libjpeg-progs optipng pngcrush php5-gd gpac
 
-2. Ensure the required apache2 rewrite-module is active by runnign the following command:
+2. Ensure the required apache2 rewrite-module is active by running the following command:
   - a2enmod rewrite
 
 3. Activate apc.rfc1867 by adding a line "apc.rfc1867 = 1" to /etc/php5/apache2/conf.d/apc.ini
-  - Even though this is optional, it is required for file upload progress to work. Don't forget to restart the web server
+  - Even though this is optional, it is required for file upload progress to work. Don't forget to restart the web server afterwards.
 
 4. Git clone or in any other way download the code to a web server public root
 
@@ -48,13 +48,13 @@ See link for more info and guides.
 
 8. Delete dbschema.sql and the whole install -folder!
 
-9. Give proper permissions for the board to create the files -folder and all subfolders. The easiest way is of course "chmod -R /path/to/installation 777", but this is the least secure also.
+9. Give proper permissions for the board to create the files -folder and all subfolders. The easiest way is of course "chmod -R /path/to/installation 777", but this is also the least secure.
 
 9. Open http://your.url/ and you should see the board open!
 
-10. To add boards, you need to issue the commands to the database directly. You can use PHPMyAdmin for example.
+10. To add boards, you need to issue the commands to the database directly, because the administration panel is incomplete. You can use PHPMyAdmin for example.
   - First add a category into the "categories" -table. Only the "name" -column is required. Note the ID of the inserted row (most likely 1).
-  - Then add a board into "boards" -table. The only required values are url (ex. "b"), name (ex. "Random"), category (the id of the inserted category (ex. "1"), required for the board to show up in the menus). "Worksafe" could be set to "0" to disable the hiding when NSFW is hidden.
+  - Then add a board into "boards" -table. The only required values are url (ex. "b"), name (ex. "Random") and category (the id of the inserted category (ex. "1"), required for the board to show up in the menus). "Worksafe" could be set to "1" to disable the hiding when NSFW is hidden.
 
 Ps. Sorry for some finnish comments in the config file :)
 
