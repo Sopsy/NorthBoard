@@ -12,11 +12,12 @@ PHP5 (exact version unknown. Should work with the newest versions from the most 
 Apache2
 Mysql5 server
 PHP-APC
-The following PHP libraries: mysql, curl, imagick, gd
+The following PHP libraries: mysql, curl, imagick, gd, geoip
 GifSicle for gif resizing
 PNGCrush and OptiPNG for png optimization
 MP4Box for mp4 streaming support
 ImageMagick for image conversions
+tmpfs (/dev/shm) might be required too. Try to enable it if you only see a white page.
 
 INSTALLATION
 ============
@@ -27,7 +28,7 @@ If you cannot install the gpac -package, you might need to add http://deb-multim
 See the prior link for more information and guides.
 
 1. Install required PHP-libraries and software:
-  - apt-get install php-apc php5-mysql php5-curl php5-imagick imagemagick gifsicle libjpeg-progs optipng pngcrush php5-gd gpac
+  - apt-get install php-apc php5-mysql php5-curl php5-imagick imagemagick gifsicle libjpeg-progs optipng pngcrush php5-gd gpac php5-geoip
 
 2. Ensure the required apache2 rewrite-module is active by running the following command:
   - a2enmod rewrite
