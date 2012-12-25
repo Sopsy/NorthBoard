@@ -8,24 +8,24 @@ This is the board software of Northpole.fi, now released under the GPLv3 license
 REQUIREMENTS
 ============
 
-PHP5 (exact version unknown. Should work with the newest versions from the most popular repositories.)
-Apache2
-Mysql5 server
-PHP-APC
-The following PHP libraries: mysql, curl, imagick, gd, geoip
-GifSicle for gif resizing
-PNGCrush and OptiPNG for png optimization
-MP4Box for mp4 streaming support
-ImageMagick for image conversions
-tmpfs (/dev/shm) might be required too. Try to enable it if you only see a white page.
+- Apache2
+- PHP5 (exact version unknown. Should work with the newest versions from the most popular repositories.)
+- Mysql5 server
+- PHP-APC (Please note that the current version of PHP-APC segfaults (=crashes) on PHP5.4+!)
+- The following PHP libraries: mysql, curl, imagick, gd, geoip
+- GifSicle for gif resizing
+- PNGCrush and OptiPNG for png optimization
+- MP4Box for mp4 streaming support
+- ImageMagick for image conversions
+- tmpfs (/dev/shm) might be required too. Try to enable it if you only see a white page.
 
 INSTALLATION
 ============
 This guide is for Debian based distros. Needs some changes for other distros.
+
 I'm going to assume you already have a functional web server with Apache2, PHP5 and a MySQL server running.
 
-If you cannot install the gpac -package, you might need to add http://deb-multimedia.org/ to sources.list. 
-See the prior link for more information and guides.
+If you cannot install the gpac -package, you might need to add http://deb-multimedia.org/ to sources.list. See the prior link for more information and guides.
 
 1. Install required PHP-libraries and software:
   - apt-get install php-apc php5-mysql php5-curl php5-imagick imagemagick gifsicle libjpeg-progs optipng pngcrush php5-gd gpac php5-geoip
