@@ -14,7 +14,7 @@ $cfg['dbpass'] = 'abcd1234';
 
 //*** SERVER SPECIFIC
 $cfg['https_port'] = "443"; // Web-server HTTPS -port
-$cfg['srvdir'] = '/home/northpole/public_html'; // Sivuston absoluuttinen hakemisto palvelimella, ilman perässäolevaa /
+$cfg['srvdir'] = '/home/northpole/public_html'; // Absolute path to the installation, without trailing slash
 $cfg['load_max'] = 30; // Upper limit of load average to load the board, if the avg-load gets over this value, the board will not load
 $cfg['use_apc'] = true; // Use PHP-APC or not? This is used to fetch the upload progress
 $cfg['imagick_bin'] = "/usr/bin/convert"; // Full location of the ImageMagick convert binary, this is required
@@ -32,7 +32,7 @@ $cfg['use_gifsicle'] = true;
 $cfg['gifsicle_bin'] = "/usr/bin/gifsicle";
 
 //*** BOARD SPECIFIC
-$cfg['htmldir'] = 'northpole.fi'; // Sivuston hakemisto, ilman perässäolevaa /, sekä ilman http(s):// alkua
+$cfg['htmldir'] = 'northpole.fi'; // The board ulr, without trailing /, and without http(s)://
 $cfg['static_htmldir'] = 'northpole.fi'; // Used for serving files, aka. static content
 $cfg['admin_email'] = 'admin@northpole.fi'; // Board administrator's email address
 $cfg['site_name'] = "Northpole"; // Your website's name
@@ -47,7 +47,7 @@ $cfg['proxy_detection'] = true; // Query the free online databases for user IPs
 $cfg['proxy_query_urls'] = 'http://www.stopforumspam.com/downloads/bannedips.zip'; // The URL to query for the blocklist.
 $cfg['proxy_list_ttl'] = 86400; // How long to save the proxy query information
 $cfg['proxy_disallow_posting'] = true; // Disallow posting with a proxy?
-$cfg['proxy_advanced_detection'] = true; // If no proxy is detected with X-Forwarded-For and blacklists, try to connect to the remote IP
+$cfg['proxy_advanced_detection'] = false; // If no proxy is detected with X-Forwarded-For and blacklists, try to connect to the remote IP
 $cfg['proxy_ports'] = array(80, 3128, 8080, 8909); // Probe for these ports on the remote IP. If any of these are accepting connections, the user will be listed as a proxy.
 $cfg['proxy_connect_timeout'] = 4; // Timeout on fsockopen if connection hangs (= firewalled and not answering "connection rejected")
 $cfg['proxy_cache_ttl'] = 604800; // How long to save the detection information in the database so we don't need to re-check it
@@ -86,9 +86,9 @@ $cfg['js']['image_max_width'] = 80; // Max width of an expanded image in percent
 
 //*** Board settings
 $cfg['modlog_expire'] = 2592000; // How long to keep entries in modlog
-$cfg['tpp'] = 10; // TPP = Threads Per Page, lankojen määrä sivulla
-$cfg['rpt'] = 3; // RPT = Replies Per Thread, näytettyjen langan vastausten määrä laudan etusivulla
-$cfg['ppp'] = 100; // PPP = Posts Per Page, postausten määrä langan sivulla
+$cfg['tpp'] = 10; // Threads Per Page
+$cfg['rpt'] = 3; // Replies Per Thread shown in the board page
+$cfg['ppp'] = 100; // Posts Per Page shown in the thread page before splitting it into pages
 $cfg['expand_limit'] = 50; // How many newest posts to show when expanding the thread
 
 //*** Overboard
@@ -99,9 +99,9 @@ $cfg['overboard_desc'] = 'Postaukset kaikilta laudoilta'; // Description of the 
 $cfg['overboard_pages'] = 20; // How many pages should the overboard have?
 $cfg['overboard_namefield'] = '2'; // 1 for regular namefield, 2 for OP checkbox. Note that with option '1', names sent into boards without namefield will be discarded.
 
-$cfg['bumplimit'] = 300; // Maksimimäärä kertoja, mitä lankaa voi bumpata
-$cfg['floodlimit'] = 5; // Minimiaika sekunneissa postausten välillä
-$cfg['threadlimit'] = 30; // Minimiaika sekunneissa uusien lankojen välillä
+$cfg['bumplimit'] = 300; // Maximum amount of messages a thread can have before not being able to bump anymore
+$cfg['floodlimit'] = 5; // Minimum time to wait between sending messages
+$cfg['threadlimit'] = 30; // Minimum time to wait between making new threads
 
 $cfg['max_word_length'] = 120; // Max length of a single word. After this point, a space is added.
 
@@ -115,13 +115,13 @@ $cfg['post_bin_ttl'] = 0; // How many days to save posts after their deletion
 $cfg['convert_lower_priority'] = true; // Lower the convert -binary priority (sets nice to 10)
 $cfg['convert_memory_limit'] = "128"; // Image conversion memory limit in megabytes (Set to false to disable)
 $cfg['high_thumb_quality'] = true; // True = use -resize, false = use -sample
-$cfg['thumbsize_x'] = 200; // Pikkukuvan maksimi leveys pikseleissä
-$cfg['thumbsize_y'] = 200; // Pikkukuvan maksimi korkeus pikseleissä
-$cfg['repthumbsize_x'] = 128; // Vastauksen pikkukuvan maksimi leveys pikseleissä
-$cfg['repthumbsize_y'] = 128; // Vastauksen pikkukuvan maksimi korkeus pikseleissä
-$cfg['anim_thumbs'] = true; // Animoidut pikkukuvat, ei huomioi seuraavaa asetusta (gif) OVERRIDES USER PERSONALIZATION SETTING IF SET TO FALSE!
-$cfg['anim_thumbs_small'] = true; // Animoidut pienikokoiset (tiedostokoko) pikkukuvat (gif)
-$cfg['anim_thumbs_small_size'] = 512000; // Maksimi tiedostokoko tavuina jonka alle menevät pikkukuvat animoidaan (gif)
+$cfg['thumbsize_x'] = 200; // Thumbnail max width in pixels
+$cfg['thumbsize_y'] = 200; // Thumbnail max height in pixels
+$cfg['repthumbsize_x'] = 128; // Reply thumbnail max width in pixels
+$cfg['repthumbsize_y'] = 128; // Reply thumbnail max height in pixels
+$cfg['anim_thumbs'] = true; // Animated thumbs? Does not care about the nex setting (gif) OVERRIDES USER PERSONALIZATION SETTING IF SET TO FALSE!
+$cfg['anim_thumbs_small'] = true; // Animated small (file size) thumbnails (gif)
+$cfg['anim_thumbs_small_size'] = 512000; // Max file size considered being a small thumbnail to animate (gif)
 $cfg['anim_thumbs_resize_filter'] = imagick::FILTER_QUADRATIC; // http://www.php.net/manual/en/imagick.constants.php
 $cfg['gif_caption'] = true; // Show the "GIF!" -caption on non-animated thumbnails of animated gifs
 $cfg['gif_caption_font_size'] = 24;
@@ -129,34 +129,35 @@ $cfg['gif_caption_text'] = 'GIF!';
 $cfg['gifsicle_options_thumb'] = '+x +c --color-method blend-diversity --colors 255 -O3'; // man gifsicle, http://www.lcdf.org/gifsicle/man.html
 $cfg['optipng_options_thumb'] = ''; // man optipng, http://optipng.sourceforge.net/manual.html
 $cfg['pngcrush_options_thumb'] = '-reduce -fix -rem allb -l 9'; // man pngcrush, http://pmt.sourceforge.net/pngcrush/
-$cfg['thumbquality'] = 70; // Pikkukuvien laatu (1-100)
+$cfg['thumbquality'] = 70; // JPG thumbnail quality (1-100)
 $cfg['png_compression'] = 95; // http://www.imagemagick.org/script/command-line-options.php#quality
-$cfg['png_thumbs_max_file_size'] = 40960; // File size limit for PNG thumbnails in bytes. false = no limit
+$cfg['png_thumbs_max_file_size'] = 40960; // File size limit for PNG thumbnails in bytes. Above this thumbs are converted to JPG false = no limit
 $cfg['max_img_size_x'] = 20000; // Max image size in pixels (width)
 $cfg['max_img_size_y'] = 40000; // Max image size in pixels (height)
-$cfg['max_filesize'] = 157286400; // Maksimi tiedostokoko tavuissa
-$cfg['max_dl_filesize'] = 157286400; // Maksimi tiedostokoko ladattavalle paketille tavuissa
+$cfg['max_filesize'] = 157286400; // Max file size in bytes
+$cfg['max_dl_filesize'] = 157286400; // Max file size for downloadable archive in bytes
 $cfg['max_tmpfs_filesize'] = 157286400; // Max file size that is saved in tmpfs instead of hard drive when downloading files
-$cfg['max_files'] = 4; // Maksimi tiedostojen määrä yhdessä postauksessa
+$cfg['max_files'] = 4; // Max amount of files in one post
 $cfg['allow_embeds'] = true; // Allow embedding?
-$cfg['embedandfile'] = true; // Sallitaanko sekä upote että kuva yhtäaikaa viesteissä, false = jos molemmat lähetetty, tallennetaan pelkkä kuva
-$cfg['free_space_limit'] = 1073741824; // Tavuina, jos vapaa kovalevytila palvelimella laskee tämän alle, ei vastaanoteta uusia tiedostoja
+$cfg['embedandfile'] = true; // Allow both an embed and a file in a single post, false = if both are sent, only the file is saved
+$cfg['free_space_limit'] = 1073741824; // In bytes, if the free hard drive space is less than this, no new files are accepted.
 $cfg['thumbnail_filetypes'] = array('jpeg', 'jpg', 'png', 'gif', 'psd', 'pdf', 'svg', 'tif', 'tiff'); // File extensions to create thumbnails from
 
-$cfg['name_maxlength'] = 30; // Nimen maksimipituus
-$cfg['msg_maxlength'] = 8000; // Viestin maksimipituus
-$cfg['subj_maxlength'] = 60; // Aiheen maksimipituus
-$cfg['msg_prevlength'] = 1000; // Viestin näytettävä merkkimäärä kun lankaa ei ole avattu
-$cfg['gen_fileicon'] = "generic.png"; // Oletus tiedostoikoni tiedostoille joilla ei ole omaa ikonia
+$cfg['name_maxlength'] = 30; // Max length of a name
+$cfg['msg_maxlength'] = 8000; // Max length of a message
+$cfg['subj_maxlength'] = 60; // Max length of a post subject
+$cfg['msg_prevlength'] = 1000; // On board, how many characters to show without expanding the message
+$cfg['gen_fileicon'] = "generic.png"; // Default fileicon for files without their own icon
 $cfg['min_post_age'] = 10; // Time in which the post cannot be deleted after posting (seconds)
 $cfg['post_countries'] = true; // Show the posting countries
 
-$cfg['st_salt'] = 'replace'; // ST = Secure Tripcode, paremmin suojatun matkakoodin suolaus
-$cfg['ip_salt'] = 'replace'; // IP-osoitteen salauksen suolaus
-$cfg['pw_salt'] = 'replace'; // Viestien salasanojen suolaus
+// Replace all of these with a long random string. For example 64 characters.
+$cfg['st_salt'] = 'replace'; // ST = Secure Tripcode, salt for secure tripcodes
+$cfg['ip_salt'] = 'replace'; // Salt for IP-address encoding
+$cfg['pw_salt'] = 'replace'; // Salt for message password encoding
 
 //*** COUNTRY/LANGUAGE
-$cfg['fallback_timezone'] = "Europe/London";
+$cfg['fallback_timezone'] = "Europe/London"; // Timezone to fall back to if autodetection fails
 $cfg['local_country_code'] = "fi"; // Local country code, lowercase
 $cfg['default_locale'] = "en_US.UTF-8"; // Default board language, used as a failsafe or when HTTP_ACCEPT_LANGUAGE -header is not sent and language is not defined
 mb_internal_encoding("UTF-8"); // PHP multibyte encoding, changing should not be needed
@@ -183,9 +184,12 @@ $cfg['locales'] = array( // "Name as shown in the menu" => "Language files folde
 	"Polski" => "pl_PL.UTF-8"
 );
 
-// Osoite ilman http(s):// -alkua
-$cfg['htmldir_plain'] = $cfg['htmldir'];
-// Tarkistetaan onko HTTPS käytössä
+// --------------------------------------
+// EVERYTHING BELOW SHOULD BE LEFT AS-IS!
+// --------------------------------------
+
+$cfg['htmldir_plain'] = $cfg['htmldir']; // Address without the http(s):// -part
+// Let's check if we use HTTPS or not
 if($_SERVER["SERVER_PORT"] == $cfg['https_port']) {
 	$cfg['htmldir'] = "https://". $cfg['htmldir'];
 	$cfg['static_htmldir'] = "https://". $cfg['static_htmldir'];
@@ -196,5 +200,6 @@ else {
 	$cfg['static_htmldir'] = "http://". $cfg['static_htmldir'];
 	$cfg['https'] = false;
 }
-$cfg['version'] = "0.9.8"; // Softan versionumero, älä muuta tätä!
+
+$cfg['version'] = "0.9.8"; // Version number of the software. You don't want to edit this.
 
