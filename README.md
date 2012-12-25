@@ -47,7 +47,7 @@ See the prior link for more information and guides.
 7. Open http://your.url/install/install.php in your web browser and follow the installation procedure.
   - This step inserts the SQL dump into the database and allows you to add an admin account.
 
-8. Delete dbschema.sql and the whole install -folder!
+8. Delete the whole install -folder!
 
 9. Give proper permissions for the board to create the files -folder and all subfolders. The easiest way is of course "chmod -R /path/to/installation 777", but this is also the least secure.
 
