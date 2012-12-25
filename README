@@ -40,7 +40,7 @@ See the prior link for more information and guides.
 
 5. Create a database for the application
 
-6. Modify inc/config.php.sample as requested and rename it to inc/config.php when done.
+6. Modify inc/config.php.sample as required and rename it to inc/config.php when done.
 
 7. Check the .htaccess file if you need to edit it (for example for SSL).
 
@@ -57,15 +57,14 @@ See the prior link for more information and guides.
   - First add a category into the "categories" -table. Only the "name" -column is required. Note the ID of the inserted row (most likely 1).
   - Then add a board into "boards" -table. The only required values are url (ex. "b"), name (ex. "Random") and category (the id of the inserted category (ex. "1"), required for the board to show up in the menus). "Worksafe" could be set to "1" to disable the hiding when NSFW is hidden.
 
-Ps. Sorry for some finnish comments in the config file :)
-
 
 Included software
 =================
 This release also includes some other software freely available from the internet:
 - The javamod player, javamod.jar (Could be this, but not really sure: http://www.javamod.de/ - if you find the correct link, please let me know!)
-- Blinkenworld (https://github.com/erlehmann/blinkenworld)
+- Blinkenworld (https://github.com/Sopsys/blinkenworld)
 - FamFamFam flag icons (http://www.famfamfam.com/lab/icons/flags/)
 - NiftyPlayer (http://www.varal.org/media/niftyplayer/)
 - JW Player (http://www.longtailvideo.com/players/jw-flv-player/)
 - jQuery plus some plugins - credits and links inside the files
+- PHP-Gettext localization library (https://launchpad.net/php-gettext/)
