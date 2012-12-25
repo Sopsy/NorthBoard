@@ -62,9 +62,13 @@ Included software
 =================
 This release also includes some other software freely available from the internet:
 - The javamod player, javamod.jar (Could be this, but not really sure: http://www.javamod.de/ - if you find the correct link, please let me know!)
-- Blinkenworld (https://github.com/Sopsys/blinkenworld)
 - FamFamFam flag icons (http://www.famfamfam.com/lab/icons/flags/)
 - NiftyPlayer (http://www.varal.org/media/niftyplayer/)
 - JW Player (http://www.longtailvideo.com/players/jw-flv-player/)
 - jQuery plus some plugins - credits and links inside the files
 - PHP-Gettext localization library (https://launchpad.net/php-gettext/)
+
+Blinkenworld
+------------
+Blinkenworld, which was included before, is now moved to a separate repository: https://github.com/Sopsys/blinkenworld
+Installation of it with NB is just a matter of downloading the script, the APIpath is correctly set already.
