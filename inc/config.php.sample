@@ -3,6 +3,11 @@
 // Global settings
 // 6.1.2010
 
+// Remove this if you use CloudFlare
+// it's used to prevent IP-Spoofing with headers
+if( isset( $_SERVER['HTTP_CF_CONNECTING_IP'] ) )
+	die('Invalid request');
+
 // Alustetaan muuttuja
 $cfg = array();
 
