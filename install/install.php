@@ -54,10 +54,10 @@ mysql_select_db( $cfg['dbname'] ) or die( 'Couldn\'t select the database, check 
 if( !TableExists( 'admin_users' ) )
 {
   // Works only for local mysql server, feel free to customize it to suit your needs
-  //system( "mysql {$cfg['dbname']} -u{$cfg['dbuser']}  -p{$cfg['dbpass']} < ../dbschema.sql" );
+  //system( "mysql {$cfg['dbname']} -u{$cfg['dbuser']}  -p{$cfg['dbpass']} < dbschema.sql" );
   
   // v2
-  ImportSqlFile('../dbschema.sql');
+  ImportSqlFile('dbschema.sql');
 }
 
 require( '../inc/functions_general.php' );
@@ -129,3 +129,4 @@ Now you should add a category to the categories table.<br />
 After that add a board with the same category as the id of the category just added.<br />
 If the themes don't seem to work just change the $cfg['use_tmpfs'] to false from the config.php.<br />
 Play around with the database to customize your board, just use common sense.
+
