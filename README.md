@@ -71,4 +71,5 @@ This release also includes some other software freely available from the interne
 Blinkenworld
 ------------
 Blinkenworld, which was included before, is now moved to a separate repository: https://github.com/Sopsys/blinkenworld
+
 Installation of it with NB is just a matter of downloading the script, the APIpath is correctly set already.
