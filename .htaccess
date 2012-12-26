@@ -8,20 +8,26 @@ ErrorDocument 403 /403/
 RewriteEngine On
 
 # no-www!
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ //%1%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
 # If you want to force HTTPS, use this
-#RewriteCond %{SERVER_PORT} 80
+#RewriteCond %{HTTPS} off
 #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
 #Header add Strict-Transport-Security "max-age=604800"
 
-# Disable MultiViews, it breaks the mod panel
-Options -MultiViews
-
-# Everything below should be left as is.
+# If you want to redirect links to files to their respective posts, use this
 #RewriteCond %{HTTP_REFERER} !^$
 #RewriteRule (.*\.)(jpg|jpeg|png|gif|swf|mp3|ogg|flac|psd|tiff|tif|mp4|flv)$ /scripts/file-redirect.php?s=$1$2 [R=301,L]
+
+#---------------------------------------
+# Everything below should be left as is.
+# Disable MultiViews, it breaks the mod panel
+Options -MultiViews
 
 RewriteRule ^banned/$ banned.php
 RewriteRule ^settings/([a-z0-9\_]+)?(/)?([a-z0-9\_]+)?(/)?$ settings.php?do=$1&id=$3
