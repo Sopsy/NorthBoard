@@ -55,7 +55,7 @@ If you cannot install the gpac -package, you might need to add http://deb-multim
 
 10. To add boards, you need to issue the commands to the database directly, because the administration panel is incomplete. You can use PHPMyAdmin for example.
   - First add a category into the "categories" -table. Only the "name" -column is required. Note the ID of the inserted row (most likely 1).
-  - Then add a board into "boards" -table. The only required values are url (ex. "b"), name (ex. "Random") and category (the id of the inserted category (ex. "1"), required for the board to show up in the menus). "Worksafe" could be set to "1" to disable the hiding when NSFW is hidden.
+  - Then add a board into "boards" -table. The only required values are url (ex. "b" - without any slashes!), name (ex. "Random") and category (the id of the inserted category (ex. "1"), required for the board to show up in the menus). "Worksafe" could be set to "1" to disable the hiding when NSFW is hidden.
 
 
 Included software
