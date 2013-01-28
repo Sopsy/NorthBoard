@@ -11,13 +11,15 @@ REQUIREMENTS
 - Apache2
 - PHP5 (exact version unknown. Should work with the newest versions from the most popular repositories.)
 - Mysql5 server
-- PHP-APC (Please note that the current version of PHP-APC segfaults (=crashes) on PHP5.4+!)
 - The following PHP libraries: mysql, curl, imagick, gd, geoip
 - GifSicle for gif resizing
 - PNGCrush and OptiPNG for png optimization
 - MP4Box for mp4 streaming support
 - ImageMagick for image conversions
 - tmpfs (/dev/shm) might be required too. Try to enable it if you only see a white page.
+
+Optional:
+- PHP-APC for upload progress (Please note that the current version of PHP-APC segfaults (=crashes) on PHP5.4+!)
 
 INSTALLATION
 ============
