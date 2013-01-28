@@ -65,7 +65,9 @@ If you cannot install the gpac -package, you might need to add http://deb-multim
 
 Included software
 =================
-This release also includes some other software freely available from the internet:
+This release also includes some other software freely available from the internet.
+Their licenses may differ from NorthBoard.
+
 - The javamod player, javamod.jar (Could be this, but not really sure: http://www.javamod.de/ - if you find the correct link, please let me know!)
 - FamFamFam flag icons (http://www.famfamfam.com/lab/icons/flags/)
 - NiftyPlayer (http://www.varal.org/media/niftyplayer/)
