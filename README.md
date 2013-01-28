@@ -1,6 +1,7 @@
 NorthBoard, the board software of http://northpole.fi/.
 
-This is the board software of Northpole.fi, now released under the GPLv3 license.
+This is the board software of Northpole.fi, now released under the CC BY-SA 3.0 license.
+See the license here: http://creativecommons.org/licenses/by-sa/3.0/
 
 !! If you have any high importance bugfixes or suggestion, please contact the admin by mail: sopsy at northpole.fi !!
 
