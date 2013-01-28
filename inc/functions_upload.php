@@ -121,24 +121,25 @@ function create_image( $source, $destination, $animooted = true ) {
 				}
 			}
 
-			if(!$cfg['high_thumb_quality'])
-			{
+			//if(!$cfg['high_thumb_quality'])
+			//{
 				$sizes = $image->getImageGeometry();
 				if($sizes['width'] > $maxwidth OR $sizes['height'] > $maxheight)
 				{
 					if($sizes['width'] > $sizes['height']) $com .= ' --resize-width '. $maxwidth;
 					else $com .= ' --resize-height '. $maxheight;
 				}
-			}
+			//}
 
 			$com .= ' -o '. escapeshellarg($destination);
 			shell_exec($com);
 
-			$com = $gifsicle .' -U -b '. escapeshellarg($destination);
-			shell_exec($com);
+			//$com = $gifsicle .' -U -b '. escapeshellarg($destination);
+			//shell_exec($com);
 
 			$image->destroy();
 			$image = new imagick($destination);
+			$writeImage = false;
 		}
 
 		if($image->getImageFormat() == "JPEG" AND $cfg['use_jpegtran'])
@@ -154,6 +155,7 @@ function create_image( $source, $destination, $animooted = true ) {
 
 			$image->destroy();
 			$image = new imagick($destination);
+			$writeImage = false;
 		}
 
 		if( $image->getNumberImages() > 1 )
@@ -169,9 +171,9 @@ function create_image( $source, $destination, $animooted = true ) {
 				$image->destroy();
 				$image = $image_tmp;
 				if($cfg['gif_caption']) $put_caption = true;
+				$writeImage = true;
 			}
 		}
-
 
 		$sizes = $image->getImageGeometry();
 
@@ -181,7 +183,7 @@ function create_image( $source, $destination, $animooted = true ) {
 			{
 				if($extension == "gif" AND $image->getNumberImages() > 1)
 				{
-					if( $cfg['use_imagick'] )
+					/*if( $cfg['use_imagick'] )
 					{
 						$image->writeImages($destination, true);
 						$image->destroy();
@@ -190,7 +192,7 @@ function create_image( $source, $destination, $animooted = true ) {
 						$image = new imagick($destination);
 					}
 					else
-					{
+					{*/
 						$filter = $cfg['anim_thumbs_resize_filter'];
 						foreach ($image as $frame)
 						{
@@ -198,12 +200,13 @@ function create_image( $source, $destination, $animooted = true ) {
 							$frame->levelImage(0, 1.0, 65535+1); // to circumvent a bug in imagick
 							$frame->orderedPosterizeImage('o4x4,16');
 						}
-					}
+					//}
 				}
 				else $image->resizeImage($maxwidth, $maxheight, imagick::FILTER_CATROM, 1.0, true);
 			}
 			else
 				foreach ($image as $frame) $frame->resizeImage($maxwidth, $maxheight, imagick::FILTER_POINT, 1.0, true);
+			$writeImage = true;
 		}
 		
 		if($put_caption)
@@ -219,20 +222,24 @@ function create_image( $source, $destination, $animooted = true ) {
 			$draw->setFillColor('white');
 			//$draw->setTextUnderColor("#0008");
 			$image->annotateImage($draw,  0,  0, 0, $cfg['gif_caption_text']);
+			$writeImage = true;
 		}
 
 		if($extension == "jpg" OR $extension == "jpeg")
 		{
 			$image->setSamplingFactors(array(2, 1, 1));
 			$image->setImageCompressionQuality($cfg['thumbquality']);
+			$writeImage = true;
 		}
 
 		if($extension == "png")
 		{
 			$image->setImageCompressionQuality( $cfg['png_compression'] );
+			$writeImage = true;
 		}
 
-		$image->writeImages($destination, true);
+		if( isset( $writeImage ) AND $writeImage )
+			$image->writeImages($destination, true);
 
 		if($extension == "gif" AND $cfg['use_gifsicle'])
 		{
