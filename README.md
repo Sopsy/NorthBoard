@@ -49,11 +49,13 @@ If you cannot install the gpac -package, you might need to add http://deb-multim
 
 8. Delete the whole install -folder!
 
-9. Give proper permissions for the board to create the files -folder and all subfolders. The easiest way is of course "chmod -R /path/to/installation 777", but this is also the least secure.
+9. Create the folder tmp/ and make it writable by the web server (for example: mkdir /path/to/installation/tmp && chown -R www-data /path/to/installation/tmp && chmod -R 744 /path/to/installation/tmp).
 
-9. Open http://your.url/ and you should see the board open!
+10. Give proper permissions for the board to create the files/ -folder and all subfolders. The easiest way is of course "chmod -R /path/to/installation 777", but this is also the least secure.
 
-10. To add boards, you need to issue the commands to the database directly, because the administration panel is incomplete. You can use PHPMyAdmin for example.
+11. Open http://your.url/ and you should see the board open!
+
+12. To add boards, you need to issue the commands to the database directly, because the administration panel is incomplete. You can use PHPMyAdmin for example.
   - First add a category into the "categories" -table. Only the "name" -column is required. Note the ID of the inserted row (most likely 1).
   - Then add a board into "boards" -table. The only required values are url (ex. "b" - without any slashes!), name (ex. "Random") and category (the id of the inserted category (ex. "1"), required for the board to show up in the menus). "Worksafe" could be set to "1" to disable the hiding when NSFW is hidden.
 
