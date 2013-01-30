@@ -87,9 +87,8 @@ else {
 $js .= $js_static;
 
 $hash = md5($js);
-$headers = getallheaders();
 // if Browser sent ID, we check if they match
-if(!empty($headers['If-None-Match']) AND ereg($hash, $headers['If-None-Match'])) {
+if( !empty( $_SERVER['HTTP_IF_NONE_MATCH'] ) AND ereg( $hash, $_SERVER['HTTP_IF_NONE_MATCH'] ) ) {
 	header('HTTP/1.1 304 Not Modified');
 }
 else {
