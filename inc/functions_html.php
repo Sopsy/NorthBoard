@@ -561,7 +561,7 @@ function print_files($post, $location = "ap", $filecount, $fileq) {
 		while( $file = mysql_fetch_assoc( $fileq ) )
 		{
 		
-			$dl_sauce = $cfg['static_htmldir'] .'/files/orig/'. $file['name'] .'.'. $file['extension'] .'/'. rawurlencode($file['orig_name']) .'.'. $file['extension'];
+			$dl_sauce = $cfg['static_htmldir'] .'/files/'. $file['folder'] .'/orig/'. $file['name'] .'.'. $file['extension'] .'/'. rawurlencode($file['orig_name']) .'.'. $file['extension'];
 			$local_sauce = $cfg['srvdir'] .'/files/'. $file['folder'] .'/orig/'. $file['name'] .'.'. $file['extension'];
 			
 			$limitsize = false;
