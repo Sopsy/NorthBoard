@@ -20,7 +20,7 @@ server {
 
         location / {
                 rewrite ^/([a-z0-9\_]+)(-[0-9]+)?/?$ /board.php?id=$1&page=$2 last;
-                rewrite ^/([a-z0-9\_]+)/threadlist$ /threadlist.php?id=$1;
+                rewrite ^/([a-z0-9\_]+)/threadlist/?$ /threadlist.php?id=$1;
                 rewrite ^/([a-z0-9\_]+)/([0-9]+)(-[0-9]+)?/?$ /thread.php?board=$1&id=$2&page=$3;
         }
         location /css {
@@ -38,6 +38,9 @@ server {
         #location /download {
         #        rewrite ^/download/([0-9]+)/([^/]+)$ /scripts/download.php?file=$1&fn=$2;
         #}
+        location /redirect {
+                rewrite ^/redirect/([0-9]+)/?$ /scripts/redirect.php?id=$1;
+        }
         location /singlepost {
                 rewrite ^/singlepost/([0-9]+)$ /singlepost.php?msg=$1;
         }
