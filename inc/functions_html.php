@@ -65,12 +65,15 @@ function flag($msg, $international = 0)
 	
 	if($cfg['post_countries'])
 	{
+		if( empty( $msg['geoip_country_code'] ) ) $msg['geoip_country_code'] = 'unk';
 		//if($msg['proxy'] != 0 OR $international == 1 OR strtolower($msg['geoip_country_code']) != $cfg['local_country_code'] AND $msg['geoip_country_code'] != "unk")
-		if($msg['proxy'] != 0 OR $international == 1 AND $msg['geoip_country_code'] != "unk")
+		if($msg['proxy'] != 0 OR $international == 1)
 		{
 			if(!is_file($cfg['srvdir'] ."/css/img/flags/". strtolower($msg['geoip_country_code']) .".png"))
 				$country = "unk";
 		
+			if( empty( $msg['geoip_country_name'] ) ) $msg['geoip_country_name'] = T_('Unknown');
+			
 			if(empty($msg['hide_region']) OR $msg['hide_region'] === 0)
 				$alt_text = $msg['geoip_country_name'] . (!empty($msg['geoip_region_name']) ? ', '. $msg['geoip_region_name'] : '') . (!empty($msg['geoip_city']) ? ', '. $msg['geoip_city'] : '');
 			else
