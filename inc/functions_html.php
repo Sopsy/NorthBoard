@@ -561,18 +561,17 @@ function print_files($post, $location = "ap", $filecount, $fileq) {
 		while( $file = mysql_fetch_assoc( $fileq ) )
 		{
 		
-			$dl_sauce = $cfg['static_htmldir'] .'/download/'. $file['name'] .'/'. rawurlencode($file['orig_name']) .'.'. $file['extension'];
+			$dl_sauce = $cfg['static_htmldir'] .'/files/orig/'. $file['name'] .'.'. $file['extension'] .'/'. rawurlencode($file['orig_name']) .'.'. $file['extension'];
 			$local_sauce = $cfg['srvdir'] .'/files/'. $file['folder'] .'/orig/'. $file['name'] .'.'. $file['extension'];
 			
 			$limitsize = false;
 			
 			if( in_array( $file['extension'], array('jpg', 'jpeg', 'png', 'gif') ) )
 			{
-			
 				$sauceb = $cfg['static_htmldir'] .'/files/'. $file['folder'] .'/thumb/'. $file['name'] .'.'. $file['thumb_ext'];
 				if($file['extension'] == 'gif' AND ($cfg['user']['autoplay_gifs'] == '0' OR !($cfg['anim_thumbs'] OR $cfg['anim_thumbs_small'] AND filesize($sauceb) < $cfg['anim_thumbs_small_size']) ) )
 					$sauceb = $cfg['static_htmldir'] .'/files/'. $file['folder'] .'/thumb/noanim-'. $file['name'] .'.'. $file['thumb_ext'];
-				$sauce = $cfg['static_htmldir'] .'/files/'. $file['folder'] .'/orig/'. $file['name'] .'.'. $file['extension'];
+				$sauce = $dl_sauce;
 				
 				$imgfile = true;
 				$videofile = false;
