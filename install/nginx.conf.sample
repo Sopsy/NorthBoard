@@ -67,7 +67,7 @@ server {
                 rewrite ^/personal/([a-z0-9\_]+)/threadlist/?$ /threadlist_personal.php?do=$1;
         }
         location /settings {
-                rewrite ^/settings/?([a-z0-9\_]+)?(/)?([a-z0-9\_]+)?$ /settings.php?do=$1&id=$3;
+                rewrite ^/settings/?([a-z0-9\_]+)?(/)?([a-z0-9\_]+)?/?$ /settings.php?do=$1&id=$3;
         }
         location /banned {
                 rewrite ^/banned/?$ /banned.php;
