@@ -181,7 +181,12 @@ else $modpost = false;
 // Country detection
 if($cfg['post_countries']) {
 	$geoip_data = geoip_record_by_name(get_ip(false));
-	$geoip_data['region_name'] = geoip_region_name_by_code($geoip_data['country_code'], $geoip_data['region']);
+	if( !empty($geoip_data['region']) )
+		$geoip_data['region_name'] = geoip_region_name_by_code($geoip_data['country_code'], $geoip_data['region']);
+	else {
+		$geoip_data['region'] = '';
+		$geoip_data['region_name'] = '';
+	}
 }
 else {
 	$geoip_data = array(
