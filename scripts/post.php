@@ -70,6 +70,8 @@ if(!empty($_FILES))
 			$files[] = $fdata;
 	}
 }
+if( empty( $files[0] ) )
+	$files[0] = false;
 
 
 //Lanka-ID
