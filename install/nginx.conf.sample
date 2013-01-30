@@ -30,10 +30,10 @@ server {
                 access_log off;
         }
         location /files {
+                rewrite ^/files/([a-zA-Z0-9\_]+)/orig/(.+\.\w+)/(.+\.\w+)$ /files/$1/orig/$2 break;
                 try_files $uri =404;
                 access_log off;
                 log_not_found off;
-                rewrite ^/files/([a-zA-Z0-9\_]+)/orig/(.+\.\w+)/(.+\.\w+)$ /files/$1/$2/$3 break;
         }
         #location /download {
         #        rewrite ^/download/([0-9]+)/([^/]+)$ /scripts/download.php?file=$1&fn=$2;
