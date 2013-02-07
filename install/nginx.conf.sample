@@ -1,0 +1,94 @@
+# Sample configuration for Nginx
+
+server {
+        server_name www.yourdomain.com;
+        return 302 $scheme://$server_name$request_uri;
+}
+
+server {
+        root /path/to/installation;
+        server_name yourdomain.com;
+        index index.php index.html index.htm;
+
+        # For using cloudflare, you can create /etc/nginx/cf_realip
+        # See: https://support.cloudflare.com/entries/22051973-does-cloudflare-have-an-ip-module-for-nginx
+        #include cf_realip;
+
+        error_page 404 /404;
+        error_page 410 /410;
+        error_page 403 /403;
+
+        location / {
+                rewrite ^/([a-z0-9\_]+)(-[0-9]+)?/?$ /board.php?id=$1&page=$2 last;
+                rewrite ^/([a-z0-9\_]+)/threadlist/?$ /threadlist.php?id=$1;
+                rewrite ^/([a-z0-9\_]+)/([0-9]+)(-[0-9]+)?/?$ /thread.php?board=$1&id=$2&page=$3;
+        }
+        location /css {
+                access_log off;
+        }
+        location /js {
+                access_log off;
+        }
+        location /files {
+                rewrite ^/files/([a-zA-Z0-9\_]+)/orig/(.+\.\w+)/(.+\.\w+)$ /files/$1/orig/$2 break;
+                try_files $uri =404;
+                access_log off;
+                log_not_found off;
+        }
+        #location /download {
+        #        rewrite ^/download/([0-9]+)/([^/]+)$ /scripts/download.php?file=$1&fn=$2;
+        #}
+        location /redirect {
+                rewrite ^/redirect/([0-9]+)/?$ /scripts/redirect.php?id=$1;
+        }
+        location /singlepost {
+                rewrite ^/singlepost/([0-9]+)$ /singlepost.php?msg=$1;
+        }
+        location /mod {
+                rewrite ^/mod/([a-z\_]+)(/)?([a-z0-9]+)?(/)?([a-z0-9]+)?(/)?([a-z0-9]+)?$ /mod/$1.php?a=$3&b=$5&c=$7;
+        }
+        location /403 {
+                rewrite ^/403$ /403.php;
+        }
+        location /404 {
+                rewrite ^/404$ /404.php;
+        }
+        location /410 {
+                rewrite ^/410$ /410.php;
+        }
+        location /delete {
+                rewrite ^/delete/(.*)?$ /scripts/delete.php$1;
+        }
+        location /post {
+                rewrite ^/post/?$ /scripts/post.php;
+        }
+        location /personal {
+                rewrite ^/personal/([a-z0-9\_]+)(-[0-9]+)?/?$ /personal.php?do=$1&page=$2;
+                rewrite ^/personal/([a-z0-9\_]+)/threadlist/?$ /threadlist_personal.php?do=$1;
+        }
+        location /settings {
+                rewrite ^/settings/?([a-z0-9\_]+)?(/)?([a-z0-9\_]+)?/?$ /settings.php?do=$1&id=$3;
+        }
+        location /banned {
+                rewrite ^/banned/?$ /banned.php;
+        }
+        location /search {
+                rewrite ^/search/?$ /search.php;
+        }
+
+        # Chrome, for some reason, requests this from time to time.
+        location ~ /cache/ { log_not_found off; access_log off; }
+
+        location ~ \.php$ {
+                # See: http://wiki.nginx.org/HttpLimitReqModule
+                #limit_req zone=two burst=4 nodelay;
+                fastcgi_split_path_info ^(.+\.php)(/.+)$;
+                # Don't forget to set cgi.fix_pathinfo=0 in php.ini!
+
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
+                fastcgi_index index.php;
+                include fastcgi_params;
+        }
+
+        location ~ /\.ht { deny all; }
+}

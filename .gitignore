@@ -4,5 +4,12 @@ tmp/*
 ads/*
 install/*
 
+# Files -symlink for Northpole
+files
+
 # Netbeans project files
 /nbproject/
+
+# Blinkenworld is now a separate repository at
+# https://github.com/Sopsys/blinkenworld
+/blinkenworld/

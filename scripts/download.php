@@ -3,6 +3,10 @@
 // Northpole.fi
 // 25.0.2010 <-- What!?
 
+// Deprecated. Replaced with a Nginx/Apache2 rewrite.
+die();
+
+/*
 include("../inc/functions_db.php");
 dbconnect(true);
 
@@ -56,4 +60,4 @@ else {
 	die();
 }
 
-?>
+*/

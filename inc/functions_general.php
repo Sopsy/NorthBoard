@@ -429,9 +429,9 @@ function get_ip($resolvedns = true) {
 	global $cfg;
 
 
-//	if( !empty( $_SERVER['HTTP_CF_CONNECTING_IP'] ) )
-//		$ip = mysql_real_escape_string($_SERVER['HTTP_CF_CONNECTING_IP']);
-//	else
+	if( !empty( $_SERVER['HTTP_CF_CONNECTING_IP'] ) )
+		$ip = mysql_real_escape_string($_SERVER['HTTP_CF_CONNECTING_IP']);
+	else
 		$ip = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
 
 	if($cfg['resolve_dns'] AND $resolvedns) {

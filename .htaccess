@@ -7,36 +7,32 @@ ErrorDocument 403 /403/
 
 RewriteEngine On
 
-# Derp.
-RewriteCond %{REQUEST_URI} ^/int(/(.*)|$) [NC]
-RewriteRule .* /ib/ [R=301,L]
-
 # no-www!
-RewriteCond %{HTTP_HOST} ^www\. [NC]
-#RewriteCond %{HTTP_HOST} !^northpole\.fi [NC]
-RewriteRule .* http://northpole.fi%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP_HOST} ^northpole\.fi$ [NC]
-RewriteCond %{REQUEST_URI} ^/files/ [NC,OR]
-RewriteCond %{REQUEST_URI} ^/download/ [NC]
-RewriteRule ^(.*)$ http://static.%{HTTP_HOST}/$1 [R=301,L]
-
-# You might want to remove these, if your site is not using HTTPS
-#RewriteCond %{SERVER_PORT} 80
+# If you want to force HTTPS, use this
+#RewriteCond %{HTTPS} off
 #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
 #Header add Strict-Transport-Security "max-age=604800"
+
+# If you want to redirect links to files to their respective posts, use this
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteRule (.*\.)(jpg|jpeg|png|gif|swf|mp3|ogg|flac|psd|tiff|tif|mp4|flv)$ /scripts/file-redirect.php?s=$1$2 [R=301,L]
+
+#---------------------------------------
+# Everything below should be left as is.
+
 
 # Disable MultiViews, it breaks the mod panel
 Options -MultiViews
 
-# Edit the domain to match yours:
-#RewriteCond %{HTTP_REFERER} !^http(s)?://(.+\.)?northpole\.fi/ [NC]
-
-# Everything below should be left as is.
-#RewriteCond %{HTTP_REFERER} !^$
-#RewriteRule (.*\.)(jpg|jpeg|png|gif|swf|mp3|ogg|flac|psd|tiff|tif|mp4|flv)$ /scripts/file-redirect.php?s=$1$2 [R=301,L]
-
+# The rest of the rewrite rules
+RewriteRule ^files/([a-zA-Z0-9\_]+)/orig/(.+\.\w+)/(.+\.\w+)$ files/$1/$2/$3 [L]
 RewriteRule ^banned/$ banned.php
 RewriteRule ^settings/([a-z0-9\_]+)?(/)?([a-z0-9\_]+)?(/)?$ settings.php?do=$1&id=$3
 RewriteRule ^search(/)?$ search.php
@@ -48,13 +44,14 @@ RewriteRule ^delete/(.*)?$ scripts/delete.php$1
 RewriteRule ^410/$ 410.php
 RewriteRule ^404/$ 404.php
 RewriteRule ^403/$ 403.php
-
 RewriteRule ^mod/([a-z\_]+)(/)?([a-z0-9]+)?(/)?([a-z0-9]+)?(/)?([a-z0-9]+)?$ mod/$1.php?a=$3&b=$5&c=$7
-
 RewriteRule ^singlepost/([0-9]+)(/)?$ singlepost.php?msg=$1
+
+# Blinkenworld is not a board (you can add as many RewriteConds here as you like)
 RewriteCond %{REQUEST_URI} !^/blinkenworld
+#RewriteCond %{REQUEST_URI} !^/custom_content
 RewriteRule ^([a-z0-9\_]+)(-[0-9]+)?(/)?$ board.php?id=$1&page=$2
+
 RewriteRule ^([a-z0-9\_]+)(/)([0-9]+)(-[0-9]+)?(/)?$ thread.php?board=$1&id=$3&page=$4
 RewriteRule ^([a-z0-9\_]+)(/)threadlist(/)?$ threadlist.php?id=$1
-
-RewriteRule ^download/([0-9]+)/([^/]+)$ scripts/download.php?file=$1&fn=$2
+#RewriteRule ^download/([0-9]+)/([^/]+)$ scripts/download.php?file=$1&fn=$2

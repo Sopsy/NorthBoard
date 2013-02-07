@@ -18,7 +18,7 @@ function check_bans() {
 
 	if(!empty($ban) AND $ban['is_old'] == 0) {
 		if(strtolower(substr($_SERVER['PHP_SELF'], -10)) != "banned.php") {
-			if($ban['can_read'] == 0 OR ($ban['start_time'] + $ban['length']) <= time() AND $ban['lenght'] != '0') {
+			if($ban['can_read'] == 0 OR ($ban['start_time'] + $ban['length']) <= time() AND $ban['length'] != '0') {
 				header("Location: ". $cfg['htmldir']."/banned/");
 				die();
 			}

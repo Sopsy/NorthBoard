@@ -65,12 +65,15 @@ function flag($msg, $international = 0)
 	
 	if($cfg['post_countries'])
 	{
+		if( empty( $msg['geoip_country_code'] ) ) $msg['geoip_country_code'] = 'unk';
 		//if($msg['proxy'] != 0 OR $international == 1 OR strtolower($msg['geoip_country_code']) != $cfg['local_country_code'] AND $msg['geoip_country_code'] != "unk")
-		if($msg['proxy'] != 0 OR $international == 1 AND $msg['geoip_country_code'] != "unk")
+		if($msg['proxy'] != 0 OR $international == 1)
 		{
 			if(!is_file($cfg['srvdir'] ."/css/img/flags/". strtolower($msg['geoip_country_code']) .".png"))
 				$country = "unk";
 		
+			if( empty( $msg['geoip_country_name'] ) ) $msg['geoip_country_name'] = T_('Unknown');
+			
 			if(empty($msg['hide_region']) OR $msg['hide_region'] === 0)
 				$alt_text = $msg['geoip_country_name'] . (!empty($msg['geoip_region_name']) ? ', '. $msg['geoip_region_name'] : '') . (!empty($msg['geoip_city']) ? ', '. $msg['geoip_city'] : '');
 			else
@@ -561,18 +564,17 @@ function print_files($post, $location = "ap", $filecount, $fileq) {
 		while( $file = mysql_fetch_assoc( $fileq ) )
 		{
 		
-			$dl_sauce = $cfg['static_htmldir'] .'/download/'. $file['name'] .'/'. rawurlencode($file['orig_name']) .'.'. $file['extension'];
+			$dl_sauce = $cfg['static_htmldir'] .'/files/'. $file['folder'] .'/orig/'. $file['name'] .'.'. $file['extension'] .'/'. rawurlencode($file['orig_name']) .'.'. $file['extension'];
 			$local_sauce = $cfg['srvdir'] .'/files/'. $file['folder'] .'/orig/'. $file['name'] .'.'. $file['extension'];
 			
 			$limitsize = false;
 			
 			if( in_array( $file['extension'], array('jpg', 'jpeg', 'png', 'gif') ) )
 			{
-			
 				$sauceb = $cfg['static_htmldir'] .'/files/'. $file['folder'] .'/thumb/'. $file['name'] .'.'. $file['thumb_ext'];
 				if($file['extension'] == 'gif' AND ($cfg['user']['autoplay_gifs'] == '0' OR !($cfg['anim_thumbs'] OR $cfg['anim_thumbs_small'] AND filesize($sauceb) < $cfg['anim_thumbs_small_size']) ) )
 					$sauceb = $cfg['static_htmldir'] .'/files/'. $file['folder'] .'/thumb/noanim-'. $file['name'] .'.'. $file['thumb_ext'];
-				$sauce = $cfg['static_htmldir'] .'/files/'. $file['folder'] .'/orig/'. $file['name'] .'.'. $file['extension'];
+				$sauce = $dl_sauce;
 				
 				$imgfile = true;
 				$videofile = false;
