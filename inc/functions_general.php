@@ -43,8 +43,8 @@ function initialize() {
 		$warnings .= sprintf(T_("%s was not found from %s!"), "OptiPNG", $cfg['optipng_bin']) .' '. sprintf(T_('Please check the value of %s or change %s to false in config.php.'), '$cfg["optipng_bin"]', '$cfg["use_optipng"]') .' ('. sprintf(T_('Debian package name: %s'), 'optipng') .")\r\n";
 	if(!is_file($cfg['pngcrush_bin']) AND $cfg['use_pngcrush'])
 		$warnings .= sprintf(T_("%s was not found from %s!"), "PNGCrush", $cfg['pngcrush_bin']) .' '. sprintf(T_('Please check the value of %s or change %s to false in config.php.'), '$cfg["pngcrush_bin"]', '$cfg["use_pngcrush"]') .' ('. sprintf(T_('Debian package name: %s'), 'pngcrush') .")\r\n";
-	//if(is_file($cfg['srvdir'] ."/install/install.php"))
-	//	$warnings .= T_("You have not deleted the file install.php. This is a serious security issue!");
+	if(is_file($cfg['srvdir'] ."/install/install.php"))
+		$warnings .= T_("You have not deleted the file install.php. This is a serious security issue!");
 	
 	// If they weren't, kill the script.
 	if($warnings != '') {
