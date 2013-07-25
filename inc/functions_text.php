@@ -194,69 +194,68 @@ function format_text($text) {
 // Tekstin lyhentäminen
 function truncate($text, $messageid, $length = 128, $link = false, $truncated_text = true) {
 
-	if(!empty($text)) {
-		
-		if($link) {
-			$a = '<a href="'. $link .'" onclick="unTruncate('. $messageid .'); return false;">';
-			$b = '</a>';
-			$c = T_("here");
-		}
-		else {
-			$a = '';
-			$b = '';
-			$c = T_('"Reply"');
-		}
-		
-		$array = explode("\n", $text);
-		
-		if( count($array) > 15 )
-		{
-			$text = limitLines($text, 15);
-		}
+    if(!empty($text)) {
 
-		// Don't count html tags
-		$curlength = preg_replace("/<\/?\w+((\s+(\w|\w[\w-]*\w)(\s*=\s*(?:\".*?\"|'.*?'|[^'\">\s]+))?)+\s*|\s*)\/?>/i", "", $text);
-		$curlength = mb_strlen($curlength);
-		
-		if($curlength > $length)
-			$text = mb_substrws($text, $length);
-		
-		/*
-		$opened = array();
-		// loop through opened and closed tags in order
-		if(preg_match_all("/<(\/?[a-z]+)>?/i", $text, $matches)) {
-			foreach($matches[1] as $tag) {
-				if(preg_match_all('/\"([^\"]*)\"/i', $text, $match)) {
-					$open_quotes = true;
-				}
-				else $open_quotes = false;
-				if(preg_match("/^[a-z]+$/i", $tag, $regs)) {
-					// a tag has been opened
-					if(strtolower($regs[0]) != 'br')
-						$opened[] = $regs[0];
-				}
-				elseif(preg_match("/^\/([a-z]+)$/i", $tag, $regs)) {
-					// a tag has been closed
-					unset($opened[array_pop(array_keys($opened, $regs[1]))]);
-				}
-			}
-		}
-		
-		foreach($opened AS $tag)
-		{
-			$text .= ($open_quotes ? '">' : '') . '</'. $tag .'>';
-		}
-		*/
-		if($curlength > $length)
-			$text .= '...';
-			
+        if($link) {
+            $a = '<a href="'. $link .'" onclick="unTruncate('. $messageid .'); return false;">';
+            $b = '</a>';
+            $c = T_("here");
+        }
+        else {
+            $a = '';
+            $b = '';
+            $c = T_('"Reply"');
+        }
 
-		if($curlength > $length OR count($array) > 15)
-			$text .= ($truncated_text ? '<span class="msg_cut" id="msg_cut_'. $messageid .'"><br /><br />'. $a . sprintf(T_("This message was truncated, click %s to see the rest of it."), $c) . $b .'</span>' : '');
-		
-		return $text;
-	}
-	else return false;
+        $array = explode("\n", $text);
+
+        if( count($array) > 15 )
+        {
+            $text = limitLines($text, 15);
+        }
+
+        // Don't count html tags
+        $curlength = preg_replace("/<\/?\w+((\s+(\w|\w[\w-]*\w)(\s*=\s*(?:\".*?\"|'.*?'|[^'\">\s]+))?)+\s*|\s*)\/?>/i", "", $text);
+        $curlength = mb_strlen($curlength);
+
+        if($curlength > $length)
+            $text = mb_substrws($text, $length);
+
+        //*
+        $opened = array();
+        // loop through opened and closed tags in order
+        if(preg_match_all("/<\/?([a-z]+)(.*?)>/i", $text, $matches)) {
+            foreach($matches[0] as $key => $tag) {
+
+                if($matches[1][$key] == 'br') {
+                    continue;
+                }
+
+                if(strstr($tag, '/') === false) {
+                    $opened[] = $matches[1][$key];
+                } else {
+                    unset($opened[array_search($matches[1][$key], $opened)]);
+                }
+            }
+        }
+
+        $opened = array_reverse($opened);
+
+        foreach($opened AS $tag)
+        {
+            $text .= '</'. $tag .'>';
+        }
+        //*/
+        if($curlength > $length)
+            $text .= '...';
+
+
+        if($curlength > $length OR count($array) > 15)
+            $text .= ($truncated_text ? '<span class="msg_cut" id="msg_cut_'. $messageid .'"><br /><br />'. $a . sprintf(T_("This message was truncated, click %s to see the rest of it."), $c) . $b .'</span>' : '');
+
+        return $text;
+    }
+    else return false;
 }
 
 // http://php.net/manual/en/function.nl2br.php
