@@ -13,3 +13,6 @@ files
 # Blinkenworld is now a separate repository at
 # https://github.com/Sopsys/blinkenworld
 /blinkenworld/
+
+
+/.idea
