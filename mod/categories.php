@@ -75,7 +75,7 @@ if (empty($_GET['a'])) {
             $errors[] = 'Name length must larger than 1';
         }
 
-        if (!is_numeric($args['order']) OR strlen($args['description']) > 11) {
+        if (!is_numeric($args['order'])) {
             $errors[] = 'Order must be numeric and length smaller than 11';
         }
 
