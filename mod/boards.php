@@ -147,16 +147,16 @@ if (empty($_GET['a'])) {
             'description' => mysql_real_escape_string($_POST['description']),
             'order' => mysql_real_escape_string($_POST['order']),
             'category' => mysql_real_escape_string($_POST['category']),
-            'international' => mysql_real_escape_string($_POST['international']),
+            'international' => mysql_real_escape_string(isset($_POST['international']) ? $_POST['international'] : null),
             'pages' => mysql_real_escape_string($_POST['pages']),
-            'locked' => mysql_real_escape_string($_POST['locked']),
-            'worksafe' => mysql_real_escape_string($_POST['worksafe']),
+            'locked' => mysql_real_escape_string(isset($_POST['locked']) ? $_POST['locked'] : null),
+            'worksafe' => mysql_real_escape_string(isset($_POST['worksafe']) ? $_POST['worksafe'] : null),
             'ad_category' => mysql_real_escape_string($_POST['ad_category']),
             'namefield' => mysql_real_escape_string($_POST['namefield']),
             'default_name' => mysql_real_escape_string($_POST['default_name']),
-            'show_empty_names' => mysql_real_escape_string($_POST['show_empty_names']),
+            'show_empty_names' => mysql_real_escape_string(isset($_POST['show_empty_names']) ? $_POST['show_empty_names'] : null),
             'default_style' => mysql_real_escape_string($_POST['default_style']),
-            'hide_sidebar' => mysql_real_escape_string($_POST['hide_sidebar']),
+            'hide_sidebar' => mysql_real_escape_string(isset($_POST['hide_sidebar']) ? $_POST['hide_sidebar'] : null),
         );
 
         /*
