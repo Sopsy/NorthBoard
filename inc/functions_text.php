@@ -160,6 +160,7 @@ function format_text($text) {
 	
 	// Remove unicode control characters
 	$text = removeForbiddenUnicode($text);
+
 	
         // Automaattinen korvaus ***://, www., mailto:, ftp. teksteille linkeiksi! V2!
 	// Still not working correctly!
@@ -173,7 +174,7 @@ function format_text($text) {
         
         // viestilinkit ja vihertekstit
 	$text = preg_replace("#(&gt;&gt;)([0-9]+)#ise", "'<a href=\"http://". $cfg['htmldir_plain'] ."/redirect/\\2\" title=\"ajax;http://". $cfg['htmldir_plain'] ."/scripts/ajax/message.php?id=\\2\" onclick=\"highlight_post(\'\\2\', this); return false;\">\\1\\2</a>'", $text);
-	$text = preg_replace("#(^|[\n\]])(&gt;)([^\n\r]+)#ise", "'\\1<span class=\"quote\">\\2\\3</span>'", $text);	
+	$text = preg_replace("#(^|[\n\]])(&gt;)([^\n\r]+)#is", "\\1<span class=\"quote\">\\2\\3</span>", $text);
 	
 	// Ja tähän BBkoodisysteemi..
 	$text = bbcode_format($text);
@@ -184,9 +185,9 @@ function format_text($text) {
 	
 	$text = trim($text);
 	$text = regulateWords($text, $cfg['max_word_length']);
-        
-	// Ja viimeisenä vielä poistetaan MySQL-koodi tekstistä
-	$text = mysql_real_escape_string($text);
+    
+    // poistetaan MySQL-koodi tekstistä
+    $text = mysql_real_escape_string($text);
 
 	return $text;
 }
