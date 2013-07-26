@@ -218,8 +218,11 @@ function truncate($text, $messageid, $length = 128, $link = false, $truncated_te
         $curlength = preg_replace("/<\/?\w+((\s+(\w|\w[\w-]*\w)(\s*=\s*(?:\".*?\"|'.*?'|[^'\">\s]+))?)+\s*|\s*)\/?>/i", "", $text);
         $curlength = mb_strlen($curlength);
 
-        if($curlength > $length)
-            $text = mb_substrws($text, $length);
+
+        if($curlength > $length){
+            // $text = mb_substrws($text, $length);
+            $text = substrhtml($text, 0, $length);
+        }
 
         //*
         $opened = array();
@@ -227,11 +230,11 @@ function truncate($text, $messageid, $length = 128, $link = false, $truncated_te
         if(preg_match_all("/<\/?([a-z]+)(.*?)>/i", $text, $matches)) {
             foreach($matches[0] as $key => $tag) {
 
-                if($matches[1][$key] == 'br') {
+                if($matches[1][$key] == 'br') { // add hr, img etc here if needed
                     continue;
                 }
 
-                if(strstr($tag, '/') === false) {
+                if(substr($tag, 1, 1) != '/') {
                     $opened[] = $matches[1][$key];
                 } else {
                     unset($opened[array_search($matches[1][$key], $opened)]);
@@ -385,6 +388,48 @@ function closeUnclosedTags($text)
 		}
 	}
 	return $text;
+}
+
+function substrhtml($str, $start, $len)
+{
+    $str_clean = substr(strip_tags($str), $start, $len);
+    $pos = strrpos($str_clean, " ");
+
+    if ($pos === false) {
+        $str_clean = substr(strip_tags($str), $start, $len);
+    } else {
+        $str_clean = substr(strip_tags($str), $start, $pos);
+    }
+
+    if (preg_match_all('/\<[^>]+>/is', $str, $matches, PREG_OFFSET_CAPTURE)) {
+        for ($i = 0; $i < count($matches[0]); $i++) {
+            if ($matches[0][$i][1] < $len) {
+                $str_clean = substr($str_clean, 0, $matches[0][$i][1]) . $matches[0][$i][0] . substr(
+                        $str_clean,
+                        $matches[0][$i][1]
+                    );
+            } else {
+                if (preg_match('/\<[^>]+>$/is', $matches[0][$i][0])) {
+                    $str_clean = substr($str_clean, 0, $matches[0][$i][1]) . $matches[0][$i][0] . substr(
+                            $str_clean,
+                            $matches[0][$i][1]
+                        );
+                    break;
+                }
+            }
+        }
+
+        return $str_clean;
+    } else {
+        $string = substr($str, $start, $len);
+        $pos = strrpos($string, " ");
+
+        if ($pos === false) {
+            return substr($str, $start, $len);
+        }
+
+        return substr($str, $start, $pos);
+    }
 }
 
 ?>
