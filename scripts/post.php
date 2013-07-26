@@ -932,6 +932,9 @@ else $modpost = 0;
 
 $password = encrypt_password($password);
 
+$posted_by_op = '0';
+$tripcode = false;
+
 // Poster name
 if($namefield == 1) {
 	// Matkakoodi, tripcode
