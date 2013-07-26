@@ -198,7 +198,8 @@ else {
 		'region' => '0',
 		'region_name' => 'N/A',
 		'latitude' => '0',
-		'longitude' => '0'
+		'longitude' => '0',
+        'city' => 'N/A',
 	);
 }
 
@@ -930,6 +931,9 @@ if($modpost AND $authorized) {
 else $modpost = 0;
 
 $password = encrypt_password($password);
+
+$posted_by_op = '0';
+$tripcode = false;
 
 // Poster name
 if($namefield == 1) {

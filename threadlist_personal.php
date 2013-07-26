@@ -97,25 +97,26 @@ $lq = mysql_query("
 		");
 // */
 
-$lq = mysql_query("SELECT `posts`.`id`, 
-        `posts`.`board`, 
-        `posts`.`subject`, 
-        `posts`.`message`, 
-        `posts`.`time`, 
-        `boards`.`url`, 
-        `post_files`.`fileid`, 
-        `files`.`folder`, 
-        `files`.`extension`, 
-        `files`.`name`, 
-        `files`.`thumb_ext` 
+$lq = mysql_query("SELECT `posts`.`id`,
+        `posts`.`board`,
+        `posts`.`subject`,
+        `posts`.`message`,
+        `posts`.`time`,
+        `boards`.`url`,
+        `post_files`.`fileid`,
+        `files`.`folder`,
+        `files`.`extension`,
+        `files`.`name`,
+        `files`.`thumb_ext`
     FROM `boards`, `posts`
         LEFT JOIN `post_files` ON `posts`.`id` = `post_files`.`postid`
         LEFT JOIN `files` ON `files`.`id` = `post_files`.`fileid`
-    WHERE `posts`.`board` = `boards`.`id` 
-    AND `posts`.`thread` = '0' 
-    AND `deleted_time` = '0' 
+    WHERE `posts`.`board` = `boards`.`id`
+    AND `posts`.`thread` = '0'
+    AND `deleted_time` = '0'
     AND (". $threads .")
-    ORDER BY `bump_time` DESC 
+    GROUP BY `posts`.`id`
+    ORDER BY `bump_time` DESC
     LIMIT 0,150");
 
 if (!$lq) {

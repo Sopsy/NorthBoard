@@ -52,7 +52,6 @@ else {
 						<td>'. date(T_("Y/m/d g:i:s A"), $b['added_time']) .'</td>
 						<td><a href="edit/'. $b['id'] .'/">'. T_("Edit") .'</td>
 					</tr>';
-					$i++;
 				}
 				
 				echo '
