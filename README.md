@@ -3,7 +3,7 @@ NorthBoard, the board software of http://northpole.fi/.
 This is the board software of Northpole.fi, now released under the MIT license.
 See `LICENSE` for details.
 
-!! If you have any high importance bugfixes or suggestion, please contact the admin by mail: sopsy at northpole.fi !!
+!! If you have any high importance bugfixes or suggestion, please contact the admin by email: admin at northpole.fi !!
 
 
 REQUIREMENTS
