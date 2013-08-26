@@ -160,6 +160,7 @@ function format_text($text) {
 	
 	// Remove unicode control characters
 	$text = removeForbiddenUnicode($text);
+
 	
         // Automaattinen korvaus ***://, www., mailto:, ftp. teksteille linkeiksi! V2!
 	// Still not working correctly!
@@ -173,7 +174,7 @@ function format_text($text) {
         
         // viestilinkit ja vihertekstit
 	$text = preg_replace("#(&gt;&gt;)([0-9]+)#ise", "'<a href=\"http://". $cfg['htmldir_plain'] ."/redirect/\\2\" title=\"ajax;http://". $cfg['htmldir_plain'] ."/scripts/ajax/message.php?id=\\2\" onclick=\"highlight_post(\'\\2\', this); return false;\">\\1\\2</a>'", $text);
-	$text = preg_replace("#(^|[\n\]])(&gt;)([^\n\r]+)#ise", "'\\1<span class=\"quote\">\\2\\3</span>'", $text);	
+	$text = preg_replace("#(^|[\n\]])(&gt;)([^\n\r]+)#is", "\\1<span class=\"quote\">\\2\\3</span>", $text);
 	
 	// Ja tähän BBkoodisysteemi..
 	$text = bbcode_format($text);
@@ -184,9 +185,9 @@ function format_text($text) {
 	
 	$text = trim($text);
 	$text = regulateWords($text, $cfg['max_word_length']);
-	
-	// Ja viimeisenä vielä poistetaan MySQL-koodi tekstistä
-	$text = mysql_real_escape_string($text);
+    
+    // poistetaan MySQL-koodi tekstistä
+    $text = mysql_real_escape_string($text);
 
 	return $text;
 }
@@ -194,69 +195,71 @@ function format_text($text) {
 // Tekstin lyhentäminen
 function truncate($text, $messageid, $length = 128, $link = false, $truncated_text = true) {
 
-	if(!empty($text)) {
-		
-		if($link) {
-			$a = '<a href="'. $link .'" onclick="unTruncate('. $messageid .'); return false;">';
-			$b = '</a>';
-			$c = T_("here");
-		}
-		else {
-			$a = '';
-			$b = '';
-			$c = T_('"Reply"');
-		}
-		
-		$array = explode("\n", $text);
-		
-		if( count($array) > 15 )
-		{
-			$text = limitLines($text, 15);
-		}
+    if(!empty($text)) {
 
-		// Don't count html tags
-		$curlength = preg_replace("/<\/?\w+((\s+(\w|\w[\w-]*\w)(\s*=\s*(?:\".*?\"|'.*?'|[^'\">\s]+))?)+\s*|\s*)\/?>/i", "", $text);
-		$curlength = mb_strlen($curlength);
-		
-		if($curlength > $length)
-			$text = mb_substrws($text, $length);
-		
-		/*
-		$opened = array();
-		// loop through opened and closed tags in order
-		if(preg_match_all("/<(\/?[a-z]+)>?/i", $text, $matches)) {
-			foreach($matches[1] as $tag) {
-				if(preg_match_all('/\"([^\"]*)\"/i', $text, $match)) {
-					$open_quotes = true;
-				}
-				else $open_quotes = false;
-				if(preg_match("/^[a-z]+$/i", $tag, $regs)) {
-					// a tag has been opened
-					if(strtolower($regs[0]) != 'br')
-						$opened[] = $regs[0];
-				}
-				elseif(preg_match("/^\/([a-z]+)$/i", $tag, $regs)) {
-					// a tag has been closed
-					unset($opened[array_pop(array_keys($opened, $regs[1]))]);
-				}
-			}
-		}
-		
-		foreach($opened AS $tag)
-		{
-			$text .= ($open_quotes ? '">' : '') . '</'. $tag .'>';
-		}
-		*/
-		if($curlength > $length)
-			$text .= '...';
-			
+        if($link) {
+            $a = '<a href="'. $link .'" onclick="unTruncate('. $messageid .'); return false;">';
+            $b = '</a>';
+            $c = T_("here");
+        }
+        else {
+            $a = '';
+            $b = '';
+            $c = T_('"Reply"');
+        }
 
-		if($curlength > $length OR count($array) > 15)
-			$text .= ($truncated_text ? '<span class="msg_cut" id="msg_cut_'. $messageid .'"><br /><br />'. $a . sprintf(T_("This message was truncated, click %s to see the rest of it."), $c) . $b .'</span>' : '');
-		
-		return $text;
-	}
-	else return false;
+        $array = explode("\n", $text);
+
+        if( count($array) > 15 )
+        {
+            $text = limitLines($text, 15);
+        }
+
+        // Don't count html tags
+        $curlength = preg_replace("/<\/?\w+((\s+(\w|\w[\w-]*\w)(\s*=\s*(?:\".*?\"|'.*?'|[^'\">\s]+))?)+\s*|\s*)\/?>/i", "", $text);
+        $curlength = mb_strlen($curlength);
+
+
+        if($curlength > $length){
+            // $text = mb_substrws($text, $length);
+            $text = substrhtml($text, 0, $length);
+        }
+
+        //*
+        $opened = array();
+        // loop through opened and closed tags in order
+        if(preg_match_all("/<\/?([a-z]+)(.*?)>/i", $text, $matches)) {
+            foreach($matches[0] as $key => $tag) {
+
+                if($matches[1][$key] == 'br') { // add hr, img etc here if needed
+                    continue;
+                }
+
+                if(substr($tag, 1, 1) != '/') {
+                    $opened[] = $matches[1][$key];
+                } else {
+                    unset($opened[array_search($matches[1][$key], $opened)]);
+                }
+            }
+        }
+
+        $opened = array_reverse($opened);
+
+        foreach($opened AS $tag)
+        {
+            $text .= '</'. $tag .'>';
+        }
+        //*/
+        if($curlength > $length)
+            $text .= '...';
+
+
+        if($curlength > $length OR count($array) > 15)
+            $text .= ($truncated_text ? '<span class="msg_cut" id="msg_cut_'. $messageid .'"><br /><br />'. $a . sprintf(T_("This message was truncated, click %s to see the rest of it."), $c) . $b .'</span>' : '');
+
+        return $text;
+    }
+    else return false;
 }
 
 // http://php.net/manual/en/function.nl2br.php
@@ -386,6 +389,48 @@ function closeUnclosedTags($text)
 		}
 	}
 	return $text;
+}
+
+function substrhtml($str, $start, $len)
+{
+    $str_clean = substr(strip_tags($str), $start, $len);
+    $pos = strrpos($str_clean, " ");
+
+    if ($pos === false) {
+        $str_clean = substr(strip_tags($str), $start, $len);
+    } else {
+        $str_clean = substr(strip_tags($str), $start, $pos);
+    }
+
+    if (preg_match_all('/\<[^>]+>/is', $str, $matches, PREG_OFFSET_CAPTURE)) {
+        for ($i = 0; $i < count($matches[0]); $i++) {
+            if ($matches[0][$i][1] < $len) {
+                $str_clean = substr($str_clean, 0, $matches[0][$i][1]) . $matches[0][$i][0] . substr(
+                        $str_clean,
+                        $matches[0][$i][1]
+                    );
+            } else {
+                if (preg_match('/\<[^>]+>$/is', $matches[0][$i][0])) {
+                    $str_clean = substr($str_clean, 0, $matches[0][$i][1]) . $matches[0][$i][0] . substr(
+                            $str_clean,
+                            $matches[0][$i][1]
+                        );
+                    break;
+                }
+            }
+        }
+
+        return $str_clean;
+    } else {
+        $string = substr($str, $start, $len);
+        $pos = strrpos($string, " ");
+
+        if ($pos === false) {
+            return substr($str, $start, $len);
+        }
+
+        return substr($str, $start, $pos);
+    }
 }
 
 ?>
