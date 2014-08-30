@@ -1,17 +1,12 @@
-NorthBoard, the board software of http://northpole.fi/.
-
 This is the board software of Northpole.fi, now released under the MIT license.
 See `LICENSE` for details.
-
-!! If you have any high importance bugfixes or suggestion, please contact the admin by email: admin at northpole.fi !!
-
 
 REQUIREMENTS
 ============
 
-- Apache2
-- PHP5 (exact version unknown. Should work with the newest versions from the most popular repositories.)
-- Mysql5 server
+- Apache2 or Nginx
+- PHP5 (recommended version 5.5)
+- Mysql5 server (recommmended version 5.6+)
 - The following PHP libraries: mysql, curl, imagick, gd, geoip
 - ImageMagick for image conversions and resizing
 
@@ -26,7 +21,7 @@ INSTALLATION
 ============
 This guide is for Debian based distros. Needs some changes for other distros.
 
-I'm going to assume you already have a functional web server with Apache2, PHP5 and a MySQL server running.
+I'm going to assume you already have a functional web server with Apache2/mod_php or Nginx/PHP-FPM and a MySQL server running.
 
 If you cannot install the gpac -package, you might need to add http://deb-multimedia.org/ to sources.list. See the prior link for more information and guides.
 
@@ -36,7 +31,7 @@ If you cannot install the gpac -package, you might need to add http://deb-multim
 2. Ensure the required apache2 rewrite-module is active by running the following command:
   - a2enmod rewrite
 
-3. Activate apc.rfc1867 by adding a line "apc.rfc1867 = 1" to /etc/php5/apache2/conf.d/apc.ini
+3. Activate apc.rfc1867 by adding a line "apc.rfc1867 = 1" to /etc/php5/(apache2|fpm)/conf.d/apc.ini
   - Even though this is optional, it is required for file upload progress to work. Don't forget to restart the web server afterwards.
 
 4. Git clone or in any other way download the code to a web server public root
@@ -45,23 +40,29 @@ If you cannot install the gpac -package, you might need to add http://deb-multim
 
 6. Modify inc/config.php.sample as required and rename it to inc/config.php when done.
 
-7. Check the .htaccess file if you need to edit it (for example for SSL).
+7a. (Apache) Check the .htaccess file if you need to edit it (for example for SSL).
+7b. (Nginx) Edit install/nginx.conf.sample as required and copy it to nginx sites-available and symlink to sites-enabled, then reload nginx.
 
-7. Open http://your.url/install/install.php in your web browser and follow the installation procedure.
+8. Open http://your.url/install/install.php in your web browser and follow the installation procedure.
   - This step inserts the SQL dump into the database and allows you to add an admin account.
 
-8. Delete the whole install -folder!
+9. Delete the whole install -folder!
 
-9. Create the folder tmp/ and make it writable by the web server (for example: mkdir /path/to/installation/tmp && chown -R www-data /path/to/installation/tmp && chmod -R 744 /path/to/installation/tmp).
+10. Create the folder tmp/ and make it writable by the web server (for example: mkdir /path/to/installation/tmp && chown -R www-data /path/to/installation/tmp && chmod -R 744 /path/to/installation/tmp).
 
-10. Give proper permissions for the board to create the files/ -folder and all subfolders. The easiest way is of course "chmod -R /path/to/installation 777", but this is also the least secure.
+11. Give proper permissions for the board to create the files/ -folder and all subfolders. The easiest way is of course "chmod -R /path/to/installation 777", but this is also the least secure.
 
-11. Open http://your.url/ and you should see the board open!
+12. Open http://your.url/ and you should see the board open!
 
-12. To add boards, you need to issue the commands to the database directly, because the administration panel is incomplete. You can use PHPMyAdmin for example.
+13. To add boards, you need to issue the commands to the database directly, because the administration panel is incomplete. You can use PHPMyAdmin for example.
   - First add a category into the "categories" -table. Only the "name" -column is required. Note the ID of the inserted row (most likely 1).
   - Then add a board into "boards" -table. The only required values are url (ex. "b" - without any slashes!), name (ex. "Random") and category (the id of the inserted category (ex. "1"), required for the board to show up in the menus). "Worksafe" could be set to "1" to disable the hiding when NSFW is hidden.
 
+Installation notes
+==================
+- If you are using the native gettext (and not the slow php-lib), you need to generate server locales to support other languages. Eg. fi_FI.UTF-8 to have finnish working.
+- GeoIP requires the MaxMind binary packages, see more by googling for PHP-GeoIP usage.
+- 
 
 Included software
 =================
@@ -78,5 +79,3 @@ Their licenses may differ from NorthBoard.
 Blinkenworld
 ------------
 Blinkenworld, which was included before, is now moved to a separate repository: https://github.com/Sopsys/blinkenworld
-
-Installation of it with NB is just a matter of downloading the script, the APIpath is correctly set already.
