@@ -50,7 +50,7 @@
 		
 		echo '
 		<p id="software">
-		<a href="https://northpole.fi/northboard/">NorthBoard v'. $cfg['version'] .'</a></p>
+		<a href="https://github.com/Sopsys/NorthBoard/">NorthBoard v'. $cfg['version'] .'</a></p>
 	</div>
 	<div id="hide_sidebar">
 		';
