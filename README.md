@@ -62,7 +62,6 @@ Installation notes
 ==================
 - If you are using the native gettext (and not the slow php-lib), you need to generate server locales to support other languages. Eg. fi_FI.UTF-8 to have finnish working.
 - GeoIP requires the MaxMind binary packages, see more by googling for PHP-GeoIP usage.
-- 
 
 Included software
 =================
