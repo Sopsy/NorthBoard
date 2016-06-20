@@ -1,3 +1,6 @@
+THIS SOFTWARE HAS BEEN ABANDONED IN 2013 AND IS NO LONGER UPDATED NOR SUPPORTED!
+However, you can still use it for whatever reasons you require, there's just no support - you need to fix any bugs yourself.
+
 This is the board software of Northpole.fi, now released under the MIT license.
 See `LICENSE` for details.
 
